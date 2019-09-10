@@ -1,6 +1,9 @@
 backend:
-  name: test-repo
+  name: github
+  repo: felipecesr/static-next
   branch: master
+  site_domain: https://felipecesar.com.br/static-next
+publish_mode: editorial_workflow
 media_folder: static/img
 collections:
   - name: "pages"
