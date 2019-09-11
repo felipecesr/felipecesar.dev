@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "export": "yarn build && next export",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test specified\""
   },
   "keywords": [],
   "author": "",
