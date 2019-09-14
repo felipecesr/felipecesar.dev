@@ -2,8 +2,7 @@ backend:
   name: github
   repo: felipecesr/static-next
   branch: master
-  site_domain: https://felipecesar.com.br/static-next
-  base_url: https://felipecesar.com.br
+  site_domain: https://cranky-swanson-5fdaf2.netlify.com
 publish_mode: editorial_workflow
 media_folder: static/img
 collections:
