@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: felipecesr/static-next
+  name: git-gateway
   branch: master
   site_domain: https://cranky-swanson-5fdaf2.netlify.com
 publish_mode: editorial_workflow
