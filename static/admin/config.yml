@@ -3,6 +3,7 @@ backend:
   repo: felipecesr/static-next
   branch: master
   site_domain: https://felipecesar.com.br/static-next
+  base_url: https://felipecesar.com.br
 publish_mode: editorial_workflow
 media_folder: static/img
 collections:
