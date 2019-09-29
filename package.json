@@ -7,7 +7,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "yarn build && next export"
+    "export": "yarn build && next export",
+    "test": "echo \"No test specified\""
   },
   "keywords": [],
   "author": "",
