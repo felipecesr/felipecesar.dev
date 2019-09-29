@@ -2,7 +2,6 @@ backend:
   name: github
   branch: master
   repo: felipecesr/static-next
-  base_url: https://cranky-swanson-5fdaf2.netlify.com
 publish_mode: editorial_workflow
 media_folder: static/uploads
 collections:
