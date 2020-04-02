@@ -3,7 +3,7 @@ backend:
   branch: master
   repo: felipecesr/static-next
 publish_mode: editorial_workflow
-media_folder: static/uploads
+media_folder: public/uploads
 collections:
   - name: 'blog'
     label: 'Blog Posts'
