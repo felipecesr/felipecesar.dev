@@ -1,22 +1,43 @@
-import React, { Component } from 'react'
-import content from '../content/home.md';
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
 
-export default class Home extends Component {
-  render() {
-    let { html , attributes:{ title, cats } } = content;
-    return (
-      <article>
-          <h1>{title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: html }}/>
-          <ul>
-              { cats.map((cat, k) => (
-                  <li key={k}>
-                    <h2>{cat.name}</h2>
-                    <p>{cat.description}</p>
-                  </li>
-              ))}
-          </ul>
-      </article>
-    )
+const Blog = ({ posts }) => (
+  <article>
+    <h1>Felipe César</h1>
+    <ul>
+      {posts.map((post, index) => (
+        <li key={index}>
+          <a href={post.slug}>{post.title}</a>
+        </li>
+      ))}
+    </ul>
+  </article>
+)
+
+export async function getStaticProps() {
+  const postsDirectory = path.join(process.cwd(), 'posts')
+  const filenames = fs.readdirSync(postsDirectory)
+
+  const posts = filenames.map(filename => {
+    const slug = filename.replace(/\.md$/, '')
+    const filePath = path.join(postsDirectory, filename)
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+
+    const { data, content } = matter(fileContents)
+
+    return {
+      slug,
+      title: data.title,
+      content
+    }
+  })
+
+  return {
+    props: {
+      posts
+    }
   }
 }
+
+export default Blog
