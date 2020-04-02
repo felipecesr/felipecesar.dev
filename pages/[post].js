@@ -13,12 +13,9 @@ const Post = ({ title, content }) => {
 export async function getStaticPaths() {
   const contexts = require.context('../posts', true, /\.md$/)
   const allPosts = contexts.keys().map(path => {
-    console.log(1, path)
     const fileName = path.match(/([^/]*)(?:\.([^.]+$))/)[1]
     return { params: fileName }
   })
-
-  console.log(2, allPosts)
 
   return {
     paths: allPosts.map(post => `/${post.params}`) || [],
