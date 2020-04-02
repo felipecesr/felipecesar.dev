@@ -1,4 +1,4 @@
-import * as S from './styles'
+import * as S from '../styles/utils'
 
 import { getAllPosts } from '../lib/api'
 
