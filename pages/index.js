@@ -1,37 +1,27 @@
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
+import * as S from './styles'
+
+import { getAllPosts } from '../lib/api'
+
+import { Layout } from '../layout'
+import { Bio } from '../components/Bio'
 
 const Blog = ({ posts }) => (
-  <article>
-    <h1>Felipe César</h1>
-    <ul>
+  <Layout>
+    <Bio />
+    <div>
       {posts.map((post, index) => (
-        <li key={index}>
-          <a href={post.slug}>{post.title}</a>
-        </li>
+        <article key={index}>
+          <S.PostTitle>
+            <a href={post.slug}>{post.title}</a>
+          </S.PostTitle>
+        </article>
       ))}
-    </ul>
-  </article>
+    </div>
+  </Layout>
 )
 
 export async function getStaticProps() {
-  const postsDirectory = path.join(process.cwd(), 'posts')
-  const filenames = fs.readdirSync(postsDirectory)
-
-  const posts = filenames.map(filename => {
-    const slug = filename.replace(/\.md$/, '')
-    const filePath = path.join(postsDirectory, filename)
-    const fileContents = fs.readFileSync(filePath, 'utf8')
-
-    const { data, content } = matter(fileContents)
-
-    return {
-      slug,
-      title: data.title,
-      content
-    }
-  })
+  const posts = getAllPosts()
 
   return {
     props: {
