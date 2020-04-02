@@ -1,7 +1,7 @@
 backend:
   name: github
   branch: master
-  repo: felipecesr/static-next
+  repo: felipecesr/felipecesar.dev
 publish_mode: editorial_workflow
 media_folder: public/uploads
 collections:
