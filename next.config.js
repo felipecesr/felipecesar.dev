@@ -1,11 +1,9 @@
 module.exports = {
-  webpack: (cfg) => {
-      cfg.module.rules.push(
-          {
-              test: /\.md$/,
-              use: 'frontmatter-markdown-loader'
-          }
-      )
-      return cfg;
+  webpack: config => {
+    config.module.rules.push({
+      test: /\.md$/,
+      use: 'raw-loader'
+    })
+    return config
   }
 }
