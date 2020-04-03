@@ -3,6 +3,7 @@ layout: default
 title: Escrevendo um componente React com TDD
 date: 2020-04-02T22:51:54.849Z
 ---
+
 # Introdução
 
 Nesse artigo vamos ver um passo a passo de como criar um componente React seguindo o TDD. Não vou me aprofundar muito, então é importante que você tenha algum conhecimento em React e Jest. Antes de começar a prática vamos relembrar como funciona o TDD.
@@ -46,7 +47,7 @@ Você pode ler as descrições das funções `describe` e `it` como uma única f
 
 Dentro do bloco `it` vamos criar uma `const` chamada `user` com um atributo `name` que armazena o nome do usuário. Depois criamos outra `const` chamada `component` que armazena o componente `UserInfo` com a prop `name`.
 
-```jsx
+```javascript
 const user = { name: 'Walter White' }
 const component = <UserInfo name={user.name} />
 ```
@@ -84,7 +85,7 @@ Não definimos o componente `UserInfo` de propósito, primeiro escrevemos um tes
 
 Dentro do arquivo UserInfo.js vamos criar o nosso componente da maneira mais simples possível para o teste passar.
 
-```jsx
+```javascript
 import React from 'react'
 
 export const UserInfo = () => <div>Walter White</div>
@@ -111,7 +112,7 @@ Show! Nosso teste está passando, mas e se quisermos usar esse componente com ou
 
 Para chegar em uma implementação real, precisamos adicionar mais testes, esse processo é chamado de **triangulação**. Então vamos escrever mais um teste:
 
-```jsx
+```javascript
 it('renders another user name', () => {
   const user = { name: 'Jesse Pinkman' }
   const component = <UserInfo name={user.name} />
@@ -134,7 +135,7 @@ Ao executar novamente nosso teste, vemos que ele volta a falhar, mas com um erro
 
 Precisamos alterar nosso componente de uma forma que os dois testes passem:
 
-```jsx
+```javascript
 export const UserInfo = ({ name }) => <div>{name}</div>
 ```
 
@@ -156,7 +157,7 @@ Essa é a hora em que devemos resistir a tentação de passar para o próximo co
 
 Se reparamos bem no nosso arquivo `UserInfo.test.js`, podemos ver claramente que alguns itens se repetem e isso não é uma boa prática.
 
-```jsx
+```javascript
 describe('UserInfo', () => {
   it('renders the user name', () => {
     const user = { name: 'Walter White' }
@@ -202,7 +203,7 @@ const render = component => ReactDOM.render(component, container)
 
 Com isso nosso teste deve ficar assim:
 
-```jsx
+```javascript
 it('renders the user name', () => {
   user = { name: 'Walter White' }
   render(<UserInfo name={user.name} />)
@@ -218,7 +219,7 @@ Dividimos nosso teste em três seções distintas:
 
 Com isso, conseguimos deixar nosso teste bem mais limpo e conciso. Abaixo podemos ver como ficou o arquivo final:
 
-```jsx
+```javascript
 describe('UserInfo', () => {
   let container, user
 
