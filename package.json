@@ -16,6 +16,7 @@
   "dependencies": {
     "gray-matter": "^4.0.2",
     "next": "^9.3.4",
+    "prismjs": "^1.19.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-markdown": "^4.3.1",
