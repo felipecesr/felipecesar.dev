@@ -25,8 +25,6 @@ const SEO = (props) => {
       <meta name="twitter:description" content={props.desc} />
       <meta name="twitter:site" content={siteMetadata.author} />
       <meta name="twitter:creator" content={siteMetadata.author} />
-      <link rel="icon" type="image/png" href="/static/images/favicon.ico" />
-      <link rel="apple-touch-icon" href="/static/images/favicon.ico" />
       <meta property="og:image" content={ogImage} />
       <meta name="twitter:image" content={ogImage} />
       {props.canonical && <link rel="canonical" href={`${props.canonical}`} />}
