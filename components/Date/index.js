@@ -7,7 +7,7 @@ const Date = ({ dateString }) => {
   const date = parseISO(dateString)
   return (
     <S.DateWrapper dateTime={dateString}>
-      {format(date, 'LLLL	d, yyyy', { locale: ptBR })}
+      {format(date, "dd 'de' MMMM 'de' yyyy", { locale: ptBR })}
     </S.DateWrapper>
   )
 }
