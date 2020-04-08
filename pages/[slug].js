@@ -7,14 +7,16 @@ import { Layout } from '../components/Layout'
 import { Date } from '../components/Date'
 import { PostWrapper } from '../components/Post/styles'
 import { SEO } from '../components/SEO'
+import { Comments } from '../components/Comments'
 
-const Post = ({ title, date, excerpt, content }) => (
+const Post = ({ slug, title, date, excerpt, content }) => (
   <Layout>
     <SEO title={title} desc={excerpt} />
     <PostWrapper>
       <h1>{title}</h1>
       <Date dateString={date} />
       <div dangerouslySetInnerHTML={{ __html: content }} />
+      <Comments url={slug} title={title} />
     </PostWrapper>
   </Layout>
 )
@@ -33,7 +35,7 @@ export async function getStaticProps({ params }) {
   let { title, date, excerpt, content } = getPostByFilename(slug)
   content = await markdownToHtml(content || '')
 
-  return { props: { title, date, excerpt, content } }
+  return { props: { slug, title, date, excerpt, content } }
 }
 
 export default Post
