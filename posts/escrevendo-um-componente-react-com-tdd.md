@@ -4,6 +4,8 @@ title: Escrevendo um componente React com TDD
 date: 2020-04-02T22:51:54.849Z
 ---
 
+Como funciona o desenvolvimento guiado por testes na criação de um componente React.
+
 # Introdução
 
 Nesse artigo vamos ver um passo a passo de como criar um componente React seguindo o TDD. Não vou me aprofundar muito, então é importante que você tenha algum conhecimento em React e Jest. Antes de começar a prática vamos relembrar como funciona o TDD.
@@ -198,7 +200,7 @@ beforeEach(() => {
 Também usamos o método `ReactDOM.render` em ambos os testes, a diferença é que precisamos passar o componente `UserInfo` como parâmetro dentro de cada teste. Nesse caso podemos criar uma função `render`:
 
 ```javascript
-const render = component => ReactDOM.render(component, container)
+const render = (component) => ReactDOM.render(component, container)
 ```
 
 Com isso nosso teste deve ficar assim:
@@ -227,7 +229,7 @@ describe('UserInfo', () => {
     container = document.createElement('div')
   })
 
-  const render = component => ReactDOM.render(component, container)
+  const render = (component) => ReactDOM.render(component, container)
 
   it('renders the user name', () => {
     user = { name: 'Walter White' }
