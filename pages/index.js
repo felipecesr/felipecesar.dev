@@ -1,20 +1,20 @@
-import * as S from '../styles/utils'
-
 import { getAllPosts } from '../lib/api'
 
-import { Layout } from '../layout'
+import { Layout } from '../components/Layout'
 import { Bio } from '../components/Bio'
+import { PostCard } from '../components/PostCard'
 
 const Blog = ({ posts }) => (
   <Layout>
     <Bio />
     <div>
       {posts.map((post, index) => (
-        <article key={index}>
-          <S.PostTitle>
-            <a href={post.slug}>{post.title}</a>
-          </S.PostTitle>
-        </article>
+        <PostCard
+          key={index}
+          link={post.slug}
+          text={post.title}
+          date={post.date}
+        />
       ))}
     </div>
   </Layout>
@@ -25,8 +25,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts
-    }
+      posts,
+    },
   }
 }
 
