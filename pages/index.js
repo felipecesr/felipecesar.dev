@@ -13,6 +13,7 @@ const Blog = ({ posts }) => (
           key={index}
           link={post.slug}
           text={post.title}
+          excerpt={post.excerpt}
           date={post.date}
         />
       ))}
