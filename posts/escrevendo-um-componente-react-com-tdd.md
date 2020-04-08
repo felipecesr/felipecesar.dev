@@ -6,11 +6,11 @@ date: 2020-04-02T22:51:54.849Z
 
 Como funciona o desenvolvimento guiado por testes na criação de um componente React.
 
-# Introdução
+## Introdução
 
 Nesse artigo vamos ver um passo a passo de como criar um componente React seguindo o TDD. Não vou me aprofundar muito, então é importante que você tenha algum conhecimento em React e Jest. Antes de começar a prática vamos relembrar como funciona o TDD.
 
-# Test-driven Development
+## Test-driven Development
 
 ![TDD Flow](https://miro.medium.com/max/475/1*5IFu-XBsbzobAK3UxIOq4Q.png)
 
@@ -245,6 +245,6 @@ describe('UserInfo', () => {
 })
 ```
 
-# Conclusão
+## Conclusão
 
 É isso, tentei resumir bastante para que o artigo não ficasse muito longo, espero que tenham gostado, se tiverem dúvidas ou sugestões não deixem de comentar. Abraço!
