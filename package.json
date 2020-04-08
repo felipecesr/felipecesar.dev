@@ -20,6 +20,7 @@
     "next": "^9.3.4",
     "prismjs": "^1.20.0",
     "react": "^16.9.0",
+    "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.9.0",
     "rehype-prism": "^0.1.1",
     "rehype-stringify": "^7.0.0",
