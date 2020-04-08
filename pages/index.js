@@ -1,7 +1,6 @@
 import { getAllPosts } from '../lib/api'
 
 import { Layout } from '../components/Layout'
-import { Bio } from '../components/Bio'
 import { PostCard } from '../components/PostCard'
 import { SEO } from '../components/SEO'
 import { siteMetadata } from '../lib/config'
@@ -12,7 +11,6 @@ const Blog = ({ posts }) => (
       title={`Home | ${siteMetadata.title}`}
       desc={siteMetadata.description}
     />
-    <Bio />
     <div>
       {posts.map((post, index) => (
         <PostCard

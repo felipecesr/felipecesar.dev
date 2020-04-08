@@ -4,7 +4,6 @@ import { getPostByFilename, getAllPaths } from '../lib/api'
 import markdownToHtml from '../lib/markdownToHtml'
 
 import { Layout } from '../components/Layout'
-import { Bio } from '../components/Bio'
 import { Date } from '../components/Date'
 import { PostWrapper } from '../components/Post/styles'
 import { SEO } from '../components/SEO'
@@ -16,8 +15,6 @@ const Post = ({ title, date, excerpt, content }) => (
       <h1>{title}</h1>
       <Date dateString={date} />
       <div dangerouslySetInnerHTML={{ __html: content }} />
-      <hr />
-      <Bio />
     </PostWrapper>
   </Layout>
 )
