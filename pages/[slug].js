@@ -1,44 +1,40 @@
-import React, { useEffect } from 'react'
-import ReactMarkdown from 'react-markdown'
-import Prism from 'prismjs'
+import React from 'react'
 
 import { getPostByFilename, getAllPaths } from '../lib/api'
+import markdownToHtml from '../lib/markdownToHtml'
 
-import { Layout } from '../layout'
+import { Layout } from '../components/Layout'
 import { Bio } from '../components/Bio'
-import PrismStyles from '../styles/prism'
+import { Date } from '../components/Date'
+import { PostWrapper } from '../components/Post/styles'
 
-const Post = ({ title, content }) => {
-  useEffect(() => {
-    Prism.highlightAll()
-  }, [content])
-
-  return (
-    <Layout>
-      <PrismStyles />
+const Post = ({ title, date, content }) => (
+  <Layout>
+    <PostWrapper>
       <h1>{title}</h1>
-      <ReactMarkdown source={content} />
+      <Date dateString={date} />
+      <div dangerouslySetInnerHTML={{ __html: content }} />
       <hr />
       <Bio />
-    </Layout>
-  )
-}
+    </PostWrapper>
+  </Layout>
+)
 
 export async function getStaticPaths() {
   const paths = getAllPaths()
 
   return {
     paths,
-    fallback: false
+    fallback: false,
   }
 }
 
 export async function getStaticProps({ params }) {
   const { slug } = params
+  let { title, date, content } = getPostByFilename(slug)
+  content = await markdownToHtml(content || '')
 
-  const { title, content } = getPostByFilename(slug)
-
-  return { props: { title, content } }
+  return { props: { title, date, content } }
 }
 
 export default Post

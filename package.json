@@ -14,12 +14,22 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "date-fns": "^2.11.1",
     "gray-matter": "^4.0.2",
+    "highlight.js": "^9.18.1",
     "next": "^9.3.4",
-    "prismjs": "^1.19.0",
+    "prismjs": "^1.20.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-markdown": "^4.3.1",
-    "styled-components": "^5.0.1"
+    "rehype-prism": "^0.1.1",
+    "rehype-stringify": "^7.0.0",
+    "remark-parse": "^8.0.0",
+    "remark-rehype": "^6.0.0",
+    "styled-components": "^5.0.1",
+    "unified": "^9.0.0"
+  },
+  "devDependencies": {
+    "babel-plugin-date-fns": "^2.0.0",
+    "babel-plugin-styled-components": "^1.10.7"
   }
 }
