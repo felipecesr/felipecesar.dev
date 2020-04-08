@@ -7,9 +7,11 @@ import { Layout } from '../components/Layout'
 import { Bio } from '../components/Bio'
 import { Date } from '../components/Date'
 import { PostWrapper } from '../components/Post/styles'
+import { SEO } from '../components/SEO'
 
-const Post = ({ title, date, content }) => (
+const Post = ({ title, date, excerpt, content }) => (
   <Layout>
+    <SEO title={title} desc={excerpt} />
     <PostWrapper>
       <h1>{title}</h1>
       <Date dateString={date} />
@@ -31,10 +33,10 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const { slug } = params
-  let { title, date, content } = getPostByFilename(slug)
+  let { title, date, excerpt, content } = getPostByFilename(slug)
   content = await markdownToHtml(content || '')
 
-  return { props: { title, date, content } }
+  return { props: { title, date, excerpt, content } }
 }
 
 export default Post
