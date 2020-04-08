@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import { TagManagerHead, TagManagerBody } from '../components/TagManager'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -41,8 +42,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;900&family=Montserrat:wght@900&display=swap"
             rel="stylesheet"
           />
+          <TagManagerHead />
         </Head>
         <body>
+          <TagManagerBody />
           <Main />
           <NextScript />
         </body>
