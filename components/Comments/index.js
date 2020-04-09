@@ -11,7 +11,7 @@ const Comments = ({ url, title }) => {
       <hr />
       <h2>Comentários</h2>
       <ReactDisqusComments
-        shortname="felipecesr"
+        shortname="felipecesar"
         identifier={completeUrl}
         title={title}
         url={completeUrl}
