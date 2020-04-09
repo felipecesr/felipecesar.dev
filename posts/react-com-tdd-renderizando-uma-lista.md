@@ -15,7 +15,7 @@ Ele pode ser usado em aplicações com JavaScript puro ou com frameworks, inclui
 
 Como estamos usando React, vamos instalar o pacote próprio para ele no nosso projeto.
 
-```zsh
+```shell
 npm install --save-dev @testing-library/react
 ```
 
@@ -28,7 +28,7 @@ import { render } from '@testing-library/react';
 ## Renderizando a lista
 Com o arquivo `UserList.test.js` criado, vamos escrever nosso primeiro teste.
 
-```jsx
+```javascript
 describe("UserList", () => {
   it("renders multiple users in ul element", () => {
     const users = [
@@ -48,7 +48,7 @@ Repare que o `render` do Testing Library nos permite usar o `container` de forma
 
 Lembrando que quando estamos desenvolvendo com TDD precisamos seguir todo o fluxo dele, então vamos executar nosso teste e vê-lo falhar.
 
-```
+```shell
 ● UserList › renders multiple users in ul element
 
 ReferenceError: UserList is not defined
@@ -68,7 +68,7 @@ import { UserList } from '../src/UserList';
 
 Ao retornar `null` dessa forma, deixamos de receber um erro do React e passamos a receber uma mensagem de erro mais amigável.
 
-```zsh
+```shell
 expect(received).not.toBeNull()
 
 Received: null
@@ -81,13 +81,13 @@ Received: null
 
 Vamos fazer o mínimo necessário para o teste passar.
 
-```jsx
+```javascript
 const List = () => <ul />;
 ```
 
 Ao executar o teste novamente, recebemos outro erro.
 
-```zsh
+```shell
 Expected length: 2
 Received length: 0
 Received object: []
@@ -102,7 +102,7 @@ Como temos mais de um `expect` podemos ver em qual deles o teste está falhando.
 
 Vamos usar a função `map` para renderizar todos os itens da lista.
 
-```jsx
+```javascript
 const List = ({ users }) => (
   <ul>
     {users.map(() => <div />)}
@@ -114,14 +114,14 @@ Você pode estar se perguntando por quê usei `div` ao invés de `li`, por enqua
 
 Após essa alteração o teste deve passar, mas com um aviso que não devemos ignorar.
 
-```zsh
+```shell
 console.error node_modules/react/cjs/react.development.js:175
 Warning: Each child in a list should have a unique "key" prop.
 ```
 
 Para remover esse aviso, podemos fazer o que ele diz e adicionar a `prop` nos itens da lista.
 
-```jsx
+```javascript
 <ul>
   {users.map(user => <div key={user.id} />)}
 </ul>
@@ -130,7 +130,7 @@ Para remover esse aviso, podemos fazer o que ele diz e adicionar a `prop` nos it
 ## Especificando os itens da lista
 Agora vamos preencher os itens da lista que acabamos de criar. Primeiro, vamos criar outro teste.
 
-```jsx
+```javascript
 it("renders each user in a li", () => {
   const users = [
     { id: 1, name: "Matthew Murdock" },
@@ -149,7 +149,7 @@ it("renders each user in a li", () => {
 
 Ao executá-lo devemos receber o seguinte erro.
 
-```zsh
+```shell
 Expected length: 2
 Received length: 0
 Received object: []
@@ -162,7 +162,7 @@ Received object: []
 
 Como não existe nenhum elemento `li` o teste não vai passar, vamos corrigir isso.
 
-```jsx
+```javascript
 <ul>
   {users.map(user => <li key={user.id} />)}
 </ul>
@@ -170,7 +170,7 @@ Como não existe nenhum elemento `li` o teste não vai passar, vamos corrigir is
 
 Recebemos outro erro após executar novamente o teste.
 
-```zsh
+```shell
 Expected: "Matthew Murdock"
 Received: ""
 
@@ -182,7 +182,7 @@ Received: ""
 
 Para corrigi-lo, precisamos exibir o nome do usuário no item da lista.
 
-```jsx
+```javascript
 <ul>
   {users.map(user => (
     <li key={user.id}>{user.name}</li>
@@ -201,7 +201,7 @@ O Testing Library conta com queries que podemos usar para interagir diretamente 
 
 No primeiro teste, vamos usar a query `getByRole`, com ela podemos buscar um elemento do DOM a partir de uma **ARIA role**.
 
-```jsx
+```javascript
 it("renders multiple users in list", () => {
   const users = [
     { id: 1, name: "Matthew Murdock" },
@@ -225,7 +225,7 @@ Você pode conferir a `role` de cada elemento nessa [lista](https://github.com/A
 
 No segundo teste, podemos usar a query `getByAllRole` para obter todos os itens da lista.
 
-```jsx
+```javascript
 it("renders each user in a list item", () => {
   const users = [
     { id: 1, name: "Matthew Murdock" },
@@ -243,7 +243,7 @@ it("renders each user in a list item", () => {
 
 Por fim, movemos o `array` de usuários para o topo da função `describe`, deixando o código mais limpo e sem repetições.
 
-```jsx
+```javascript
 describe("UserList", () => {
   const users = [
     { id: 1, name: "Matthew Murdock" },
