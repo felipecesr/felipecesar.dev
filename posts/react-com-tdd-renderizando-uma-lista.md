@@ -3,6 +3,8 @@ layout: default
 title: "React com TDD: Renderizando uma lista"
 date: "2020-04-05T00:24:22.838Z"
 ---
+Aprenda como criar um componente de lista em React com desenvolvimento guiado por testes.
+
 ## Introdução
 Dando continuidade ao [artigo anterior](https://dev.to/felipecesr/escrevendo-um-componente-react-com-tdd-1aaj), onde criamos o componente `UserInfo`, neste artigo vamos criar o componente `UserList` que vai receber um `array` com nomes de usuários e renderizar uma lista com cada um deles.
 
