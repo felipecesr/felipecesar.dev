@@ -23,7 +23,7 @@ O primeiro princípio do SOLID é o da responsabilidade única ou **SRP**, este 
 
 Sua definição formal diz:
 
-> Uma classe deve ter **um, e apenas um,** motivo para ser modificada.
+> Uma classe deve ter **um, e apenas um**, motivo para ser modificada.
 
 Se uma classe só deve ter um motivo para ser modificada, certamente ela só deve ter uma única responsabilidade.
 
