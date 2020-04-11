@@ -106,4 +106,47 @@ const UserListContainer = () => {
 
 ## Testando a apresentação
 
-Os próximos testes vão verificar se o componente `UserList` está sendo renderizado corretamente...
+Os próximos testes vão verificar se o componente `UserList` está será renderizado corretamente, para isso precisamos importá-lo primeiro.
+
+```javascript
+import * as UserListExports from "../src/UserList";
+```
+
+Ele está sendo importado dessa forma porque vamos criar um stub para ele (isso mesmo, também podemos fazer stubs de componentes).
+
+```javascript
+beforeEach(() => {
+  jest.spyOn(window, "fetch").mockReturnValue(users);
+  jest.spyOn(UserListExports, "UserList").mockReturnValue(null);
+});
+
+afterEach(() => {
+  window.fetch.mockRestore();
+  UserListExports.UserList.mockRestore();
+});
+```
+Feito isso, nosso próximo teste deve verificar se `UserList` está sendo iniciado corretamente.
+
+```javascript
+it("initially passes no data to UserList", () => {
+  render(<UserListContainer />);
+  expect(UserListExports.UserList).toHaveBeenCalledWith(
+    { users: [] },
+    expect.anything()
+  );
+});
+```
+Nesse caso queremos saber se `UserList` foi chamado e se ele recebeu um `array` vazio como prop, por isso usamos `toHaveBeenCalledWith`.
+
+Quando usamos toHaveBeenCalledWith podemos passar expect.anything como argumento para dizer que não nos importamos com qual é o valor dele.*
+
+Para que o teste passe precisamos importar o `UserList` dentro de `UserListContainer` e retorná-lo com o valor esperado.
+
+```javascript
+import { UserList } from './UserList';
+
+// ...
+
+return <UserList users={[]} />;
+```
+
