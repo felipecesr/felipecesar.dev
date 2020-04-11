@@ -207,7 +207,7 @@ it("displays users that are fetched on mount", async () => {
 
 > The async form of act does the same two things that the sync form does, but it also flushes the current runtime task queue. For those of you who have been doing this manually before React 16.9, this is equivalent to calling await new Promise(setTimeout).
 
-Agora o teste está passando, mas ainda tem warnings sendo exibidos. Isso acontece porque agora os testes anteriores também precisam do `act`, adicione o `act` nos outros testes.
+Agora o teste está passando, mas ainda tem warnings sendo exibidos. Isso acontece porque agora os testes anteriores também precisam do `act`.
 
 ```javascript
 it("fetches data when component is mounted", async () => {
