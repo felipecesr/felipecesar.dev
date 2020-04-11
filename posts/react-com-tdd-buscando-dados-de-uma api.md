@@ -153,8 +153,8 @@ return <UserList users={[]} />;
 Agora precisamos testar se o componente vai exibir os dados corretamente quando a requisição for concluída.
 
 ```javascript
-it("displays users that are fetched on mount", async () => {
-  await render(<UserListContainer />);
+it("displays users that are fetched on mount", () => {
+  render(<UserListContainer />);
   expect(UserListExports.UserList).toHaveBeenCalledWith(
     { users },
     expect.anything()
@@ -188,7 +188,19 @@ const UserListContainer = () => {
 
 ```
 
-Executando os testes agora, podemos ver que o teste está passando, mas mostra vários warnings dizendo que o `act` não está sendo usado corretamente.
+Executando os testes agora, podemos ver que o teste ainda não está passando e além do erro ele mostra vários warnings dizendo que o `act` não está sendo usado corretamente.
 
-Esse erro acontece porque alteramos o estado quando a requisição terminou.
+Esse warning aparece porque alteramos o estado quando a requisição terminou.
+
+```javascript
+import { render, act } from "@testing-library/react";
+
+// ...
+
+it("displays users that are fetched on mount", async () => {
+  await act(async () => render(<UserListContainer />));
+  // ...
+});
+```
+sdsd
 
