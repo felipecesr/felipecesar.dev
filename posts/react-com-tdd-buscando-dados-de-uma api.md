@@ -125,6 +125,7 @@ afterEach(() => {
   UserListExports.UserList.mockRestore();
 });
 ```
+
 Feito isso, nosso próximo teste deve verificar se `UserList` está sendo iniciado corretamente.
 
 ```javascript
@@ -136,6 +137,7 @@ it("initially passes no data to UserList", () => {
   );
 });
 ```
+
 Nesse caso queremos saber se `UserList` foi chamado e se ele recebeu um `array` vazio como prop, por isso usamos `toHaveBeenCalledWith`.
 
 Quando usamos toHaveBeenCalledWith podemos passar expect.anything como argumento para dizer que não nos importamos com qual é o valor dele.*
@@ -161,6 +163,7 @@ it("displays users that are fetched on mount", () => {
   );
 });
 ```
+
 Para fazer o teste passar precisamos importar o hook `userState` dentro do `UserListContainer` e usá-lo para armazenar os dados no estado do componente.
 
 ```javascript
@@ -185,7 +188,6 @@ const UserListContainer = () => {
 
   return <UserList users={users} />;
 };
-
 ```
 
 Executando os testes agora, podemos ver que o teste ainda não está passando e além do erro ele mostra vários warnings dizendo que o `act` não está sendo usado corretamente.
@@ -202,5 +204,7 @@ it("displays users that are fetched on mount", async () => {
   // ...
 });
 ```
-sdsd
 
+> The async form of act does the same two things that the sync form does, but it also flushes the current runtime task queue. For those of you who have been doing this manually before React 16.9, this is equivalent to calling await new Promise(setTimeout).
+
+Agora o teste está passando, mas ainda tem warnings sendo exibidos. Isso acontece porque agora os testes anteriores também precisam do `act`, adicione o `act` nos outros testes.
