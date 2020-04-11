@@ -147,7 +147,7 @@ Para que o teste passe precisamos importar o `UserList` dentro de `UserListConta
 ```javascript
 import { UserList } from './UserList';
 
-// ...
+...
 
 return <UserList users={[]} />;
 ```
@@ -197,11 +197,12 @@ Esse warning aparece porque alteramos o estado quando a requisição terminou.
 ```javascript
 import { render, act } from "@testing-library/react";
 
-// ...
+...
 
 it("displays users that are fetched on mount", async () => {
   await act(async () => render(<UserListContainer />));
-  // ...
+
+  ...
 });
 ```
 
