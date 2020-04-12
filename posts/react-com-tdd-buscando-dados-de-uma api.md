@@ -174,13 +174,14 @@ const UserListContainer = () => {
 
   useEffect(() => {
     const fetchMovies = async () => {
-      const result = await window.fetch("/tv/popular", {
+      const response = await window.fetch("/tv/popular", {
         method: "GET",
         credentials: "same-origin",
         headers: { "Content-Type": "application/json" },
       });
+      const users = await response.json();
 
-      setUsers(result);
+      setUsers(users);
     };
 
     fetchMovies();
