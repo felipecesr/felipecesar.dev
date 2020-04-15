@@ -5,13 +5,11 @@ date: 2020-04-10T19:12:13.285Z
 ---
 Componentes React normalmente contém um mix de **lógica** e **apresentação**. Quando falamos em lógica, nos referimos a qualquer parte que não seja relacionada a UI, como chamadas de API, eventos e manipulação de dados.
 
-No artigo anterior criamos o componente `UserList` que será a camada de apresentação, nesse artigo vamos criar o componente que terá a lógica responsável por fazer a requisição dos dados.
-
-Essa separação de responsabilidades é conhecida como **Container and Presentational Pattern** e será usada nesse artigo.
+No artigo anterior criamos o componente `UserList` que será a camada de apresentação, nesse artigo vamos criar o componente que terá a lógica responsável por fazer a requisição dos dados. Essa separação de responsabilidades é conhecida como **Container and Presentational Pattern**.
 
 ## Iniciando o desenvolvimento
 
-Antes de iniciar o desenvolvimento vamos instalar o `whatwg-fetch` que é um polyfill que vai nos permitir usar o `fetch` dentro do Jest.
+Antes de iniciar o desenvolvimento vamos instalar o `whatwg-fetch` que é um polyfill da api `fetch`, vamos precisar dele nos nossos testes.
 
 ```shell
 npm i whatwg-fetch
@@ -40,13 +38,12 @@ describe("UserListContainer", () => {
 });
 ```
 
-Antes de seguir em frente vou explicar o que está algumas coisas sobre esse código.
+Antes de seguir em frente vamos entender esse código.
 
-* beforeEach e AfterEach são funções que serão executadas antes e depois de cada teste.
-* Usamos o jest.spyOn para criar um stub no window.fetch, um stub é um dublê de teste que sempre retorna o mesmo valor quando é chamado.
-* mockRestore restaura o fetch ao que era antes
-
-  > Dublês de teste são objetos que atuam no lugar de outros objetos
+* `beforeEach` e `AfterEach` são funções que serão executadas antes e depois de cada teste.
+* Usamos o `jest.spyOn` para criar um `stub`, um `stub` é um dublê de teste que sempre retorna o mesmo valor quando é chamado.
+* Dublês de teste são objetos que atuam no lugar de outros objetos, nesse caso um objeto vai atuar como o `fetch`.
+* `mockRestore` restaura o `fetch` original.
 
 Agora podemos escrever nosso primeiro teste:
 
@@ -64,9 +61,9 @@ it("fetches data when component is mounted", () => {
 });
 ```
 
-No teste usamos o método `toHaveBeenCalledWith` para verificar se o `fetch` foi chamado quando montamos o componente.
+Nesse teste montamos o componente e verificamos se o `fetch` foi chamado com os parâmetros corretos usando `toHaveBeenCalledWith`.
 
-Se executarmos o teste agora, ele vai retornar uma mensagem de erro "Cannot find module" porque ainda não criamos o arquivo com o Container. Então vamos criar o arquivo `src/UserListContainer.js` retornando null por enquanto.
+Se executarmos o teste agora, ele vai retornar uma mensagem de erro "Cannot find module" porque ainda não criamos o arquivo com o componente. Então vamos criar o arquivo `src/UserListContainer.js` retornando null por enquanto.
 
 ```javascript
 const UserListContainer = () => null;
@@ -82,7 +79,7 @@ Expected: "/tv/popular", ...
 Number of calls: 0
 ```
 
-Para fazer o teste passar precisamos importar o hook `useEffect` para fazer a requisição quando o componente for iniciado.*
+Para fazer o teste passar precisamos importar o hook `useEffect` e fazer a requisição quando o componente for iniciado.
 
 ```javascript
 import React, { useEffect } from "react";
@@ -112,7 +109,7 @@ Os próximos testes vão verificar se o componente `UserList` está será render
 import * as UserListExports from "../src/UserList";
 ```
 
-Ele está sendo importado dessa forma porque vamos criar um stub para ele (isso mesmo, também podemos fazer stubs de componentes).
+Ele está sendo importado dessa forma porque vamos criar um stub para o `UserList` (isso mesmo, também podemos fazer stubs de componentes).
 
 ```javascript
 beforeEach(() => {
@@ -126,7 +123,7 @@ afterEach(() => {
 });
 ```
 
-Feito isso, nosso próximo teste deve verificar se `UserList` está sendo iniciado corretamente.
+Feito isso, nosso próximo teste deve verificar se `UserList` está sendo chamado e se recebe a `prop` users com um `array` vazio.
 
 ```javascript
 it("initially passes no data to UserList", () => {
@@ -138,21 +135,22 @@ it("initially passes no data to UserList", () => {
 });
 ```
 
-Nesse caso queremos saber se `UserList` foi chamado e se ele recebeu um `array` vazio como prop, por isso usamos `toHaveBeenCalledWith`.
-
-Quando usamos toHaveBeenCalledWith podemos passar expect.anything como argumento para dizer que não nos importamos com qual é o valor dele.*
+No `toHaveBeenCalledWith` podemos usar `expect.anything` quando o valor do argumento pode ser qualquer coisa, contanto que não seja `null` ou `undefined`.
 
 Para que o teste passe precisamos importar o `UserList` dentro de `UserListContainer` e retorná-lo com o valor esperado.
 
 ```javascript
 import { UserList } from './UserList';
 
-...
+const UserListContainer = () => {
 
-return <UserList users={[]} />;
+  ...
+
+  return <UserList users={[]} />;
+};
 ```
 
-Agora precisamos testar se o componente vai exibir os dados corretamente quando a requisição for concluída.
+Feito isso, precisamos criar um teste que vai verificar se o componente exibe os dados corretamente quando a requisição for concluída.
 
 ```javascript
 it("displays users that are fetched on mount", () => {
@@ -164,7 +162,7 @@ it("displays users that are fetched on mount", () => {
 });
 ```
 
-Para fazer o teste passar precisamos importar o hook `userState` dentro do `UserListContainer` e usá-lo para armazenar os dados no estado do componente.
+Para o teste passar precisamos importar o hook `userState` dentro do `UserListContainer` e usá-lo para armazenar os dados no estado do componente.
 
 ```javascript
 import React, { useEffect, useState } from "react";
@@ -191,9 +189,7 @@ const UserListContainer = () => {
 };
 ```
 
-Executando os testes agora, podemos ver que o teste ainda não está passando e além do erro ele mostra vários warnings dizendo que o `act` não está sendo usado corretamente.
-
-Esse warning aparece porque alteramos o estado quando a requisição terminou.
+Executando os testes agora, podemos ver que o teste ainda não está passando e além do erro ele mostra vários avisos dizendo que o `act` não está sendo usado corretamente, como alteramos o estado do componente após a requisição precisamos usa o `act`.
 
 ```javascript
 import { render, act } from "@testing-library/react";
@@ -206,8 +202,6 @@ it("displays users that are fetched on mount", async () => {
   ...
 });
 ```
-
-> The async form of act does the same two things that the sync form does, but it also flushes the current runtime task queue. For those of you who have been doing this manually before React 16.9, this is equivalent to calling await new Promise(setTimeout).
 
 Agora o teste está passando, mas ainda tem warnings sendo exibidos. Isso acontece porque agora os testes anteriores também precisam do `act`.
 
