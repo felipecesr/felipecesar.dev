@@ -547,4 +547,20 @@ export const PostWrapper = styled.section`
     margin-bottom: 1.75rem;
     margin-top: -1.75rem;
   }
+
+  .mdx-marker {
+    width: 100%;
+    display: block;
+    margin-right: -1em;
+    margin-left: -0.5em;
+    padding-right: 1em;
+    padding-left: 0.25em;
+    border-left: 0.25em solid #007acc;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 122, 204, 0.39),
+      rgba(0, 122, 204, 0.39) 61%,
+      #2d2d2d
+    ) !important;
+  }
 `
