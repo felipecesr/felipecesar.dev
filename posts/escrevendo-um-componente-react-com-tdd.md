@@ -49,7 +49,7 @@ Você pode ler as descrições das funções `describe` e `it` como uma única f
 
 Dentro do bloco `it` vamos criar uma `const` chamada `user` com um atributo `name` que armazena o nome do usuário. Depois criamos outra `const` chamada `component` que armazena o componente `UserInfo` com a prop `name`.
 
-```javascript
+```jsx
 const user = { name: 'Walter White' }
 const component = <UserInfo name={user.name} />
 ```
@@ -74,7 +74,7 @@ expect(container.textContent).toMatch('Walter White')
 
 Quando executarmos o teste ele vai dar o seguinte erro:
 
-```
+```shell
 ReferenceError: UserInfo is not defined
    5 |   it('renders the user name', () => {
    6 |     const user = { name: 'Walter White' };
@@ -126,7 +126,7 @@ it('renders another user name', () => {
 
 Ao executar novamente nosso teste, vemos que ele volta a falhar, mas com um erro diferente dessa vez:
 
-```zsh
+```
 ● UserInfo › renders another user name
 
   expect(received).toMatch(expected)
@@ -159,7 +159,7 @@ Essa é a hora em que devemos resistir a tentação de passar para o próximo co
 
 Se reparamos bem no nosso arquivo `UserInfo.test.js`, podemos ver claramente que alguns itens se repetem e isso não é uma boa prática.
 
-```javascript
+```jsx{3,4,5,6,12,13,14,15}
 describe('UserInfo', () => {
   it('renders the user name', () => {
     const user = { name: 'Walter White' }
