@@ -152,10 +152,12 @@ const UserListContainer = () => {
 
 Feito isso, precisamos criar um teste que vai verificar se o componente exibe os dados corretamente quando a requisição for concluída.
 
+Quando recebemos os dados da requisição queremos mostrá-los, nesse caso UserListContainer será renderizado duas vezes, uma com um array vazio e outra com os usuários. Por isso vamos usar `toHaveBeenLastCalledWith` nesse caso.
+
 ```javascript
 it("displays users that are fetched on mount", () => {
   render(<UserListContainer />);
-  expect(UserListExports.UserList).toHaveBeenCalledWith(
+  expect(UserListExports.UserList).toHaveBeenLastCalledWith(
     { users },
     expect.anything()
   );
