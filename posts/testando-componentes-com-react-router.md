@@ -74,4 +74,4 @@ function render (ui, {route, ...renderOptions} = {}) {
   return rtlRender({ui}, {wrapper: Wrapper, ...renderOptions})
 }
 ```
-Dessa forma não precisamos mais passar o Router como primeiro argumento sempre que o render for chamado
+Dessa forma não precisamos mais passar o Router como primeiro argumento sempre que o render for chamado. Quando o rerender for chamado ele não vai rerenderizar o Wrapper, só rerenderiza o children.
