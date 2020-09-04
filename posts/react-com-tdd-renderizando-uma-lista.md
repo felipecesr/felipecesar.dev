@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "React com TDD: Renderizando uma lista"
-date: "2020-04-05T00:24:22.838Z"
+date: 2020-04-05T00:24:22.838Z
 ---
 Aprenda como criar um componente de lista em React com desenvolvimento guiado por testes.
 
@@ -228,7 +228,7 @@ Como isso torna nosso código mais próximo da forma que o usuário interage com
 
 Podemos pensar que estamos dizendo para o usuário checar se uma existe uma lista e se ela tem dois itens, independente de ser um `ul` ou `ol`, não precisamos desses detalhes de implementação no teste.
 
-Você pode conferir a `role` de cada elemento nessa [lista](https://github.com/A11yance/aria-query#elements-to-roles).
+Você pode conferir a `role` de cada elemento nessa [lista](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles).
 
 No segundo teste, podemos usar a query `getByAllRole` para obter todos os itens da lista.
 
