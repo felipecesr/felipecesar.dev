@@ -47,7 +47,7 @@ test('binaryGap throws an error for negative number', () => {
 })
 
 test('binaryGap throws an error for string', () => {
-    expect(binaryGap(-10)).toThrowError(/you must use a positive integer number/)
+    expect(binaryGap('2')).toThrowError(/you must use a positive integer number/)
 })
 
 Conclusão
