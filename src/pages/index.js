@@ -1,3 +1,4 @@
+import { NextSeo } from "next-seo";
 import { getAllPosts } from "lib/api";
 
 import Header from "components/Header";
@@ -9,6 +10,7 @@ import Footer from "components/Footer";
 export default function Index({ allPosts }) {
   return (
     <>
+      <NextSeo title="Felipe Cesar" />
       <Header />
       <Main>
         <Title>Neue Posts</Title>
