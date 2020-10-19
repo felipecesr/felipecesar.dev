@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import media from "styled-media-query";
 
+import { Container } from "styles/utils";
+
 export const Header = styled.header`
   background-color: #ebedf2;
   display: flex;
@@ -30,13 +32,13 @@ export const SkipLink = styled.a`
   }
 `;
 
-export const Wrapper = styled.div`
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 6rem 1.5rem;
+export const Wrapper = styled(Container)`
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 
   ${media.greaterThan("medium")`
-    padding: 13rem 2rem;
+    padding-top: 13rem;
+    padding-bottom: 13rem;
   `}
 `;
 
