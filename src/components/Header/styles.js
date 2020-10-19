@@ -4,7 +4,7 @@ import media from "styled-media-query";
 import { Container } from "styles/utils";
 
 export const Header = styled.header`
-  background-color: #ebedf2;
+  background-color: #111216;
   display: flex;
   align-items: center;
 `;

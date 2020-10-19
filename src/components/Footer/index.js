@@ -5,6 +5,7 @@ export default function Footer() {
 
   return (
     <S.Footer>
+      <S.Gradient />
       <S.Wrapper>© {year} - Felipe Cesar</S.Wrapper>
     </S.Footer>
   );
