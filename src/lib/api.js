@@ -26,7 +26,7 @@ export function getPostBySlug(slug) {
   });
 
   return {
-    slug: slug.slice(11).replace(".md", ""),
+    slug: realSlug,
     title: data.title,
     date: new Date(data.date).toISOString(),
     excerpt,
