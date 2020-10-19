@@ -3,7 +3,7 @@ import { getAllPosts } from "lib/api";
 import Header from "components/Header";
 import Main from "components/Main";
 import Title from "components/Title";
-import Card from "components/Card";
+import List from "components/List";
 import Footer from "components/Footer";
 
 export default function Index({ allPosts }) {
@@ -12,13 +12,7 @@ export default function Index({ allPosts }) {
       <Header />
       <Main>
         <Title>Neue Posts</Title>
-        <ul>
-          {allPosts.map((post, index) => (
-            <li key={index}>
-              <Card {...post} />
-            </li>
-          ))}
-        </ul>
+        <List items={allPosts} />
       </Main>
       <Footer />
     </>
@@ -26,7 +20,7 @@ export default function Index({ allPosts }) {
 }
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts(["title", "slug", "excerpt", "date"]);
+  const allPosts = getAllPosts();
 
   return {
     props: { allPosts },
