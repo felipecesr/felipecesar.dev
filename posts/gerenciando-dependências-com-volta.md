@@ -3,7 +3,7 @@ layout: default
 title: Gerenciando dependências com Volta
 date: 2020-10-19T02:28:22.573Z
 ---
-Neste post vou falar um pouco sobre o que é o [Volta](https://volta.sh/) e por quê troquei o [NVM](http://nvm.sh/) por ele.
+Neste post vou falar um pouco sobre o que é o [Volta](https://volta.sh/) e porque deixei de usar o [NVM](http://nvm.sh/).
 
 ## O que é o Volta
 
@@ -40,19 +40,20 @@ Ele vai adicionar as versões salvas em um objeto no package.json.
   "yarn": "1.22.10"
 }
 ```
+Caso você não tenha alguma dessas versões instaladas, ele baixa automaticamente.
 
 ## Por quê deixei de usar o NVM?
 
 Quando ouvi falar sobre o Volta pela primeira vez, a primeira coisa que pensei foi: Não preciso disso, já uso o NVM.
 
-Mesmo assim resolvi dar uma olhada e vi que não era a mesma coisa, com o NVM eu conseguia gerenciar versões do Node, com o Volta eu posso fazer isso com qualquer ferramenta.
+Mesmo assim resolvi dar uma olhada e logo percebi que estava enganado, com o NVM eu conseguia gerenciar versões do Node, com o Volta eu posso fazer isso com qualquer ferramenta.
 
 Além disso, tinham alguns pontos que me incomodavam no NVM:
 
-* Sempre precisava trocar as versões de forma manual, para automatizar isso é necessário configurar o shell para fazer isso.
-* Sempre que abria o terminal em um projeto que tinha o arquivo `.nvmrc` demorava muito para trocar a versão.
+* Sempre precisava trocar as versões de forma manual, para automatizar isso era necessário adicionar um arquivo `.nvmrc` e fazer algumas configurações.
+* Tinha uma certa demora para trocar a versão.
 
-Com o Volta não é necessário nenhuma configuração e esse mudança é extremamente rápida.
+Com o Volta essa troca de versão é extremamente rápida e não é necessário nenhuma configuração adicional, ele já faz isso automaticamente.
 
 ## Conclusão
 
