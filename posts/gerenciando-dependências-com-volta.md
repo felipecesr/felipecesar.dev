@@ -57,4 +57,4 @@ Com o Volta essa troca de versão é extremamente rápida e não é necessário 
 
 ## Conclusão
 
-Caso você tenha ouvido falar e tenha pensado da mesma forma que eu pensei no início, não deixe de testar.
+Este post foi uma breve introdução ao Volta e algumas vantagens que vi em relação ao NVM, se você viu outras vantagens, ou desvantagens não deixe de comentar. Abraço!
