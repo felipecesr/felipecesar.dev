@@ -49,25 +49,24 @@ export default styled(Container)`
   p,
   li {
     letter-spacing: -0.003em;
-    --baseline-multiplier: 0.179;
-    --x-height-multiplier: 0.35;
     font-size: 21px;
     line-height: 1.58;
+  }
 
-    pre {
-      padding: 0.2rem 0.5rem;
-      margin: 0.5rem 0;
-    }
+  ul,
+  ol {
+    margin-left: 1.45rem;
+    margin-bottom: 1.45rem;
+  }
+
+  li {
+    position: relative;
+    padding-bottom: 15px;
   }
 
   blockquote {
     margin-left: 0;
     padding-left: 1.45rem;
     border-left: 2px solid #fff;
-
-    p {
-      font-size: 19px;
-      font-style: italic;
-    }
   }
 `;
