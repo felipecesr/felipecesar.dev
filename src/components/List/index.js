@@ -8,9 +8,7 @@ export default function List({ items }) {
         <S.ListItem key={index}>
           <S.Date>{item.date}</S.Date>
           <Link href={item.slug}>
-            <a>
-              <S.Title>{item.title}</S.Title>
-            </a>
+            <a>{item.title}</a>
           </Link>
         </S.ListItem>
       ))}

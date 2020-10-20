@@ -16,23 +16,23 @@ export const ListItem = styled.li`
   }
 
   a {
+    display: block;
+    font-size: 1.777rem;
+    font-weight: 600;
     text-decoration: none;
 
     &:hover {
       text-decoration: underline;
     }
+
+    ${media.greaterThan("medium")`
+      font-size: 2.369rem;
+    `}
   }
 `;
 
 export const Date = styled.p`
   color: #595c62;
   font-family: "Source Code Pro", monospace;
-`;
-
-export const Title = styled.h3`
-  font-size: 1.777rem;
-
-  ${media.greaterThan("medium")`
-    font-size: 2.369rem;
-  `}
+  font-weight: 600;
 `;

@@ -1,6 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
+import { formatDate } from "utils";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
@@ -28,7 +29,7 @@ export function getPostBySlug(slug) {
   return {
     slug: realSlug,
     title: data.title,
-    date: new Date(data.date).toISOString(),
+    date: formatDate(new Date(data.date).toISOString()),
     excerpt,
     content,
   };

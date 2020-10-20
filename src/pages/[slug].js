@@ -11,8 +11,10 @@ import Comments from "components/Comments";
 import Container from "components/Container";
 
 const Headline = styled.p`
-  color: #eee;
+  font-family: "Source Code Pro", monospace;
   font-size: 1.25rem;
+  font-weight: 600;
+  opacity: 0.5;
 
   a {
     font-style: normal;
