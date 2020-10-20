@@ -1,4 +1,4 @@
-import { Wrapper } from "styles/utils";
+import Wrapper from "components/Wrapper";
 
 export default function Main({ children }) {
   return (

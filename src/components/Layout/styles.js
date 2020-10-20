@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container } from "styles/utils";
+import Container from "components/Container";
 
 export const SkipLink = styled.a`
   border: 0;

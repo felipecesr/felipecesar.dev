@@ -8,7 +8,7 @@ import markdownToHtml from "lib/markdownToHtml";
 import Hero from "components/Hero";
 import Content from "components/Content";
 import Comments from "components/Comments";
-import { Container } from "styles/utils";
+import Container from "components/Container";
 
 const Headline = styled.p`
   color: #eee;

@@ -6,7 +6,7 @@ import Hero from "components/Hero";
 import Main from "components/Main";
 import Title from "components/Title";
 import List from "components/List";
-import { Container } from "styles/utils";
+import Container from "components/Container";
 import { getAllPosts } from "lib/api";
 
 const HeroInner = styled(Container)`
