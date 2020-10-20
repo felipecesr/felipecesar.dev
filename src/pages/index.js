@@ -52,12 +52,12 @@ export default function Index({ allPosts }) {
       <NextSeo title="Felipe Cesar" />
       <Hero>
         <HeroInner>
-          <h1>Felipe Cesar</h1>
-          <HeroText>Hey, ich bin Arya.</HeroText>
+          <h1>Felipe César</h1>
+          <HeroText>Olá!</HeroText>
           <HeroText>
-            Ich bin eine in Winterfell lebende Frontend Entwicklerin, die
-            versucht Leute mit dem spitzen Ende abzustechen. Vorher war ich
-            ahnungslos, hatte aber die Ehre Jaqen H'ghar zu treffen.
+            Meu nome é Felipe César. Sou Desenvolvedor Frontend, fiz esse blog
+            para compartilhar conhecimentos sobre assuntos estou estudando ou
+            que considero importantes.
           </HeroText>
           <Social>
             <li>
@@ -73,7 +73,7 @@ export default function Index({ allPosts }) {
         </HeroInner>
       </Hero>
       <Main>
-        <Title>Neue Posts</Title>
+        <Title>Últimos posts</Title>
         <List items={allPosts} />
       </Main>
     </>

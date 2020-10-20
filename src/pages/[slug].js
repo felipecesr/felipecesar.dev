@@ -40,7 +40,7 @@ export default function Post({ slug, title, date, excerpt, content }) {
         <HeroInner>
           <Nav>
             <Link href="/">
-              <a aria-label="Back to Home">Felipe Cesar</a>
+              <a aria-label="Back to Home">Felipe César</a>
             </Link>
           </Nav>
           <Headline>{date}</Headline>
