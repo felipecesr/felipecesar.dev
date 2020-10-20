@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components";
+import fonts from "styles/fonts";
 
 const GlobalStyles = createGlobalStyle`
+  ${fonts}
+
   * {
     margin: 0;
     padding: 0;
@@ -14,14 +17,22 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    color: #fff;
     background-color: #1D2128;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    color: #fff;
+    font-family: 'Lora', Georgia, serif;
   }
 
-  a {
-    transition: all 0.4s ease-in-out 0s;
+  a,
+  a:focus,
+  a:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  img {
+    border: none;
+    max-width: 100%;
+    vertical-align: middle;
   }
 `;
 

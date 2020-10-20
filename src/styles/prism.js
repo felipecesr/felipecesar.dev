@@ -6,8 +6,7 @@ const prism = css`
   pre[class*="language-"] {
     color: #ccc;
     background: none;
-    font-family: "Operator Mono", Consolas, Menlo, Monaco, source-code-pro,
-      "Courier New", monospace;
+    font-family: "Source Code Pro", Consolas, Menlo, Monaco, monospace;
     font-size: 14px;
     line-height: 1.375;
     direction: ltr;

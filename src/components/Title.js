@@ -4,6 +4,7 @@ import media from "styled-media-query";
 export default styled.h2`
   font-style: italic;
   font-size: 1.4444rem;
+  font-weight: 400;
   position: relative;
   margin-top: 4rem;
 

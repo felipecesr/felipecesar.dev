@@ -10,6 +10,7 @@ export const SkipLink = styled.a`
   padding: 0;
   overflow: hidden;
   position: absolute;
+  transition: all 0.4s ease-in-out 0s;
 
   &:focus {
     padding: 1rem;

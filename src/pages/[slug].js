@@ -11,9 +11,6 @@ import Comments from "components/Comments";
 import { Container } from "styles/utils";
 
 const Headline = styled.p`
-  font-family: "Source Sans Pro", -apple-system, "BlinkMacSystemFont",
-    "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
   color: #eee;
   font-size: 1.25rem;
 
@@ -30,7 +27,7 @@ export const HeroInner = styled(Container)`
 
 export const Nav = styled.nav`
   display: block;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 `;
 
 export default function Post({ slug, title, date, excerpt, content }) {
@@ -39,7 +36,7 @@ export default function Post({ slug, title, date, excerpt, content }) {
       <NextSeo title={title} description={excerpt} />
       <Hero>
         <HeroInner>
-          <Nav class="css-wbe2ly e12mfo420">
+          <Nav>
             <Link href="/">
               <a aria-label="Back to Home">Felipe Cesar</a>
             </Link>

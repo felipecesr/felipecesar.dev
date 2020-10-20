@@ -13,8 +13,8 @@ export default styled.div`
   h4,
   h5,
   h6 {
-    line-height: 1.1;
     margin-bottom: 1.45rem;
+    line-height: 1.1;
   }
 
   h1 {
@@ -47,7 +47,6 @@ export default styled.div`
 
   p,
   li {
-    letter-spacing: -0.003em;
     font-size: 21px;
     line-height: 1.58;
   }
