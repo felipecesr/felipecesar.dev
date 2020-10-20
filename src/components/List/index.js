@@ -6,9 +6,9 @@ export default function List({ items }) {
     <S.List>
       {items.map((item, index) => (
         <S.ListItem key={index}>
+          <S.Date>{item.date}</S.Date>
           <Link href={item.slug}>
             <a>
-              <S.Date>{item.date}</S.Date>
               <S.Title>{item.title}</S.Title>
             </a>
           </Link>

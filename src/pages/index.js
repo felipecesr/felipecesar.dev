@@ -7,6 +7,7 @@ import Main from "components/Main";
 import Title from "components/Title";
 import List from "components/List";
 import Container from "components/Container";
+import Social from "components/Social";
 import { getAllPosts } from "lib/api";
 
 const HeroInner = styled(Container)`
@@ -45,24 +46,6 @@ const HeroText = styled.p`
   `}
 `;
 
-const Social = styled.ul`
-  display: flex;
-  list-style-type: none;
-  margin-top: 2rem;
-
-  li {
-    font-size: 1.2rem;
-
-    & + li {
-      margin-left: 1.75rem;
-    }
-
-    ${media.greaterThan("medium")`
-      font-size: 1.333rem;
-    `}
-  }
-`;
-
 export default function Index({ allPosts }) {
   return (
     <>
@@ -78,10 +61,10 @@ export default function Index({ allPosts }) {
           </HeroText>
           <Social>
             <li>
-              <a href="/">Github</a>
+              <a href="/">Twitter</a>
             </li>
             <li>
-              <a href="/">Twitter</a>
+              <a href="/">Github</a>
             </li>
             <li>
               <a href="/">Linkedin</a>
