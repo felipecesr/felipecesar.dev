@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 import Container from "components/Container";
 
 export const SkipLink = styled.a`
@@ -28,6 +29,9 @@ export const SkipLink = styled.a`
 export const Footer = styled.footer`
   position: relative;
   padding-top: 6rem;
+  padding-bottom: 2rem;
+  font-family: "Source Code Pro", monospace;
+  text-align: center;
 
   &::before {
     content: "";
@@ -43,9 +47,61 @@ export const Footer = styled.footer`
       rgba(66, 81, 98, 0.36) 100%
     );
   }
+
+  ${media.greaterThan("medium")`
+    padding-bottom: 80px;
+  `}
 `;
 
 export const Wrapper = styled(Container)`
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  ${media.greaterThan("medium")`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
+  `}
+`;
+
+export const Copy = styled.p`
+  margin-bottom: 100px;
+  opacity: 0.5;
+
+  ${media.greaterThan("medium")`
+    margin-bottom: 0;
+  `}
+`;
+
+export const Social = styled.ul`
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+  li {
+    width: 40px;
+    height: 40px;
+    padding: 0.7em;
+
+    ${media.greaterThan("medium")`
+      padding-right: 0;
+      padding-left: 1.4em;
+    `}
+  }
+
+  a {
+    display: block;
+    opacity: 0.5;
+    transition: opacity 0.3s ease 0s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+  }
 `;
