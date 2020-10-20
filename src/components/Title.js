@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import media from "styled-media-query";
 
-export const Title = styled.h2`
+export default styled.h2`
   font-style: italic;
   font-size: 1.4444rem;
   position: relative;

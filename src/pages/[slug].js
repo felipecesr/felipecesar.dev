@@ -1,12 +1,13 @@
 import { NextSeo } from "next-seo";
+import Link from "next/link";
 import styled from "styled-components";
 
 import { getPostBySlug, getPostSlugs } from "lib/api";
 import markdownToHtml from "lib/markdownToHtml";
 
 import Hero from "components/Hero";
-import Main from "components/Main";
 import Content from "components/Content";
+import Comments from "components/Comments";
 import { Container } from "styles/utils";
 
 const Headline = styled.p`
@@ -22,19 +23,37 @@ const Headline = styled.p`
   }
 `;
 
-export default function Post({ title, date, excerpt, content }) {
+export const HeroInner = styled(Container)`
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+`;
+
+export const Nav = styled.nav`
+  display: block;
+  padding-bottom: 2rem;
+`;
+
+export default function Post({ slug, title, date, excerpt, content }) {
   return (
     <>
       <NextSeo title={title} description={excerpt} />
       <Hero>
-        <Container>
+        <HeroInner>
+          <Nav class="css-wbe2ly e12mfo420">
+            <Link href="/">
+              <a aria-label="Back to Home">Felipe Cesar</a>
+            </Link>
+          </Nav>
           <Headline>{date}</Headline>
           <h1>{title}</h1>
-        </Container>
+        </HeroInner>
       </Hero>
-      <main id="main">
-        <Content dangerouslySetInnerHTML={{ __html: content }} />
-      </main>
+      <Container>
+        <main id="main">
+          <Content dangerouslySetInnerHTML={{ __html: content }} />
+        </main>
+        <Comments url={slug} title={title} />
+      </Container>
     </>
   );
 }
@@ -53,5 +72,5 @@ export async function getStaticProps({ params }) {
   let { title, date, content, excerpt } = getPostBySlug(slug);
   content = await markdownToHtml(content);
 
-  return { props: { title, date, content, excerpt } };
+  return { props: { slug, title, date, content, excerpt } };
 }

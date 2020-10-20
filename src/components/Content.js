@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import prism from "styles/prism";
-import { Container } from "styles/utils";
 
-export default styled(Container)`
+export default styled.div`
   ${prism}
 
   padding-top: 6rem;

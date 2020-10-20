@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import media from "styled-media-query";
 
-export const Hero = styled.header`
+export default styled.header`
   background-color: #111216;
   display: flex;
   align-items: center;
