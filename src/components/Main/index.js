@@ -1,9 +1,9 @@
-import * as S from "./styles";
+import { Wrapper } from "styles/utils";
 
 export default function Main({ children }) {
   return (
     <main id="main">
-      <S.Wrapper>{children}</S.Wrapper>
+      <Wrapper>{children}</Wrapper>
     </main>
   );
 }

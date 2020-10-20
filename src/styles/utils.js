@@ -12,3 +12,8 @@ export const Container = styled.div`
     padding-left: 2rem;
   `}
 `;
+
+export const Wrapper = styled(Container)`
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+`;
