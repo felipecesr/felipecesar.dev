@@ -5,7 +5,6 @@ import Header from "components/Header";
 import Main from "components/Main";
 import Title from "components/Title";
 import List from "components/List";
-import Footer from "components/Footer";
 
 export default function Index({ allPosts }) {
   return (
@@ -16,7 +15,6 @@ export default function Index({ allPosts }) {
         <Title>Neue Posts</Title>
         <List items={allPosts} />
       </Main>
-      <Footer />
     </>
   );
 }
