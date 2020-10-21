@@ -35,7 +35,11 @@ export const Nav = styled.nav`
 export default function Post({ slug, title, date, excerpt, content }) {
   return (
     <>
-      <NextSeo title={title} description={excerpt} />
+      <NextSeo
+        title={title}
+        titleTemplate="%s | Felipe César"
+        description={excerpt}
+      />
       <Hero>
         <HeroInner>
           <Nav>
