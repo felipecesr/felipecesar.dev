@@ -1,5 +1,5 @@
 import unified from "unified";
-import markdown from "remark-parse";
+import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 const slug = require("remark-slug");
 const headings = require("remark-autolink-headings");
@@ -8,7 +8,7 @@ import mdxPrism from "mdx-prism";
 
 export default async function markdownToHtml(markdown = "") {
   const result = await unified()
-    .use(markdown)
+    .use(remarkParse)
     .use(slug)
     .use(headings)
     .use(remarkRehype)
