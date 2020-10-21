@@ -1,4 +1,3 @@
-import { NextSeo } from "next-seo";
 import styled from "styled-components";
 import media from "styled-media-query";
 
@@ -49,7 +48,6 @@ const HeroText = styled.p`
 export default function Index({ allPosts }) {
   return (
     <>
-      <NextSeo title="Felipe Cesar" />
       <Hero>
         <HeroInner>
           <h1>Felipe César</h1>
@@ -61,13 +59,31 @@ export default function Index({ allPosts }) {
           </HeroText>
           <Social>
             <li>
-              <a href="/">Twitter</a>
+              <a
+                href="https://twitter.com/felipecesr"
+                target="_blank"
+                rel="noopener"
+              >
+                Twitter
+              </a>
             </li>
             <li>
-              <a href="/">Github</a>
+              <a
+                href="https://github.com/felipecesr"
+                target="_blank"
+                rel="noopener"
+              >
+                Github
+              </a>
             </li>
             <li>
-              <a href="/">Linkedin</a>
+              <a
+                href="https://www.linkedin.com/in/felipecesr"
+                target="_blank"
+                rel="noopener"
+              >
+                Linkedin
+              </a>
             </li>
           </Social>
         </HeroInner>

@@ -14,7 +14,11 @@ export default function Layout({ children }) {
           <S.Copy>© {year} - Felipe Cesar</S.Copy>
           <S.Social>
             <li>
-              <a href="">
+              <a
+                href="https://twitter.com/felipecesr"
+                target="_blank"
+                rel="noopener"
+              >
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -32,7 +36,11 @@ export default function Layout({ children }) {
               </a>
             </li>
             <li>
-              <a href="/">
+              <a
+                href="https://github.com/felipecesr"
+                target="_blank"
+                rel="noopener"
+              >
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -50,7 +58,11 @@ export default function Layout({ children }) {
               </a>
             </li>
             <li>
-              <a href="/">
+              <a
+                href="https://www.linkedin.com/in/felipecesr"
+                target="_blank"
+                rel="noopener"
+              >
                 <svg
                   aria-hidden="true"
                   focusable="false"
