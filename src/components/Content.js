@@ -13,8 +13,26 @@ export default styled.div`
   h4,
   h5,
   h6 {
+    position: relative;
     margin-bottom: 1.45rem;
     line-height: 1.1;
+    vertical-align: middle;
+
+    > a {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url("/images/link.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.5;
+      margin-left: 10px;
+      vertical-align: middle;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   h1 {

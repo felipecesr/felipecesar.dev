@@ -22,6 +22,10 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Lora', Georgia, serif;
   }
 
+  a {
+    transition: opacity 0.3s ease 0s;
+  }
+
   a,
   a:focus,
   a:hover {

@@ -11,7 +11,6 @@ export default styled.ul`
   a {
     opacity: 0.5;
     text-decoration: none;
-    transition: opacity 0.3s ease 0s;
 
     &:hover {
       opacity: 1;
