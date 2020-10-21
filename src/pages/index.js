@@ -13,6 +13,18 @@ const HeroInner = styled(Container)`
   padding-top: 6rem;
   padding-bottom: 6rem;
 
+  ul {
+    margin-top: 2rem;
+  }
+
+  li {
+    font-size: 1.2rem;
+
+    ${media.greaterThan("medium")`
+      font-size: 1.333rem;
+    `}
+  }
+
   ${media.greaterThan("medium")`
     padding-top: 8rem;
     padding-bottom: 8rem;
@@ -57,35 +69,7 @@ export default function Index({ allPosts }) {
             para compartilhar conhecimentos sobre assuntos estou estudando ou
             que considero importantes.
           </HeroText>
-          <Social>
-            <li>
-              <a
-                href="https://twitter.com/felipecesr"
-                target="_blank"
-                rel="noopener"
-              >
-                Twitter
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/felipecesr"
-                target="_blank"
-                rel="noopener"
-              >
-                Github
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/felipecesr"
-                target="_blank"
-                rel="noopener"
-              >
-                Linkedin
-              </a>
-            </li>
-          </Social>
+          <Social />
         </HeroInner>
       </Hero>
       <Main>
