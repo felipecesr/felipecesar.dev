@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-import Container from "components/Container";
 
 export const SkipLink = styled.a`
   border: 0;
@@ -18,7 +17,7 @@ export const SkipLink = styled.a`
     position: fixed;
     top: 10px;
     left: 10px;
-    background: #fff;
+    background: #000;
     z-index: 1;
     width: auto;
     height: auto;
@@ -53,15 +52,13 @@ export const Footer = styled.footer`
   `}
 `;
 
-export const Wrapper = styled(Container)`
+export const Wrapper = styled.div`
   ${media.greaterThan("medium")`
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid rgba(255,255,255,0.15);
     padding-top: 50px;
-    padding-left: 0;
-    padding-right: 0;
   `}
 `;
 
@@ -72,36 +69,4 @@ export const Copy = styled.p`
   ${media.greaterThan("medium")`
     margin-bottom: 0;
   `}
-`;
-
-export const Social = styled.ul`
-  display: flex;
-  justify-content: center;
-  list-style: none;
-
-  li {
-    width: 40px;
-    height: 40px;
-    padding: 0.7em;
-
-    ${media.greaterThan("medium")`
-      padding-right: 0;
-      padding-left: 1.4em;
-    `}
-  }
-
-  a {
-    display: block;
-    opacity: 0.5;
-    transition: opacity 0.3s ease 0s;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  svg {
-    display: block;
-    width: 100%;
-  }
 `;
