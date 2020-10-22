@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { TagManagerBody } from "components/TagManager";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -38,6 +39,7 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
+          <TagManagerBody />
           <Main />
           <NextScript />
         </body>
