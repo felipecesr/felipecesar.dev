@@ -6,7 +6,6 @@ const Comments = ({ url, title }) => {
 
   return (
     <S.CommentsWrapper>
-      <hr />
       <h2>Comentários</h2>
       <ReactDisqusComments
         shortname="felipecesar"
