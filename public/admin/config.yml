@@ -5,19 +5,19 @@ backend:
 publish_mode: editorial_workflow
 media_folder: public/uploads
 collections:
-  - name: 'blog'
-    label: 'Blog Posts'
-    label_singular: 'Blog Post'
-    folder: 'posts'
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "_posts"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     fields:
       - {
-          label: 'Layout',
-          name: 'layout',
-          widget: 'hidden',
-          default: 'default',
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "default",
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
