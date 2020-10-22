@@ -63,12 +63,11 @@ export default function Index({ allPosts }) {
       <Hero>
         <HeroInner>
           <h1>Felipe César</h1>
-          <HeroText>Olá!</HeroText>
-          <HeroText>
+          {/* <HeroText>
             Meu nome é Felipe César. Sou Desenvolvedor Frontend, fiz esse blog
             para compartilhar conhecimentos sobre assuntos estou estudando ou
             que considero importantes.
-          </HeroText>
+          </HeroText> */}
           <Social />
         </HeroInner>
       </Hero>
