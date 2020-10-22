@@ -1,0 +1,88 @@
+import styled from "styled-components";
+import prism from "styles/prism";
+
+export default styled.div`
+  ${prism}
+
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+    margin-bottom: 1.45rem;
+    line-height: 1.1;
+    vertical-align: middle;
+
+    > a {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url("/images/link.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.5;
+      margin-left: 10px;
+      vertical-align: middle;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 3.157rem;
+  }
+
+  h2 {
+    font-size: 1.99326rem;
+  }
+
+  h3 {
+    font-size: 1.58383rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.79459rem;
+  }
+
+  h6 {
+    font-size: 0.7083rem;
+  }
+
+  p {
+    margin-bottom: 1.45rem;
+  }
+
+  p,
+  li {
+    font-size: 21px;
+    line-height: 1.58;
+  }
+
+  ul,
+  ol {
+    margin-left: 1.45rem;
+    margin-bottom: 1.45rem;
+  }
+
+  li {
+    position: relative;
+    padding-bottom: 15px;
+  }
+
+  blockquote {
+    margin-left: 0;
+    padding-left: 1.45rem;
+    border-left: 2px solid #fff;
+  }
+`;

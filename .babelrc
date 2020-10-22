@@ -1,7 +1,4 @@
 {
-  "plugins": [
-    ["styled-components", { "ssr": true, "displayName": true }],
-    "date-fns"
-  ],
-  "presets": ["next/babel"]
+  "presets": ["next/babel"],
+  "plugins": [["babel-plugin-styled-components", { "ssr": true }], "date-fns"]
 }
