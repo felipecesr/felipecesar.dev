@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { TagManagerBody } from "components/TagManager";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -34,7 +33,13 @@ export default class MyDocument extends Document {
       <Html>
         <Head />
         <body>
-          <TagManagerBody />
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `
+      <iframe src="https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM}" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    `,
+            }}
+          />
           <Main />
           <NextScript />
         </body>
