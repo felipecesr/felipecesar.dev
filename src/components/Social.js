@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.ul`
-  display: flex;
+  display: inline-flex;
   font-family: "Source Code Pro", monospace;
   font-weight: 600;
   list-style-type: none;
