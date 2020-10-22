@@ -8,6 +8,10 @@
     "build": "next build && next export",
     "start": "next start"
   },
+  "volta": {
+    "node": "12.19.0",
+    "yarn": "1.22.10"
+  },
   "dependencies": {
     "date-fns": "^2.16.1",
     "gray-matter": "^4.0.2",
@@ -26,10 +30,6 @@
     "styled-components": "^5.2.0",
     "styled-media-query": "^2.1.2",
     "unified": "^9.2.0"
-  },
-  "volta": {
-    "node": "12.19.0",
-    "yarn": "1.22.10"
   },
   "devDependencies": {
     "babel-plugin-date-fns": "^2.0.0",
