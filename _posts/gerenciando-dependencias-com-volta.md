@@ -37,12 +37,12 @@ Com o comando `volta list all` podemos listar todas as ferramentas e versões in
 
 ```shell
 Node runtimes:
-        v10.19.0
-        v12.19.0 (default)
+    v10.19.0
+    v12.19.0 (default)
 
-    Package managers:
-        Yarn:
-            v1.22.10 (default)
+Package managers:
+    Yarn:
+        v1.22.10 (default)
 ```
 
 Quando executamos o comando `volta install` ele baixa a versão e define como default automaticamente, caso você já tenha a versão instalada, ele só define como default.
