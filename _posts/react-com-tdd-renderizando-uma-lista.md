@@ -1,5 +1,5 @@
 ---
-layout: default
+language: pt-br
 title: "React com TDD: Renderizando uma lista"
 date: 2020-04-05T00:24:22.838Z
 ---

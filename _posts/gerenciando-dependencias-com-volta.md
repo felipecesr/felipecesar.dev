@@ -1,5 +1,5 @@
 ---
-layout: default
+language: pt-br
 title: Gerenciando dependências com Volta
 date: 2020-10-19T02:28:22.573Z
 ---
