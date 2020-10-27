@@ -7,6 +7,7 @@ import Title from "components/Title";
 import List from "components/List";
 import Container from "components/Container";
 import Social from "components/Social";
+import HeroText from "components/HeroText";
 import { getAllPosts } from "lib/api";
 
 const HeroInner = styled(Container)`
@@ -41,22 +42,6 @@ const HeroInner = styled(Container)`
   `}
 `;
 
-const HeroText = styled.p`
-  font-size: 1.25rem;
-
-  & + p {
-    margin-top: 1.45rem;
-  }
-
-  ${media.greaterThan("medium")`
-    font-size: 1.4rem;
-  `}
-
-  ${media.greaterThan("large")`
-    font-size: 1.7rem;
-  `}
-`;
-
 export default function Index({ allPosts }) {
   return (
     <>
@@ -64,9 +49,9 @@ export default function Index({ allPosts }) {
         <HeroInner>
           <h1>Felipe César</h1>
           {/* <HeroText>
-            Meu nome é Felipe César. Sou Desenvolvedor Frontend, fiz esse blog
-            para compartilhar conhecimentos sobre assuntos estou estudando ou
-            que considero importantes.
+            <strong>Desenvolvedor Front-End</strong>, entusiasta JavaScript e
+            apaixonado por boas práticas. Fiz esse blog para compartilhar
+            artigos e dicas relacionados a desenvolvimento.
           </HeroText> */}
           <Social />
         </HeroInner>
