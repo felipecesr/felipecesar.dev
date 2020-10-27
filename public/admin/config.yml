@@ -5,19 +5,37 @@ backend:
 publish_mode: editorial_workflow
 media_folder: public/uploads
 collections:
-  - name: "blog"
-    label: "Blog Posts"
+  - label: "Blog em Português"
     label_singular: "Blog Post"
+    name: "portuguese_posts"
     folder: "_posts"
     create: true
     slug: "{{slug}}"
+    filter: { field: "language", value: "pt-BR" }
     fields:
       - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "default",
+          label: "Idioma",
+          name: "language",
+          widget: "select",
+          options: ["pt-BR", "en"],
+        }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data de publicação", name: "date", widget: "datetime" }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }
+  - label: "Blog in English"
+    label_singular: "Blog Post"
+    name: "english_posts"
+    folder: "_posts"
+    create: true
+    slug: "{{slug}}"
+    filter: { field: "language", value: "en" }
+    fields:
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options: ["pt-BR", "en"],
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Content", name: "body", widget: "markdown" }

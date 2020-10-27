@@ -7,7 +7,7 @@ import Title from "components/Title";
 import List from "components/List";
 import Container from "components/Container";
 import Social from "components/Social";
-import HeroText from "components/HeroText";
+// import HeroText from "components/HeroText";
 import { getAllPosts } from "lib/api";
 
 const HeroInner = styled(Container)`
@@ -64,8 +64,8 @@ export default function Index({ allPosts }) {
   );
 }
 
-export async function getStaticProps() {
-  const allPosts = getAllPosts();
+export async function getStaticProps({ locale }) {
+  const allPosts = getAllPosts(locale);
 
   return {
     props: { allPosts },

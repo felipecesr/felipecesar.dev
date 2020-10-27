@@ -2,7 +2,7 @@ import { NextSeo } from "next-seo";
 import Link from "next/link";
 import styled from "styled-components";
 
-import { getPostBySlug, getPostSlugs } from "lib/api";
+import { getPostBySlug, getAllPosts } from "lib/api";
 import markdownToHtml from "lib/markdownToHtml";
 
 import Hero from "components/Hero";
@@ -47,7 +47,10 @@ export default function Post({ slug, title, date, excerpt, content }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getPostSlugs().map((slug) => `/${slug.replace(/\.md$/, "")}`);
+  const paths = getAllPosts().map((post) => ({
+    params: { slug: post.slug },
+    locale: post.language,
+  }));
 
   return {
     paths,
