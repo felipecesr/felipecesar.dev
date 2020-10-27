@@ -27,13 +27,33 @@ volta install node
 node
 ```
 
-Também podemos definir versões fixas em nossos projetos utilizando o comando `pin`:
+Podemos também instalar uma versão específica:
+
+```shell
+volta install node@10
+```
+
+Com o comando `volta list all` podemos listar todas as ferramentas e versões instaladas:
+
+```shell
+Node runtimes:
+        v10.19.0
+        v12.19.0 (default)
+
+    Package managers:
+        Yarn:
+            v1.22.10 (default)
+```
+
+Quando executamos o comando `volta install` ele baixa a versão e define como default automaticamente, caso você já tenha a versão instalada, ele só define como default.
+
+Também podemos fixar versões em nossos projetos utilizando o comando `volta pin`, por exemplo:
 
 ```shell
 volta pin node yarn
 ```
 
-Ele vai adicionar as versões salvas em um objeto no package.json.
+Ele vai adicionar as versões no package.json.
 
 ```json
 "volta": {
@@ -52,11 +72,11 @@ Mesmo assim resolvi dar uma olhada e logo percebi que estava enganado, com o NVM
 
 Além disso, tinham alguns pontos que me incomodavam no NVM:
 
-- Sempre precisava trocar as versões de forma manual, para automatizar isso era necessário adicionar um arquivo `.nvmrc` e fazer algumas configurações.
-- Tinha uma certa demora para trocar a versão.
+* Sempre precisava trocar as versões de forma manual, para automatizar isso era necessário fazer algumas configurações no shell e adicionar um arquivo `.nvmrc` no projeto.
+* Quando abria o terminal no diretório do projeto demorava um pouco trocar a versão.
 
-Com o Volta essa troca de versão é extremamente rápida e não é necessário nenhuma configuração adicional, ele já faz isso automaticamente.
+Com o Volta a troca de versão é extremamente rápida e não é necessário nenhuma configuração adicional, ele já faz isso automaticamente.
 
 ## Conclusão
 
-Este post foi uma breve introdução ao Volta e algumas vantagens que vi em relação ao NVM, se você viu outras vantagens, ou desvantagens não deixe de comentar. Abraço!
+Este post foi uma breve introdução ao Volta e algumas vantagens que vi em relação ao NVM, se você viu outras vantagens ou desvantagens não deixe de comentar. Abraço!
