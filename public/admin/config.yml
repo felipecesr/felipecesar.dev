@@ -11,13 +11,13 @@ collections:
     folder: "_posts"
     create: true
     slug: "{{slug}}"
-    filter: { field: "language", value: "pt-br" }
+    filter: { field: "language", value: "pt-BR" }
     fields:
       - {
           label: "Idioma",
           name: "language",
           widget: "select",
-          options: ["pt-br", "en"],
+          options: ["pt-BR", "en"],
         }
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Data de publicação", name: "date", widget: "datetime" }
@@ -34,7 +34,7 @@ collections:
           label: "Language",
           name: "language",
           widget: "select",
-          options: ["pt-br", "en"],
+          options: ["pt-BR", "en"],
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }

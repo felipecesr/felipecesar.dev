@@ -1,5 +1,5 @@
 ---
-language: pt-br
+language: pt-BR
 title: Escrevendo um componente React com TDD
 date: 2020-04-02T22:51:54.849Z
 ---
