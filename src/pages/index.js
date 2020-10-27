@@ -64,8 +64,8 @@ export default function Index({ allPosts }) {
   );
 }
 
-export async function getStaticProps() {
-  const allPosts = getAllPosts();
+export async function getStaticProps({ locale }) {
+  const allPosts = getAllPosts(locale);
 
   return {
     props: { allPosts },
