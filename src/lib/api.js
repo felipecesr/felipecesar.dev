@@ -36,11 +36,11 @@ export function getPostBySlug(slug) {
   };
 }
 
-export function getAllPosts(locale = "pt-BR") {
+export function getAllPosts(locale) {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
-    .sort((post1, post2) => (post1.date > post2.date ? "-1" : "1"))
-    .filter((post) => post.language === locale);
-  return posts;
+    .sort((post1, post2) => (post1.date > post2.date ? "-1" : "1"));
+
+  return locale ? posts.filter((post) => post.language === locale) : posts;
 }
