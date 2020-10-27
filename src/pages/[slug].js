@@ -9,37 +9,12 @@ import Hero from "components/Hero";
 import Content from "components/Content";
 import Comments from "components/Comments";
 import Container from "components/Container";
-
-const Headline = styled.p`
-  font-family: "Source Code Pro", monospace;
-  font-size: 1.25rem;
-  font-weight: 600;
-  opacity: 0.5;
-
-  a {
-    font-style: normal;
-    font-weight: normal;
-  }
-`;
+import Nav from "components/Nav";
+import Headline from "components/Headline";
 
 export const HeroInner = styled(Container)`
   padding-top: 1rem;
   padding-bottom: 4rem;
-`;
-
-export const Nav = styled.nav`
-  display: block;
-  margin-bottom: 2rem;
-
-  a {
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 18px;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 `;
 
 export default function Post({ slug, title, date, excerpt, content }) {
