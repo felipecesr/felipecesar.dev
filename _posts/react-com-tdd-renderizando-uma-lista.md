@@ -5,13 +5,13 @@ date: 2020-04-05T00:24:22.838Z
 ---
 Aprenda como criar um componente de lista em React com desenvolvimento guiado por testes.
 
-## Introdução
+### Introdução
 
 Dando continuidade ao [artigo anterior](https://felipecesar.dev/escrevendo-um-componente-react-com-tdd), onde criamos o componente `UserInfo`, neste artigo vamos criar o componente `UserList` que vai receber um `array` com nomes de usuários e renderizar uma lista com cada um deles.
 
 Além disso, também vamos começar a usar uma ferramenta que não usamos no artigo anterior, o [Testing Library](https://testing-library.com/).
 
-## Testing Library
+### Testing Library
 
 O Testing Library, de uma forma bem resumida, é uma familia de pacotes que nos permite interagir diretamente com DOM por meio de queries que ajudam a testar nossas aplicações de um ponto de vista semelhante ao do usuário, reduzindo detalhes de implementação.
 
@@ -29,7 +29,7 @@ Após a instalação, vamos criar um arquivo chamado `UserList.test.js`. Dessa v
 import { render } from '@testing-library/react';
 ```
 
-## Renderizando a lista
+### Renderizando a lista
 
 Com o arquivo `UserList.test.js` criado, vamos escrever nosso primeiro teste.
 
@@ -132,7 +132,7 @@ Para remover esse aviso, podemos fazer o que ele diz e adicionar a `prop` nos it
 </ul>
 ```
 
-## Especificando os itens da lista
+### Especificando os itens da lista
 
 Agora vamos preencher os itens da lista que acabamos de criar. Primeiro, vamos criar outro teste.
 
@@ -198,7 +198,7 @@ Para corrigi-lo, precisamos exibir o nome do usuário no item da lista.
 
 Pronto! Temos o nosso componente de lista funcionando e coberto por testes, só falta refatorar nosso código.
 
-## Refatorando
+### Refatorando
 
 Não sei se você reparou, mas instalamos o Testing Library para melhorar a forma como escrevemos os testes. Até agora não vimos nenhuma diferença, simplesmente deixamos de criar um método `render` para usar um que já está pronto.
 
@@ -273,6 +273,6 @@ describe("UserList", () => {
 });
 ```
 
-## Conclusão
+### Conclusão
 
 Neste artigo, criamos um componente de lista com TDD e ainda podemos aprender um pouco sobre Testing Library, nos próximos vamos explorar um pouco mais essa lib. Se tiverem dúvidas ou sugestões não deixem de comentar. Abraço!

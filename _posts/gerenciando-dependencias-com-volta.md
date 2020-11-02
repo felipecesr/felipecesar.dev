@@ -6,7 +6,7 @@ date: 2020-10-19T02:28:22.573Z
 
 Neste post vou falar um pouco sobre o que é o [Volta](https://volta.sh/) e porque deixei de usar o [NVM](http://nvm.sh/).
 
-## O que é o Volta
+### O que é o Volta
 
 Volta é uma ferramenta de linha de comando que permite instalar e executar qualquer ferramenta JavaScript perfeitamente. Ele garante que todos no projeto usem as mesmas ferramentas, com as mesmas versões.
 
@@ -64,7 +64,7 @@ Ele vai adicionar as versões no package.json.
 
 Caso você não tenha alguma dessas versões instaladas, ele baixa automaticamente.
 
-## Por quê deixei de usar o NVM?
+### Por quê deixei de usar o NVM?
 
 Quando ouvi falar sobre o Volta pela primeira vez, a primeira coisa que pensei foi: Não preciso disso, já uso o NVM.
 
@@ -77,6 +77,6 @@ Além disso, tinham alguns pontos que me incomodavam no NVM:
 
 Com o Volta a troca de versão é extremamente rápida e não é necessário nenhuma configuração adicional, ele já faz isso automaticamente.
 
-## Conclusão
+### Conclusão
 
 Este post foi uma breve introdução ao Volta e algumas vantagens que vi em relação ao NVM, se você viu outras vantagens ou desvantagens não deixe de comentar. Abraço!
