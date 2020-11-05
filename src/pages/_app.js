@@ -21,6 +21,12 @@ function MyApp({ Component, pageProps }) {
     <Layout>
       <Head>
         <meta name="theme-color" content="#111216" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="RSS feed for blog posts"
+          href="https://felipecesar.dev/rss.xml"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `

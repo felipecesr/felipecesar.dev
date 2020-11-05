@@ -30,6 +30,7 @@ export function getPostBySlug(slug) {
     slug: realSlug,
     title: data.title,
     date: formatDate(new Date(data.date).toISOString()),
+    utcDate: new Date(data.date).toUTCString(),
     excerpt,
     content,
   };
