@@ -1,24 +1,4 @@
-import styled from "styled-components";
-
-const Wrapper = styled.ul`
-  display: inline-flex;
-  font-family: "Source Code Pro", monospace;
-  font-weight: 600;
-  list-style-type: none;
-
-  a {
-    opacity: 0.5;
-    text-decoration: none;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  li + li {
-    margin-left: 1.75em;
-  }
-`;
+import styles from "./styles.module.scss";
 
 export default function Social() {
   const socialNetworks = {
@@ -28,7 +8,7 @@ export default function Social() {
   };
 
   return (
-    <Wrapper>
+    <ul className={styles.social}>
       {Object.keys(socialNetworks).map((key) => (
         <li key={key}>
           <a href={socialNetworks[key]} target="_blank" rel="noopener">
@@ -36,6 +16,6 @@ export default function Social() {
           </a>
         </li>
       ))}
-    </Wrapper>
+    </ul>
   );
 }

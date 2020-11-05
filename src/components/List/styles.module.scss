@@ -1,23 +1,20 @@
-import styled from "styled-components";
-import media from "styled-media-query";
-
-export const List = styled.ul`
+.list {
   list-style-type: none;
   margin-top: 4rem;
 
   & + * {
     margin-top: 8rem;
   }
-`;
+}
 
-export const ListItem = styled.li`
+.listItem {
   & + li {
     margin-top: 1.45rem;
   }
 
   a {
     display: block;
-    font-size: 1.777rem;
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
 
@@ -25,14 +22,14 @@ export const ListItem = styled.li`
       text-decoration: underline;
     }
 
-    ${media.greaterThan("medium")`
-      font-size: 2.369rem;
-    `}
+    @media (min-width: calc(var(--bp-medium) * 1em)) {
+      font-size: 1.5rem;
+    }
   }
-`;
+}
 
-export const Date = styled.p`
+.date {
   color: #595c62;
   font-family: "Source Code Pro", monospace;
   font-weight: 600;
-`;
+}

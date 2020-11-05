@@ -4,8 +4,11 @@ import { useEffect } from "react";
 import { DefaultSeo } from "next-seo";
 
 import SEO from "next-seo.config";
-import Layout from "components/Layout";
+import { Layout } from "components/Layout";
 import { GTMPageView } from "utils/gtm";
+
+import "styles/global.scss";
+import "styles/prism.scss";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

@@ -1,0 +1,51 @@
+.header {
+  --size: 8rem;
+  --border: 0.9rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  h1 {
+    background-color: #111216;
+    display: block;
+    padding: 1rem 0 5rem;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+.avatar {
+  background-color: #111216;
+  border-radius: 50%;
+  border: calc(var(--border) / 2) solid #1d2128;
+  margin-top: calc((var(--size) / 2) * (-1));
+  height: calc(var(--size) - var(--border));
+  width: calc(var(--size) - var(--border));
+
+  .header--post & {
+    position: absolute;
+    top: 8px;
+    margin-top: 0;
+  }
+}
+
+.header--post {
+  --size: 4rem;
+  --border: 0.4rem;
+  align-items: start;
+  padding-left: 1rem;
+  margin-bottom: calc(var(--size) / 2);
+  background-color: var(--bgc);
+  position: relative;
+
+  a {
+    display: block;
+    margin: 0 4rem;
+  }
+
+  h1 {
+    padding: 0.5rem 1rem;
+  }
+}

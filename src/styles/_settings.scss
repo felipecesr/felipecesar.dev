@@ -1,0 +1,18 @@
+:root {
+  /* Breakpoint variables */
+  --bp-small: 24.15;
+  --bp-medium: 43.75;
+  --bp-large: 60.25;
+  --bp-xlarge: 75;
+
+  /* H1 variables */
+  --h1-font-size-min: 2;
+  --h1-font-size-max: 5;
+
+  /* Color variables */
+  --background-color: #1d2128;
+  --text-color: #ccc;
+}
+
+@media (prefers-color-scheme: dark) {
+}

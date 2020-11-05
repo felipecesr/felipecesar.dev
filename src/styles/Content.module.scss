@@ -1,9 +1,4 @@
-import styled from "styled-components";
-import prism from "styles/prism";
-
-export default styled.div`
-  ${prism}
-
+.content {
   padding-top: 6rem;
   padding-bottom: 6rem;
 
@@ -36,27 +31,27 @@ export default styled.div`
   }
 
   h1 {
-    font-size: 3.157rem;
+    // font-size: 3.157rem;
   }
 
   h2 {
-    font-size: 1.99326rem;
+    // font-size: 1.99326rem;
   }
 
   h3 {
-    font-size: 1.58383rem;
+    // font-size: 1.58383rem;
   }
 
   h4 {
-    font-size: 1rem;
+    // font-size: 1rem;
   }
 
   h5 {
-    font-size: 0.79459rem;
+    // font-size: 0.79459rem;
   }
 
   h6 {
-    font-size: 0.7083rem;
+    // font-size: 0.7083rem;
   }
 
   p {
@@ -65,7 +60,7 @@ export default styled.div`
 
   p,
   li {
-    font-size: 21px;
+    // font-size: 21px;
     line-height: 1.58;
   }
 
@@ -85,4 +80,4 @@ export default styled.div`
     padding-left: 1.45rem;
     border-left: 2px solid #fff;
   }
-`;
+}

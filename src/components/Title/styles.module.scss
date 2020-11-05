@@ -1,9 +1,6 @@
-import styled from "styled-components";
-import media from "styled-media-query";
-
-export default styled.h2`
+.title {
   font-style: italic;
-  font-size: 1.4444rem;
+  font-size: 1.2rem;
   font-weight: 400;
   position: relative;
   margin-top: 4rem;
@@ -18,14 +15,14 @@ export default styled.h2`
     position: absolute;
     top: 50%;
 
-    ${media.greaterThan("medium")`
+    @media (min-width: calc(var(--bp-medium) * 1em)) {
       width: 1.5rem;
       left: -40px;
-    `}
+    }
 
-    ${media.greaterThan("large")`
+    @media (min-width: calc(var(--bp-large) * 1em)) {
       width: 3rem;
       left: -80px;
-    `}
+    }
   }
-`;
+}

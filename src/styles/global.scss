@@ -1,0 +1,58 @@
+@use 'settings';
+@use 'fonts';
+@use 'base';
+@use 'prism';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+html {
+  font-size: clamp(100%, calc(1em + 0.5vw), 150%);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Lora", Georgia, serif;
+  line-height: 1.5;
+}
+
+main {
+  margin: auto;
+  max-width: 30rem;
+  min-height: 75vh;
+  padding: 1rem;
+  width: 100%;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+a {
+  transition: opacity 0.3s ease 0s;
+}
+
+a,
+a:focus,
+a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+  vertical-align: middle;
+}

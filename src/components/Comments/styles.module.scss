@@ -1,0 +1,18 @@
+.comments {
+  margin: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.comments h2 {
+  font-size: 1.99326rem;
+  margin-top: 1.45rem;
+  margin-bottom: 1.45rem;
+}
+
+.comments iframe[src="ads-iframe"] {
+  display: none;
+}
+
+.comments #disqus_thread a {
+  color: #1fa1f2 !important;
+}
