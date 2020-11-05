@@ -1,3 +1,4 @@
+import fs from "fs";
 import styled from "styled-components";
 import media from "styled-media-query";
 
@@ -9,6 +10,7 @@ import Container from "components/Container";
 import Social from "components/Social";
 import HeroText from "components/HeroText";
 import { getAllPosts } from "lib/api";
+import { generateRss } from "lib/rss";
 
 const HeroInner = styled(Container)`
   padding-top: 6rem;
@@ -66,6 +68,9 @@ export default function Index({ allPosts }) {
 
 export async function getStaticProps() {
   const allPosts = getAllPosts();
+  const rss = generateRss(allPosts);
+
+  fs.writeFileSync("./public/rss.xml", rss);
 
   return {
     props: { allPosts },
