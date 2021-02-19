@@ -33,3 +33,9 @@ const sum = (a, b) => a - b
 ```
 
 Nesse caso, resolvemos apenas alterando o operador utilizado na função e se executarmos o código novamente nenhum erro é retornado.
+
+Por mais simples que seja o exemplo acima, ele dá uma boa base sobre o que são testes automatizados.
+
+## E no mundo real, como funcionam?
+
+No mundo real existem tipos diferentes de testes e ferramentas que auxiliam em cada um deles.
