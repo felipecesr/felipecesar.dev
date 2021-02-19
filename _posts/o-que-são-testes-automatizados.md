@@ -3,6 +3,15 @@ layout: default
 title: React Test-Driven Development
 date: 2021-02-19T17:28:48.865Z
 ---
+## O que é um teste?
+
+Teste é o processo onde verificamos se uma aplicação está funcionando corretamente.
+
+## Tipos de teste
+
+- Testes manuais
+- Testes automatizados
+
 ## O que são testes automatizados?
 Testes automatizados são, de forma bem resumida, códigos que disparam erros quando o resultado retornado da execução é diferente do resultado esperado.
 
@@ -35,13 +44,29 @@ const sum = (a, b) => a - b
 
 Nesse caso, resolvemos apenas alterando o operador utilizado na função e se executarmos o código novamente nenhum erro é retornado.
 
-Por mais simples que seja o exemplo acima, ele dá uma boa base sobre o que são testes automatizados.
-
 ### E no mundo real, como funcionam?
 
-No mundo real existem tipos diferentes de testes e ferramentas que auxiliam em cada um deles.
+O exemplo acima serve apenas para dar uma base. No mundo real existem tipos diferentes de testes e ferramentas que auxiliam em cada um deles.
 
 Neste artigo vou falar sobre os testes mais comuns utilizados em aplicações React
+
+## Tipos de Teste Automatizado
+
+### Estáticos
+
+### Unitários
+
+- Testam partes isoladas da aplicação (funções e componentes)
+
+### Integração
+
+- Testam como componentes funcionam juntos
+- Utilizam todos os providers
+- Mocar o mínimo (fetch e animações)
+
+### E2E
+
+- Executamos toda a aplicação (frontend e backend) e testamos as interações como se fosse um usuário.
 
 ### Referências
 
