@@ -39,3 +39,6 @@ Por mais simples que seja o exemplo acima, ele dá uma boa base sobre o que são
 ## E no mundo real, como funcionam?
 
 No mundo real existem tipos diferentes de testes e ferramentas que auxiliam em cada um deles.
+
+## Referências
+https://kentcdodds.com/blog/but-really-what-is-a-javascript-test
