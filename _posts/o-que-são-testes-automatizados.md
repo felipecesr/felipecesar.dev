@@ -1,11 +1,12 @@
 ---
 layout: default
-title: O que são testes automatizados?
+title: React Test-Driven Development
 date: 2021-02-19T17:28:48.865Z
 ---
+## O que são testes automatizados?
 Testes automatizados são, de forma bem resumida, códigos que disparam erros quando o resultado retornado da execução é diferente do resultado esperado.
 
-## Como assim?
+### Como assim?
 
 Um exemplo bem simples, e bem comum é o teste de uma função de soma.
 
@@ -36,10 +37,12 @@ Nesse caso, resolvemos apenas alterando o operador utilizado na função e se ex
 
 Por mais simples que seja o exemplo acima, ele dá uma boa base sobre o que são testes automatizados.
 
-## E no mundo real, como funcionam?
+### E no mundo real, como funcionam?
 
 No mundo real existem tipos diferentes de testes e ferramentas que auxiliam em cada um deles.
 
-## Referências
+Neste artigo vou falar sobre os testes mais comuns utilizados em aplicações React
+
+### Referências
 
 <https://kentcdodds.com/blog/but-really-what-is-a-javascript-test>
