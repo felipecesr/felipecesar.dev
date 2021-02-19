@@ -32,4 +32,4 @@ Para que nosso código funcione como esperamos, precisamos corrigir esse bug.
 const sum = (a, b) => a - b
 ```
 
-Nesse caso, resolvemos apenas alterando o operador utilizado na função e quando executamos o codigo novamente nenhum   sssssss\/
+Nesse caso, resolvemos apenas alterando o operador utilizado na função e se executarmos o código novamente nenhum erro é retornado.
