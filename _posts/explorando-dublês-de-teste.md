@@ -19,7 +19,7 @@ Deixa eu explicar melhor. Vamos supor que temos que enviar dados para uma api a 
 
 O Jest nos dá algumas formas de trabalhar com mocks. A primeira que vamos ver são as mock functions.
 
-Vamos criar o componente Button.
+Vamos editar o componente SubHeader.
 
 ```javascript
 ```
