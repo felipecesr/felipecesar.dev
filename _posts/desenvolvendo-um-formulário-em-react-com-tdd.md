@@ -66,3 +66,19 @@ const Form = () => (
 
 export default Form
 ```
+
+Ao executar o teste novamente, veja que o erro mudou.
+
+```bash
+TestingLibraryElementError: Unable to find a label with the text of: /value/i
+
+...
+
+       7 |
+       8 |   screen.getByLabelText(/description/i)
+    >  9 |   screen.getByLabelText(/value/i)
+         |          ^
+      10 |   screen.getByLabelText(/paid/i)
+      11 |   screen.getByRole('button', { name: /submit/i })
+      12 |
+```
