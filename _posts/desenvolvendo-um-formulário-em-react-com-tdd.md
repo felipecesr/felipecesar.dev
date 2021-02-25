@@ -109,3 +109,41 @@ Se executarmos o teste novamente, podemos ver que ele está passando.
 ## Adicionando o evento Submit ao formulário
 
 A próxima coisa que iremos fazer é desabilitar o botão após o clique e submeter o formulário.
+
+Para isso, vamos criar uma `const` no teste para armazenar o botão e importar o `fireEvent` da Testing Library para executar o evento de clique, depois podemos verificar se o botão está desabilitado.
+
+```javascript
+import { render, screen, fireEvent } from '@testing-library/react'
+import Form from '../Form'
+
+test('renders a form with description, value, paid and a submit button', () => {
+  render(<Form />)
+
+  ...
+  const buttonElement = screen.getByRole('button', { name: /submit/i })
+
+  fireEvent.click(buttonElement)
+  expect(buttonElement).toBeDisabled()
+})
+```
+
+Se executarmos o código agora, além da falha esperada do teste, também foi retornado um erro no console.
+
+```bash
+Error: Not implemented: HTMLFormElement.prototype.submit
+```
+
+Esse erro ocorre porque quando clicamos no botão, o comportamento padrão é recarregar a página inteira, o Jest usa o js-dom por padrão e ele não tem esse comportamento implementado, por isso o erro.
+
+Para que ele não ocorra mais, podemos implementar a função `handleSubmit`, adicionar o `e.preventDefault()` para remover esse comportamento e adicioná-la no evento `onSubmit` do formulário.
+
+```javascript
+const Form = () => {
+  const handleSubmit = e => {
+    e.preventDefault()
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+...
+```
