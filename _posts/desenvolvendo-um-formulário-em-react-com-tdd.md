@@ -147,3 +147,37 @@ const Form = () => {
     <form onSubmit={handleSubmit}>
 ...
 ```
+
+Agora quando executamos o teste, temos apenas a falha do teste.
+
+```javascript
+Received element is not disabled:
+      <button type="submit" />
+
+      12 |
+      13 |   fireEvent.click(buttonElement)
+    > 14 |   expect(buttonElement).toBeDisabled()
+         |                         ^
+```
+
+Para que nosso teste volte a passar, precisamos desabilitar o botão após o clique, para fazer isso, vamos usar o hook `useState` para definir o estado do botão e alterar esse estado no evento do clique.
+
+```javascript
+import { useState } from 'react'
+
+const Form = () => {
+  const [isSaving, setIsSaving] = useState(false)
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    setIsSaving(true)
+  }
+
+  ...
+
+  <button type='submit' disabled={isSaving}>
+    Submit
+  </button>
+```
+
+Agora nosso teste voltou a passar.
