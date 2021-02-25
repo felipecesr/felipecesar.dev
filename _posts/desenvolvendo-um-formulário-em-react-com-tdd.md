@@ -103,3 +103,5 @@ const Form = () => (
 
 export default Form
 ```
+
+Se executarmos o teste novamente, podemos ver que ele está passando.
