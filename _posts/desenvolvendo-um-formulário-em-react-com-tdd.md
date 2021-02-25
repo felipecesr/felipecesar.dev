@@ -59,8 +59,8 @@ No arquivo `Form.js` podemos adicionar o primeiro campo do formulário.
 ```javascript
 const Form = () => (
   <form>
-    <label htmlFor='description'>Description</label>
-    <input type='text' id='description' />
+    <label htmlFor='description-input'>Description</label>
+    <input type='text' id='description-input' />
   </form>
 )
 
@@ -88,14 +88,14 @@ Como é um processo repetitivo e para não deixar o artigo muito extenso vou adi
 ```javascript
 const Form = () => (
   <form>
-    <label htmlFor='description'>Description</label>
-    <input type='text' id='description' />
+    <label htmlFor='description-input'>Description</label>
+    <input type='text' id='description-input' />
 
-    <label htmlFor='value'>Value</label>
-    <input type='text' id='value' />
+    <label htmlFor='value-input'>Value</label>
+    <input type='text' id='value-input' />
 
-    <label htmlFor='paid'>Paid</label>
-    <input type='checkbox' id='paid' />
+    <label htmlFor='paid-input'>Paid</label>
+    <input type='checkbox' id='paid-input' />
 
     <button type='submit'>Submit</button>
   </form>
