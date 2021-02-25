@@ -82,3 +82,24 @@ TestingLibraryElementError: Unable to find a label with the text of: /value/i
       11 |   screen.getByRole('button', { name: /submit/i })
       12 |
 ```
+
+Como é um processo repetitivo e para não deixar o artigo muito extenso vou adicionar os campos restantes de uma só vez.
+
+```javascript
+const Form = () => (
+  <form>
+    <label htmlFor='description'>Description</label>
+    <input type='text' id='description' />
+
+    <label htmlFor='value'>Value</label>
+    <input type='text' id='value' />
+
+    <label htmlFor='paid'>Paid</label>
+    <input type='checkbox' id='paid' />
+
+    <button type='submit'>Submit</button>
+  </form>
+)
+
+export default Form
+```
