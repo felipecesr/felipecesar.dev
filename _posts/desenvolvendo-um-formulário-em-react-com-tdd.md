@@ -184,4 +184,4 @@ Agora nosso teste voltou a passar.
 
 Próximo: falar sobre mocks e adicionar chamada do método no formulário
 
-Depois: Redirect e userEvent
+Depois: Redirect, validações, refatorações (userEvent e custom render)
