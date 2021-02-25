@@ -105,3 +105,7 @@ export default Form
 ```
 
 Se executarmos o teste novamente, podemos ver que ele está passando.
+
+## Adicionando o evento Submit ao formulário
+
+A próxima coisa que iremos fazer é desabilitar o botão após o clique e submeter o formulário.
