@@ -1,7 +1,5 @@
-import GlobalStyles from "styles/global";
-import * as S from "./styles";
-
-import Container from "components/Container";
+import styles from './Layout.module.scss'
+import containerStyles from "components/Container.module.scss";
 import Social from "components/Social";
 
 export default function Layout({ children }) {
@@ -9,17 +7,16 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <GlobalStyles />
-      <S.SkipLink href="#main">Skip to main</S.SkipLink>
+      <a className={styles.skipLink} href="#main">Skip to main</a>
       {children}
-      <S.Footer>
-        <Container>
-          <S.Wrapper>
-            <S.Copy>© {year} - Felipe Cesar</S.Copy>
+      <footer className={styles.footer}>
+        <div className={`${containerStyles['container']} ${containerStyles['px-md-1']}`}>
+          <div className={styles.layoutWrapper}>
+            <p className={styles.copy}>© {year} - Felipe Cesar</p>
             <Social />
-          </S.Wrapper>
-        </Container>
-      </S.Footer>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

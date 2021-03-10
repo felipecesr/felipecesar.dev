@@ -1,8 +1,7 @@
-import styled from "styled-components";
-import prism from "styles/prism";
+@import '~styles/prism';
 
-export default styled.div`
-  ${prism}
+.content {
+  @include prims;
 
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -85,4 +84,4 @@ export default styled.div`
     padding-left: 1.45rem;
     border-left: 2px solid #fff;
   }
-`;
+}

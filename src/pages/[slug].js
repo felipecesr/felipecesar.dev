@@ -1,21 +1,16 @@
 import { NextSeo } from "next-seo";
 import Link from "next/link";
-import styled from "styled-components";
 
 import { getPostBySlug, getPostSlugs } from "lib/api";
 import markdownToHtml from "lib/markdownToHtml";
+import containerStyles from "components/Container.module.scss";
+import contentStyles from "components/Content.module.scss";
 
-import Hero from "components/Hero";
-import Content from "components/Content";
+import heroStyles from "components/Hero.module.scss";
 import Comments from "components/Comments";
-import Container from "components/Container";
-import Nav from "components/Nav";
-import Headline from "components/Headline";
-
-export const HeroInner = styled(Container)`
-  padding-top: 1rem;
-  padding-bottom: 4rem;
-`;
+import navStyles from "components/Nav.module.scss";
+import headlineStyles from "components/Headline.module.scss";
+import heroInnerStyles from 'components/HeroInner.module.scss'
 
 export default function Post({ slug, title, date, excerpt, content }) {
   return (
@@ -25,23 +20,23 @@ export default function Post({ slug, title, date, excerpt, content }) {
         titleTemplate="%s | Felipe César"
         description={excerpt}
       />
-      <Hero>
-        <HeroInner>
-          <Nav>
+      <header className={heroStyles.hero}>
+        <div className={`${containerStyles.container} ${heroInnerStyles.heroInner}`}>
+          <nav className={navStyles.nav}>
             <Link href="/">
               <a aria-label="Back to Home">Felipe César</a>
             </Link>
-          </Nav>
-          <Headline>{date}</Headline>
+          </nav>
+          <p className={headlineStyles.headline}>{date}</p>
           <h1>{title}</h1>
-        </HeroInner>
-      </Hero>
-      <Container>
+        </div>
+      </header>
+      <div className={containerStyles.container}>
         <main id="main">
-          <Content dangerouslySetInnerHTML={{ __html: content }} />
+          <div className={contentStyles.content} dangerouslySetInnerHTML={{ __html: content }} />
         </main>
         <Comments url={slug} title={title} />
-      </Container>
+      </div>
     </>
   );
 }

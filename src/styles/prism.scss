@@ -1,6 +1,4 @@
-import { css } from "styled-components";
-
-const prism = css`
+@mixin prims {
   code[class*="language-"],
   pre[class*="language-"] {
     color: #ccc;
@@ -159,6 +157,4 @@ const prism = css`
       #2d2d2d
     ) !important;
   }
-`;
-
-export default prism;
+}

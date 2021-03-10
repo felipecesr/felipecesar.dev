@@ -1,16 +1,13 @@
-import styled from "styled-components";
-import media from "styled-media-query";
-
-export const List = styled.ul`
+.list {
   list-style-type: none;
   margin-top: 4rem;
 
   & + * {
     margin-top: 8rem;
   }
-`;
+}
 
-export const ListItem = styled.li`
+.listItem {
   & + li {
     margin-top: 1.45rem;
   }
@@ -25,14 +22,14 @@ export const ListItem = styled.li`
       text-decoration: underline;
     }
 
-    ${media.greaterThan("medium")`
+    @media (min-width: 768px) {
       font-size: 2.369rem;
-    `}
+    }
   }
-`;
+}
 
-export const Date = styled.p`
+.date {
   color: #595c62;
   font-family: "Source Code Pro", monospace;
   font-weight: 600;
-`;
+}

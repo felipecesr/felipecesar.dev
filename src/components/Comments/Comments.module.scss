@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-export const CommentsWrapper = styled.section`
+.commentsWrapper {
   margin: auto;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 
@@ -19,4 +17,4 @@ export const CommentsWrapper = styled.section`
       color: #1fa1f2 !important;
     }
   }
-`;
+}
