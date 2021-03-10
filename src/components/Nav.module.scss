@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-export default styled.nav`
+.nav {
   display: block;
   margin-bottom: 2rem;
 
@@ -13,4 +11,4 @@ export default styled.nav`
       text-decoration: underline;
     }
   }
-`;
+}

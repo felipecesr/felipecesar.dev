@@ -7,6 +7,9 @@ import SEO from "next-seo.config";
 import Layout from "components/Layout";
 import { GTMPageView } from "utils/gtm";
 
+import 'styles/fonts.scss'
+import 'styles/global.scss'
+
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     const handleRouteChange = (url) => GTMPageView(url);

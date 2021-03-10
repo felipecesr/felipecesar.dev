@@ -1,7 +1,4 @@
-import styled from "styled-components";
-import media from "styled-media-query";
-
-export default styled.header`
+.hero {
   background-color: #111216;
   display: flex;
   align-items: center;
@@ -10,8 +7,8 @@ export default styled.header`
     font-size: 2.369rem;
     margin-bottom: 2rem;
 
-    ${media.greaterThan("medium")`
+    @media (min-width: 768px) {
       font-size: 3.157rem;
-    `}
+    }
   }
-`;
+}

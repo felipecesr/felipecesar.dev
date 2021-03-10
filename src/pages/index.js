@@ -2,17 +2,16 @@ import fs from "fs";
 import styled from "styled-components";
 import media from "styled-media-query";
 
-import Hero from "components/Hero";
+import heroStyles from "components/Hero.module.scss";
 import Main from "components/Main";
-import Title from "components/Title";
+import titleStyles from "components/Title.module.scss";
 import List from "components/List";
-import Container from "components/Container";
+import containerStyles from "components/Container.module.scss";
 import Social from "components/Social";
-import HeroText from "components/HeroText";
 import { getAllPosts } from "lib/api";
 import { generateRss } from "lib/rss";
 
-const HeroInner = styled(Container)`
+const HeroInner = styled.div`
   padding-top: 6rem;
   padding-bottom: 6rem;
 
@@ -47,19 +46,14 @@ const HeroInner = styled(Container)`
 export default function Index({ allPosts }) {
   return (
     <>
-      <Hero>
-        <HeroInner>
+      <header className={heroStyles.hero}>
+        <HeroInner className={containerStyles.container}>
           <h1>Felipe César</h1>
-          {/* <HeroText>
-            <strong>Desenvolvedor Front-End</strong>, entusiasta JavaScript e
-            apaixonado por boas práticas. Fiz esse blog para compartilhar
-            artigos e dicas relacionados a desenvolvimento.
-          </HeroText> */}
           <Social />
         </HeroInner>
-      </Hero>
+      </header>
       <Main>
-        <Title>Últimos posts</Title>
+        <h2 className={titleStyles.title}>Últimos posts</h2>
         <List items={allPosts} />
       </Main>
     </>

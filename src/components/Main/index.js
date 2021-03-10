@@ -1,9 +1,9 @@
-import Wrapper from "components/Wrapper";
+import styles from "../Container.module.scss";
 
 export default function Main({ children }) {
   return (
     <main id="main">
-      <Wrapper>{children}</Wrapper>
+      <div className={styles.container + ' ' + styles['px-1']}>{children}</div>
     </main>
   );
 }

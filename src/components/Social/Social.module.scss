@@ -1,0 +1,19 @@
+.socialWrapper {
+  display: inline-flex;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+  list-style-type: none;
+
+  a {
+    opacity: 0.5;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  li + li {
+    margin-left: 1.75em;
+  }
+}

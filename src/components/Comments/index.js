@@ -1,11 +1,11 @@
 import ReactDisqusComments from "react-disqus-comments";
-import * as S from "./styles";
+import styles from './Comments.module.scss'
 
 const Comments = ({ url, title }) => {
   const completeUrl = "https://felipecesar.dev" + "/" + url;
 
   return (
-    <S.CommentsWrapper>
+    <section className={styles.commentsWrapper}>
       <h2>Comentários</h2>
       <ReactDisqusComments
         shortname="felipecesar"
@@ -13,7 +13,7 @@ const Comments = ({ url, title }) => {
         title={title}
         url={completeUrl}
       />
-    </S.CommentsWrapper>
+    </section>
   );
 };
 

@@ -1,17 +1,17 @@
 import Link from "next/link";
-import * as S from "./styles";
+import styles from './List.module.scss'
 
 export default function List({ items }) {
   return (
-    <S.List>
+    <ul className={styles.list}>
       {items.map((item, index) => (
-        <S.ListItem key={index}>
-          <S.Date>{item.date}</S.Date>
+        <li key={index} className={styles.listItem}>
+          <p className={styles.date}>{item.date}</p>
           <Link href={item.slug}>
             <a>{item.title}</a>
           </Link>
-        </S.ListItem>
+        </li>
       ))}
-    </S.List>
+    </ul>
   );
 }

@@ -1,7 +1,14 @@
-import styled from "styled-components";
-import media from "styled-media-query";
+.layoutWrapper {
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 50px;
+  }
+}
 
-export const SkipLink = styled.a`
+.skipLink {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -23,9 +30,9 @@ export const SkipLink = styled.a`
     height: auto;
     clip: auto;
   }
-`;
+}
 
-export const Footer = styled.footer`
+.footer {
   position: relative;
   padding-top: 6rem;
   padding-bottom: 2rem;
@@ -47,26 +54,16 @@ export const Footer = styled.footer`
     );
   }
 
-  ${media.greaterThan("medium")`
+  @media (min-width: 768px) {
     padding-bottom: 80px;
-  `}
-`;
+  }
+}
 
-export const Wrapper = styled.div`
-  ${media.greaterThan("medium")`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    padding-top: 50px;
-  `}
-`;
-
-export const Copy = styled.p`
+.copy {
   margin-bottom: 100px;
   opacity: 0.5;
 
-  ${media.greaterThan("medium")`
+  @media (min-width: 768px) {
     margin-bottom: 0;
-  `}
-`;
+  }
+}
