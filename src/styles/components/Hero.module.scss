@@ -4,11 +4,14 @@
   align-items: center;
 
   h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
     font-size: 2.369rem;
     margin-bottom: 2rem;
+    text-transform: uppercase;
 
     @media (min-width: 768px) {
-      font-size: 3.157rem;
+      font-size: 3.375em;
     }
   }
 }

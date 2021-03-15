@@ -1,5 +1,5 @@
 import ReactDisqusComments from "react-disqus-comments";
-import styles from './Comments.module.scss'
+import styles from 'styles/components/Comments.module.scss'
 
 const Comments = ({ url, title }) => {
   const completeUrl = "https://felipecesar.dev" + "/" + url;

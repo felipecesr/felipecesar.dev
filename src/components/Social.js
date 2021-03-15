@@ -1,4 +1,4 @@
-import styles from './Social.module.scss'
+import styles from 'styles/components/Social.module.scss'
 
 export default function Social() {
   const socialNetworks = {

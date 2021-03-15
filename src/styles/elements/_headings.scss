@@ -1,0 +1,58 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: clamp(var(--min), var(--val), var(--max));
+  position: relative;
+  margin-bottom: 1.45rem;
+  line-height: 1.1;
+  vertical-align: middle;
+
+  > a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("/images/link.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.5;
+    margin-right: 10px;
+    vertical-align: middle;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+h1 {
+  --min: 3.157rem;
+  --val: 5vw;
+  --max: 3em;
+}
+
+h2 {
+  --min: 1.99326rem;
+  --val: 4vw;
+  --max: 2.25em;
+}
+
+h3 {
+  --min: 1.58383rem;
+  --val: 4vw;
+  --max: 2.25em;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.79459rem;
+}
+
+h6 {
+  font-size: 0.7083rem;
+}

@@ -1,14 +1,14 @@
 import fs from "fs";
 
-import heroStyles from "components/Hero.module.scss";
+import heroStyles from "styles/components/Hero.module.scss";
 import Main from "components/Main";
-import titleStyles from "components/Title.module.scss";
+import titleStyles from "styles/components/Title.module.scss";
 import List from "components/List";
-import { container } from "components/Container.module.scss";
+import { container } from "styles/components/Container.module.scss";
 import Social from "components/Social";
 import { getAllPosts } from "lib/api";
 import { generateRss } from "lib/rss";
-import { heroInnerHome } from 'components/HeroInner.module.scss'
+import { heroInnerHome } from 'styles/components/HeroInner.module.scss'
 
 export default function Index({ allPosts }) {
   return (

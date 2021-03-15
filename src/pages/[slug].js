@@ -3,14 +3,14 @@ import Link from "next/link";
 
 import { getPostBySlug, getPostSlugs } from "lib/api";
 import markdownToHtml from "lib/markdownToHtml";
-import containerStyles from "components/Container.module.scss";
-import contentStyles from "components/Content.module.scss";
+import containerStyles from "styles/components/Container.module.scss";
+import contentStyles from "styles/components/Content.module.scss";
 
-import heroStyles from "components/Hero.module.scss";
+import heroStyles from "styles/components/Hero.module.scss";
 import Comments from "components/Comments";
-import navStyles from "components/Nav.module.scss";
-import headlineStyles from "components/Headline.module.scss";
-import heroInnerStyles from 'components/HeroInner.module.scss'
+import navStyles from "styles/components/Nav.module.scss";
+import headlineStyles from "styles/components/Headline.module.scss";
+import heroInnerStyles from 'styles/components/HeroInner.module.scss'
 
 export default function Post({ slug, title, date, excerpt, content }) {
   return (
