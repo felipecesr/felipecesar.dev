@@ -1,3 +1,5 @@
+@import 'tools/functions';
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +15,7 @@ html, body, #__next {
 body {
   background-color: #1D2128;
   color: #fff;
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Lora', serif;
 }
 
 a {
@@ -32,3 +34,9 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
+
+// p {
+//   --min: 1.25em;   /* 20px */
+//   --val: 2.5vw; /* preferred value = 2.5% viewport width */
+//   --max: 1.5em; /* maximum value */
+// }

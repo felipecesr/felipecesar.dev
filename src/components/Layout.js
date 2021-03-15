@@ -1,5 +1,5 @@
-import styles from './Layout.module.scss'
-import containerStyles from "components/Container.module.scss";
+import styles from 'styles/components/Layout.module.scss'
+import containerStyles from "styles/components/Container.module.scss";
 import Social from "components/Social";
 
 export default function Layout({ children }) {

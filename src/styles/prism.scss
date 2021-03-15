@@ -4,7 +4,7 @@
     pre[class*="language-"] {
       color: #ccc;
       background: none;
-      font-family: "Source Code Pro", Consolas, Menlo, Monaco, monospace;
+      font-family: Consolas, Menlo, Monaco, monospace;
       font-size: 14px;
       line-height: 1.375;
       direction: ltr;
@@ -25,7 +25,7 @@
 
     :not(pre) > code[class*="language-"],
     pre[class*="language-"] {
-      background: #292c34;
+      background: #111216;
       border-radius: 5px;
     }
 

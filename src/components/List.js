@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from './List.module.scss'
+import styles from 'styles/components/List.module.scss'
 
 export default function List({ items }) {
   return (

@@ -10,7 +10,7 @@ export default async function markdownToHtml(markdown = "") {
   const result = await unified()
     .use(remarkParse)
     .use(slug)
-    .use(headings, { behavior: "append" })
+    .use(headings, { behavior: "prepend" })
     .use(remarkRehype)
     .use(mdxPrism)
     .use(html)
