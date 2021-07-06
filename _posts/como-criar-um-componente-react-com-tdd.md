@@ -68,7 +68,7 @@ Por enquanto não precisamos de nada além disso para que o teste passe.
 Adicionamos um valor "na mão", apenas para o teste passar, mas vamos precisar que o componente funcione com outros valores, para isso vamos fazer a seguinte alteração no teste:
 
 ```jsx
-ReactDOM.render(<Highlight value={3000} />, container);
+ReactDOM.render(<Highlight value="3000" />, container);
 ```
 
 E logo em seguida no componente:
@@ -88,7 +88,7 @@ test("renders another value", () => {
   const container = document.createElement("div");
   document.body.appendChild(container);
 
-  ReactDOM.render(<Highlight value={5000} />, container);
+  ReactDOM.render(<Highlight value="5000" />, container);
 
   expect(document.body.textContent).toBe("5000");
 });
@@ -132,15 +132,15 @@ Ela contém o código que se repete nos dois testes. Com essa função, podemos 
 
 ```jsx
 test("renders a value", () => {
-  const value = 3000; // Arrange
+  const value = "3000"; // Arrange
   render(<Highlight value={value} />); // Act
-  expect(document.body.textContent).toBe(`R$ ${value}`); // Assert
+  expect(document.body.textContent).toBe(value); // Assert
 });
 
 test("renders another value", () => {
-  const value = 5000; // Arrange
+  const value = "5000"; // Arrange
   render(<Highlight value={value} />); // Act
-  expect(document.body.textContent).toBe(`R$ ${value}`); // Assert
+  expect(document.body.textContent).toBe(value); // Assert
 });
 ```
 
