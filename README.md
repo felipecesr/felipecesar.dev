@@ -6,10 +6,9 @@
 
 ## Technology stack
 
-* **Content:** [Markdown](https://daringfireball.net/projects/markdown/)
-* **Back-end:** [Next.js](https://nextjs.org/)
-* **Front-end:** [React](https://reactjs.org/)
-* **Deployment:** [Netlify](https://netlify.com/)
+* **Built with:** [Next.js](https://nextjs.org/)
+* **Hosted on:** [Netlify](https://netlify.com/)
+* **Managed by:** [Netlify CMS](https://www.netlifycms.org/)
 
 ## Running locally
 
@@ -82,4 +81,4 @@ Here you'll find all the CSS, images, and font files.
 
 ## License
 
-[MIT License](http://felipecesr.mit-license.org/) © Felipe Cesar
+[MIT License](https://github.com/felipecesr/felipecesar.dev/blob/master/LICENSE) © Felipe Cesar
