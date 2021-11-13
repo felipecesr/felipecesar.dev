@@ -1,4 +1,4 @@
 {
   "presets": ["next/babel"],
-  "plugins": [["babel-plugin-styled-components", { "ssr": true }], "date-fns"]
+  "plugins": ["date-fns"]
 }
