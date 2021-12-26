@@ -18,6 +18,7 @@ theme = "yinyang"
   homepage = "https://twitter.com/felipecesr"
 
 [params]
+mainSections = ["posts"]
 headTitle = "Felipe Cesar"
 disqus = "felipecesar" # disqus account name
 extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-5TG84ZB"></script>'
