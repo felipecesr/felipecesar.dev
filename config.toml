@@ -9,7 +9,7 @@ theme = "yinyang"
       unsafe = true
   [markup.highlight]
     guessSyntax = true
-    noClasses = true
+    noClasses = false
     style = "bw"
     tabWidth = 2
 
@@ -22,6 +22,7 @@ mainSections = ["posts"]
 headTitle = "Felipe Cesar"
 disqus = "felipecesar" # disqus account name
 extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-5TG84ZB"></script>'
+extraCSSFiles = ["css/syntax.css"]
 [[params.socials]]
 name = "Github"
 link = "https://github.com/felipecesr"
