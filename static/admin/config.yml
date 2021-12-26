@@ -9,9 +9,9 @@ collections:
   - name: "blog"
     label: "Blog Posts"
     label_singular: "Blog Post"
-    folder: "_posts"
+    folder: "content/posts"
     create: true
-    slug: "content/blog"
+    slug: "{{slug}}"
     fields:
       - {
           label: "Layout",
