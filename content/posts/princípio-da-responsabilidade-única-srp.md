@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Princípio da Responsabilidade Única (SRP)
-date: 2021-07-16T16:51:23.478Z
+date: 2018-07-16T16:51:23.478Z
 ---
 Neste artigo vou explicar como funciona o **Princípio da Responsabilidade Única (SRP)** do **SOLID** e mostrar como aplicá-lo em JavaScript.
 
@@ -9,10 +9,10 @@ Neste artigo vou explicar como funciona o **Princípio da Responsabilidade Únic
 
 SOLID é um acrônimo de 5 princípios da programação orientada a objetos, são eles:
 
-**[S]**ingle Responsability Principle
-**[O]**pen/Closed Principle
-**[L]**iskov Substitution Principle
-**[I]**nterface Segregation Principle
+**[S]**ingle Responsability Principle\
+**[O]**pen/Closed Principle\
+**[L]**iskov Substitution Principle\
+**[I]**nterface Segregation Principle\
 **[D]**ependency Inversion Principle
 
 Com a aplicação destes princípios podemos obter alguns benefícios, como códigos mais fáceis de manter, adaptar, testar, etc. Além de evitar possíveis problemas como códigos desestruturados, frágeis e duplicados.
