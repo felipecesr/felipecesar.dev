@@ -1,7 +1,8 @@
 baseURL = "https://felipecesar.dev/"
-languageCode = "pt-BR"
+languageCode = "pt-br"
 title = "Felipe Cesar - Desenvolvedor Front-End"
 theme = "yinyang"
+DefaultContentLanguage = "pt-br"
 
 [markup]
   [markup.goldmark]
@@ -16,6 +17,16 @@ theme = "yinyang"
 [author]
   name = "Felipe"
   homepage = "https://twitter.com/felipecesr"
+
+[languages]
+  [languages.pt-br]
+    contentDir = "content/pt-br"
+    languageName = "Portuguese"
+    weight = 1
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "English"
+    weight = 2
 
 [params]
 mainSections = ["posts"]
