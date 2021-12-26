@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Como criar um componente React com TDD
+tags:
+  - react
+  - tdd
+  - javascript
 date: 2021-07-06T02:20:58.090Z
 ---
 Quando começamos a estudar sobre TDD (Test Driven Development) é comum surgirem algumas dúvidas, por exemplo, o que testar? como escrever testes antes do código de produção?
