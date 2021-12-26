@@ -1,0 +1,33 @@
+baseURL = "https://felipecesar.dev/"
+languageCode = "pt-BR"
+title = "Felipe Cesar - Desenvolvedor Front-End"
+theme = "yinyang"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    guessSyntax = true
+    noClasses = true
+    style = "bw"
+    tabWidth = 2
+
+[author]
+  name = "Felipe"
+  homepage = "https://twitter.com/felipecesr"
+
+[params]
+mainSections = ["posts"]
+headTitle = "Felipe Cesar"
+disqus = "felipecesar" # disqus account name
+extraHead = '<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-5TG84ZB"></script>'
+[[params.socials]]
+name = "Github"
+link = "https://github.com/felipecesr"
+[[params.socials]]
+name = "LinkedIn"
+link = "https://www.linkedin.com/in/felipecesr/"
+[[params.socials]]
+name = "Twitter"
+link = "https://twitter.com/felipecesr"
