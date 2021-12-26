@@ -1,5 +1,0 @@
-$emBase: 16px;
-
-@function emCal($pixelBasedNum){
-  @return $pixelBasedNum / $emBase * 1em
-}
