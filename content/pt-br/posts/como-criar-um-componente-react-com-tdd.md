@@ -8,6 +8,7 @@ tags:
 date: 2021-07-06T02:20:58.090Z
 aliases:
   - /como-criar-um-componente-react-com-tdd/
+  - /escrevendo-um-componente-react-com-tdd/
 ---
 Quando começamos a estudar sobre TDD (Test Driven Development) é comum surgirem algumas dúvidas, por exemplo, o que testar? como escrever testes antes do código de produção?
 
