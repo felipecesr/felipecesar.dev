@@ -2,7 +2,8 @@
 layout: default
 title: Como criar funções puras com TDD
 date: 2021-07-10T16:58:47.689Z
-aliases: [/como-criar-funções-puras-com-tdd/]
+aliases:
+  - /como-criar-funções-puras-com-tdd/
 ---
 Nesse artigo vamos criar a função `multiply`, seguindo o TDD, que foi explicado em detalhes no primeiro [artigo](https://dev.to/felipecesr/como-criar-um-componente-react-com-tdd-236p). Ela deve receber dois valores e retornar a multiplicação deles.
 

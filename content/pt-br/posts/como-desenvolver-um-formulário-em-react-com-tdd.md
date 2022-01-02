@@ -2,7 +2,8 @@
 layout: default
 title: Como desenvolver um formulário em React com TDD
 date: 2021-07-08T13:06:03.967Z
-aliases: [/como-desenvolver-um-formulário-em-react-com-tdd/]
+aliases:
+  - /como-desenvolver-um-formulário-em-react-com-tdd/
 ---
 Continuando os artigos sobre testes, chegou a hora de adicionar um pouco mais de ação, vamos criar um componente de formulário, onde o usuário vai preencher os campos e clicar em um botão para submeter os dados.
 
