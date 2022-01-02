@@ -2,6 +2,7 @@
 layout: default
 title: Gerenciando dependências com Volta
 date: 2020-10-19T02:28:22.573Z
+aliases: [/gerenciando-dependencias-com-volta/]
 ---
 
 Neste post vou falar um pouco sobre o que é o [Volta](https://volta.sh/) e porque deixei de usar o [NVM](http://nvm.sh/).

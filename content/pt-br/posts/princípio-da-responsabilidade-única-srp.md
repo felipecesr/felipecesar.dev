@@ -2,6 +2,7 @@
 layout: default
 title: Princípio da Responsabilidade Única (SRP)
 date: 2018-07-16T16:51:23.478Z
+aliases: [/princípio-da-responsabilidade-única-srp/]
 ---
 Neste artigo vou explicar como funciona o **Princípio da Responsabilidade Única (SRP)** do **SOLID** e mostrar como aplicá-lo em JavaScript.
 

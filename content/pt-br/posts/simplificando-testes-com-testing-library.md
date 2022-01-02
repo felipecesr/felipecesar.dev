@@ -2,6 +2,7 @@
 layout: default
 title: Simplificando testes com Testing Library
 date: 2021-07-06T16:19:42.847Z
+aliases: [/simplificando-testes-com-testing-library/]
 ---
 Fala pessoal! Neste artigo vamos falar sobre [Testing Library](https://testing-library.com/) dando continuidade ao [artigo anterior](https://dev.to/felipecesr/como-criar-um-componente-react-com-tdd-236p). Se quiser pode baixar o [repositório](https://github.com/felipecesr/react-com-tdd-na-pratica/tree/exercise-01-end) para acompanhar o conteúdo.
 
