@@ -33,9 +33,3 @@ HUGO_ENABLEGITINFO = "true"
 from = "/npmjs/*"
 to = "/npmjs/"
 status = 200
-
-[[redirects]]
-from = "/*"
-to = "/posts/:splat"
-status = 301
-force = true
