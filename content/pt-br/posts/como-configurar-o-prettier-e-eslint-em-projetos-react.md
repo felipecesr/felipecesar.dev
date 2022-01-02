@@ -2,6 +2,7 @@
 layout: default
 title: Como configurar o Prettier e ESLint em projetos React
 date: 2021-07-17T17:00:29.174Z
+aliases: [/como-configurar-o-prettier-e-eslint-em-projetos-react/]
 ---
 Continuando a série sobre testes, vamos adicionar duas ferramentas ao projeto que ajudam a melhorar a qualidade do código.
 
