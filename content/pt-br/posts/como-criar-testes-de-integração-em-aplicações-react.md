@@ -2,6 +2,7 @@
 layout: default
 title: Como criar testes de integração em aplicações React
 date: 2021-07-12T20:09:12.831Z
+aliases: [/como-criar-testes-de-integração-em-aplicações-react/]
 ---
 Fala galera! Nos artigos anteriores criamos dois componentes e uma função, testamos cada uma das partes de forma isolada, criando testes que são conhecidos como testes unitários.
 
