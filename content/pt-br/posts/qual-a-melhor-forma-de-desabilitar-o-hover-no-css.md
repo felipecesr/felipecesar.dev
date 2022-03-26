@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Qual a melhor forma de desabilitar o hover no CSS?
+title: Interaction Media Features
 tags:
   - css
 date: 2022-03-26T13:01:42.745Z
