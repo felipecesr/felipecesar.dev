@@ -31,7 +31,7 @@ a {
     color: red;
   }
 }
-``
+```
 
 Mas essa é a melhor solução? Vamos considerar as seguintes situações:
 
