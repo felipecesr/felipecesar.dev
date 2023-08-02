@@ -31,6 +31,8 @@ DefaultContentLanguage = "pt-br"
 [params]
 mainSections = ["posts"]
 headTitle = "Felipe Cesar"
+author = 'Felipe Cesar'
+description = "Um blog com artigos sobre boas práticas em engenharia de software focado em JavaScript, TypeScript e desenvolvimento web em geral."
 disqus = "felipecesar" # disqus account name
 extraHead = '''
 <!-- Google Tag Manager -->
