@@ -6,6 +6,7 @@ tags:
   - engineer
   - architecture
 date: 2023-09-16T15:05:22.047Z
+aliases: []
 ---
 Neste post compartilho algumas anotações sobre MVC que fiz lendo o livro [Learning JavaScript Design Pattern](https://www.amazon.com.br/Learning-JavaScript-Design-Patterns-Developers/dp/1098139879/) do [Addy Osmani](https://twitter.com/addyosmani).
 
@@ -30,17 +31,17 @@ Quando um usuário clica em algum elemento da View, não é responsabilidade da 
 
 ```javascript
 const buildPhotoView = (photoModel, photoController) => {
-	const photoEl = document.createElement('div')
+  const photoEl = document.createElement('div')
 
-	const render = () => {
-		/* ... */
-	}
+  const render = () => {
+	/* ... */
+  }
 
   photoModel.addSubscriber(render)
 
-	photoEl.addEventListener('click', () => {
-		photoController.handleEvent('click', photoModel)
-	})
+  photoEl.addEventListener('click', () => {
+    photoController.handleEvent('click', photoModel)
+  })
 }
 ```
 
