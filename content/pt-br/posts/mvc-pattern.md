@@ -44,3 +44,5 @@ const buildPhotoView = (photoModel, photoController) => {
 ```
 
 Templates não são Views. Uma View é um objeto que observa um Model e mantém a representação visual atualizada. Views representam os dados da aplicação visualmente, e templates podem ser usados para gerar Views.
+
+Na visão da GoF o MVC é uma variação de três design patterns clássicos: Observer, Strategy e Composite. Dependendo da implementação. ele também pode usar os padrões Factory e Template Methods.
