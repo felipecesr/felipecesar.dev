@@ -17,11 +17,9 @@ Neste post compartilho algumas anotações sobre MVC que fiz lendo o livro [Lear
 
 ## Resumindo
 
-Model são dados de negócio.
-
-View em JavaScript constrói e organiza uma coleção de elementos DOM.
-
-A tarefa de atualizar o Model é do Controller.
+* Model são dados de negócio.
+* View em JavaScript constrói e organiza uma coleção de elementos DOM.
+* A tarefa de atualizar o Model é do Controller.
 
 ## Exemplo
 
