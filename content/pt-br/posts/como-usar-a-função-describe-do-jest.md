@@ -77,4 +77,4 @@ Algumas pessoas podem odiar isso (inclusive eu ) porque os testes ficam mais dif
 
 ## Conclusão
 
-A sintaxe `describe` pode ajudar quando você quiser criar diferentes contextos dentro do mesmo arquivo, mas é importante tomar cuidado para não deixar os testes difíceis de manter.
+A função `describe` pode ajudar quando você quiser criar diferentes contextos dentro do mesmo arquivo, mas é importante tomar cuidado para não deixar os testes difíceis de manter.
