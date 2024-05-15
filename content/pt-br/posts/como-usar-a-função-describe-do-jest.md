@@ -17,12 +17,12 @@ O código abaixo mostra como ela pode ser usada.
 ```jsx
 describe('aliquotaIR', () => {
   test('retorna a tarifa de 22,5% quando recebe o valor de 180 dias', () => {
-	  const tempoInvestidoEmDias = 180;
-  
-	  const tarifa = aliquotaIR(tempoInvestidoEmDias);
-  
-	  expect(tarifa).toBeCloseTo(0.225);
-	});
+    const tempoInvestidoEmDias = 180;
+
+    const tarifa = aliquotaIR(tempoInvestidoEmDias);
+
+    expect(tarifa).toBeCloseTo(0.225);
+  });
 });
 ```
 
@@ -44,12 +44,12 @@ O [Jest](https://jestjs.io/) também expõe a função `it`. Esta função é um
 ```jsx
 describe('aliquotaIR', () => {
   it('retorna a tarifa de 22,5% quando recebe o valor de 180 dias', () => {
-	  const tempoInvestidoEmDias = 180;
-  
-	  const tarifa = aliquotaIR(tempoInvestidoEmDias);
-  
-	  expect(tarifa).toBeCloseTo(0.225);
-	});
+    const tempoInvestidoEmDias = 180;
+
+    const tarifa = aliquotaIR(tempoInvestidoEmDias);
+
+    expect(tarifa).toBeCloseTo(0.225);
+  });
 });
 ```
 
@@ -61,15 +61,15 @@ Podemos usar o `describe` para criar outro nível de contexto para explicar o ce
 
 ```jsx
 describe('aliquotaIR', () => {
-	describe('dado o valor de 180 dias', () => {
-		test('retorna a tarifa de 22,5%', () => {
-		  const tempoInvestidoEmDias = 180;
-  
-		  const tarifa = aliquotaIR(tempoInvestidoEmDias);
-  
-		  expect(tarifa).toBeCloseTo(0.225);
-		});
-	});
+  describe('dado o valor de 180 dias', () => {
+    test('retorna a tarifa de 22,5%', () => {
+      const tempoInvestidoEmDias = 180;
+
+      const tarifa = aliquotaIR(tempoInvestidoEmDias);
+
+      expect(tarifa).toBeCloseTo(0.225);
+    });
+  });
 });
 ```
 
