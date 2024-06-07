@@ -6,7 +6,7 @@ tags:
   - oop
   - solid
   - es6
-date: 2018-07-16T20:12:04.630Z
+date: 2018-11-16T19:12:04.630Z
 ---
 De volta aos princípios **SOLID**, hoje vou falar sobre o terceiro princípio do acrônimo: o **Princípio de Substituição de Liskov** (Liskov Substitution Principle), ou simplesmente **LSP**. Se você não leu os posts anteriores pode encontrá-los clicando [aqui](/posts/princípio-da-responsabilidade-única-srp/) e [aqui](/posts/solid-com-javascript-princípio-aberto-fechado-ocp/).
 
