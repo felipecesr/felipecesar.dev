@@ -1,4 +1,6 @@
 import './global.css'
+import Nav from '@/components/nav'
+import Footer from '@/components/footer'
 
 const RootLayout = ({
   children,
@@ -6,8 +8,12 @@ const RootLayout = ({
   children: React.ReactNode
 }) => {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="pt-BR">
+      <body>
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
