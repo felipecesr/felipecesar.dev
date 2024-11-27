@@ -6,9 +6,9 @@
 
 ## Technology stack
 
-* **Built with:** [Hugo](https://gohugo.io/)
+* **Built with:** [Next.js](https://nextjs.org/)
 * **Hosted on:** [Netlify](https://netlify.com/)
-* **Managed by:** [Netlify CMS](https://www.netlifycms.org/)
+* **Managed by:** [Decap CMS](https://decapcms.org/)
 
 ## License
 
