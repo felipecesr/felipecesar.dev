@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Escrevendo Bons Testes com a Testing Library: Um Guia Pratico"
+title: "Escrevendo Bons Testes com a Testing Library: Um Guia Prático"
 tags:
   - javascript
   - testes
