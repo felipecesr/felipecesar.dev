@@ -1,37 +1,17 @@
 ---
 layout: default
-title: "Comece do Zero: Testes de Unidade com JavaScript"
+title: "Comece do Zero: Entenda como testes funcionam com JavaScript"
 tags:
   - javascript
   - testes
   - qualidade
 date: 2024-12-02T18:53:00.000Z
 ---
-Testes de unidade são fundamentais para garantir a qualidade e a sustentabilidade do código. Neste artigo, você aprenderá como funcionam os testes de unidade na prática, enquanto constrói um "mini framework de testes" do zero e explora conceitos essenciais de forma simples e direta.
+Testes são fundamentais para garantir a qualidade e a sustentabilidade do código. Neste post, você aprenderá como os testes funcionam na prática, enquanto constrói um "mini framework de testes" do zero e explora conceitos essenciais de forma simples e direta.
 
-## O que são testes de unidade?
+## O que é um teste?
 
-Testes de unidade são uma técnica de teste em que as menores partes testáveis de uma aplicação, chamadas unidades, são individualmente e independentemente verificadas para validar seu comportamento correto.
-
-Uma unidade é um caso de uso dentro do sistema e sempre tem um "ponto de entrada" e um "ponto de saída". Um exemplo simples é uma função que calcula algo e retorna um valor. Vale ressaltar que uma unidade pode ser uma função, várias funções, ou até mesmo vários módulos ou componentes. Vamos ilustrar com um exemplo simples:
-
-```javascript
-function sum(a, b) {
-  return a + b;
-}
-```
-
-Aqui, a função `sum` é o ponto de entrada, e o valor retornado é o ponto de saída.
-
-## Por quê testar?
-
-O objetivo principal dos testes de unidade é possibilitar o **crescimento sustentável do projeto**. Eles fornecem segurança para refatorar, corrigir bugs e adicionar novas funcionalidades sem medo de quebrar o que já funciona.
-
-**Importante:** o sucesso não está na busca por 100% de cobertura de testes, mas na criação de uma suíte de testes confiável que permita trabalhar com confiança. Ter muitos testes não significa nada se você ainda tiver medo de modificar o código.
-
-## Começando do zero: O primeiro teste
-
-Um teste básico verifica se a saída de uma unidade corresponde ao esperado. Sem usar nenhum framework, um teste pode ser assim:
+Teste é o processo onde verificamos se algo funciona de acordo com o esperado. Por exemplo, no código abaixo utilizo a função `sum` para somar 2 + 2 e digo que o valor esperado é 4. Se não der erro durante a execução do código significa que o teste passou.
 
 ```javascript
 const result = sum(2, 2);
@@ -41,6 +21,12 @@ if (result !== expected) {
   throw new Error(`${result} is not equal to ${expected}`);
 }
 ```
+
+## Por quê testar?
+
+O objetivo principal dos testes é possibilitar o **crescimento sustentável do projeto**. Eles **fornecem segurança** para refatorar, corrigir bugs e adicionar novas funcionalidades sem medo de quebrar o que já funciona.
+
+**Importante:** o sucesso não está na busca por 100% de cobertura de testes, mas na criação de uma suíte de testes confiável que permita trabalhar com confiança. Ter muitos testes não significa nada se você ainda tiver medo de modificar o código.
 
 Isso já é funcional, mas não escalável. Então, vamos melhorar!
 
@@ -100,6 +86,6 @@ test("a positive and a negative number", () => {
 
 ## Conclusão
 
-Testes de unidade são uma peça-chave para escrever códigos mais confiáveis e sustentáveis. Frameworks populares como [Jest](https://jestjs.io/) e [Vitest](https://vitest.dev/) tornam o processo mais simples, mas compreender como eles funcionam por baixo dos panos é essencial para aproveitar todo o seu potencial. Neste artigo, você deu os primeiros passos para dominar os fundamentos e entender sua aplicação prática.
+Testes são uma peça-chave para escrever códigos mais confiáveis e sustentáveis. Frameworks populares como [Jest](https://jestjs.io/) e [Vitest](https://vitest.dev/) tornam o processo mais simples, mas compreender como eles funcionam por baixo dos panos é essencial para aproveitar todo o seu potencial. Neste artigo, você deu os primeiros passos para dominar os fundamentos e entender sua aplicação prática.
 
-O que você achou deste guia? Tem dúvidas ou experiências para compartilhar? Deixe seu comentário!
+O que você achou deste post? Tem dúvidas ou experiências para compartilhar? Deixe seu comentário!
