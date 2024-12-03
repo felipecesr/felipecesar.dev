@@ -7,7 +7,7 @@ tags:
   - qualidade
 date: 2024-12-02T18:53:00.000Z
 ---
-Testes são fundamentais para garantir a qualidade e a sustentabilidade do código. Neste post, você aprenderá como os testes funcionam na prática, enquanto constrói um "mini framework de testes" do zero e explora conceitos essenciais de forma simples e direta.
+Neste post, você aprenderá como os testes funcionam na prática, enquanto constrói um "mini framework de testes" do zero e explora conceitos essenciais de forma simples e direta.
 
 ## O que é um teste?
 
