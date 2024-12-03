@@ -9,7 +9,7 @@ tags:
   - react
 date: 2024-12-03T18:27:00.000Z
 ---
-Os testes são a base de uma aplicação robusta e confiável. Mas o que define um **bom teste**? Como desenvolvedor front-end, aprendi que **bons testes** devem seguir quatro regras simples, mas poderosas. Neste artigo, vou mostrar como aplicá-las com a **[Testing Library](https://testing-library.com/)**, uma ferramenta que transforma a forma como escrevemos testes.
+Os testes são a base de uma aplicação robusta e confiável. Mas o que define um **bom teste**? Como desenvolvedor front-end, aprendi que **bons testes** devem seguir **quatro regras** simples, mas poderosas. Neste artigo, vou mostrar como aplicá-las com a **[Testing Library](https://testing-library.com/)**, uma ferramenta que transforma a forma como escrevemos testes.
 
 ## O que define um bom teste?
 
@@ -50,13 +50,13 @@ test('opens the menu', () => {
 
 Esse código executa os seguintes passos:
 
-* Pesquisa os elementos button e menu-bar usando os seletores corretos
-* Faz uma chamada ao método click a partir do elemento button
-* Verifica se uma classe foi adicionada no elemento menu-bar
+* Pesquisa os elementos `button` e `menu-bar` usando os seletores corretos
+* Faz uma chamada ao método `click` a partir do elemento `button`
+* Verifica se uma classe foi adicionada no elemento `menu-bar`
 
 Este teste dá **feedback rápido**, mas falha nos seguintes pontos:
 
-* **Resistência a refatorações**: Mudanças na classe ou estrutura do DOM quebram o teste.
+* **Resistência a refatorações**: Mudanças na classe ou estrutura do [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) quebram o teste.
 * **Proteção contra regressões**: Ele testa detalhes de implementação, e não o comportamento do usuário.
 
 ## A solução: Testing Library
