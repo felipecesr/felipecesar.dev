@@ -20,7 +20,7 @@ Além disso, o modo de observação (watch mode) do Vitest é incrivelmente ráp
 
 Ah, e você não precisa usar Vite para aproveitar tudo isso! O Vitest também funciona perfeitamente em outros cenários.
 
-## Já Usa o Jest? Adapte-se em Minutos
+## Já usa o Jest? Adapte-se em minutos
 
 Se você já está familiarizado com o Jest, migrar para o Vitest é fácil. Sua API é quase idêntica, incluindo ferramentas poderosas como **Snapshot** e **Coverage**. Veja um exemplo prático retirado da documentação:
 
