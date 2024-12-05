@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Vitest: A próxima geração dos frameworks de teste"
+title: "Vitest: A proxima geracao dos frameworks de teste"
 tags:
   - teste
   - qualidade
