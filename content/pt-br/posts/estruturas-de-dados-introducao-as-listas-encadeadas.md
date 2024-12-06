@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Estruturas de dados: Introdução às Listas Encadeadas"
+title: "Estruturas de dados: Introdução as Listas Encadeadas"
 tags:
   - javascript
   - testes
