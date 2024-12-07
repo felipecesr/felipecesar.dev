@@ -29,7 +29,7 @@ data02.ts
 #EXT-X-ENDLIST
 ```
 
-**Significado das tags principais:**
+### Significado das tags principais:
 
 * **EXTM3U:** Indica o formato da playlist.
 * **EXT-X-VERSION:** Versão do protocolo HLS utilizada.
