@@ -122,3 +122,9 @@ async onMediaAttaching(event, data) {
 3. **Vinculação ao elemento `<video>`:** Associa o `MediaSource` ao vídeo usando um [Object URL](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL_static).
 4. **Espera pelo evento `sourceopen`:** Garante que o `MediaSource` esteja pronto para receber dados.
 5. **Dispara o evento `MEDIA_ATTACHED`:** Indica que a mídia foi anexada com sucesso, permitindo que outras partes do player continuem o processamento.
+
+## Conclusão
+
+A [API Media Source Extensions](https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API) é o que permite ao navegador fazer streaming de vídeo adaptativo, fundamental para lidar com formatos como HLS. Essa etapa é o primeiro passo para tornar o player HLS dinâmico e pronto para exibir vídeos em diferentes condições de rede.
+
+Fique ligado e acompanhe os próximos capítulos dessa jornada!
