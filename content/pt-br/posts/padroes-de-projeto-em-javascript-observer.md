@@ -12,6 +12,8 @@ Nos últimos posts sobre o **player HLS**, usamos a biblioteca [EventEmitter3](h
 
 O **Padrão Observer** se baseia em uma relação de **inscrição e notificação**, onde um objeto (o "Subject") notifica outros objetos ("Observers") sobre mudanças em seu estado. Pense em uma lista de transmissão: você se inscreve, recebe as notificações e pode cancelar a qualquer momento.
 
+![Exemplo do padrão observer](/img/observer.png)
+
 Agora, por que isso é relevante? Em aplicações modernas, precisamos reagir a eventos de forma organizada, e o Observer nos ajuda a encapsular essa lógica.
 
 ## Exemplo prático
