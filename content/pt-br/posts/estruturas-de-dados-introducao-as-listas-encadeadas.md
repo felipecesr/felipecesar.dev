@@ -164,6 +164,10 @@ class LinkedList {
     while (current.next && current.next.value !== value) {
       current = current.next;
     }
+    
+    if (current.next) {
+      current.next = current.next.next;
+    }
   }
 }
 ```
