@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Padroes de projeto em JavaScript: Observer"
+title: "Padrões de projeto em JavaScript: Observer"
 tags:
   - patterns
   - javascript
