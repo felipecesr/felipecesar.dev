@@ -53,6 +53,7 @@ class LinkedList {
     const node = new Node(value);
     if (!this.head) {
       this.head = node;
+      return;
     }
   }
 }
@@ -162,6 +163,10 @@ class LinkedList {
     let current = this.head;
     while (current.next && current.next.value !== value) {
       current = current.next;
+    }
+    
+    if (current.next) {
+      current.next = current.next.next;
     }
   }
 }
