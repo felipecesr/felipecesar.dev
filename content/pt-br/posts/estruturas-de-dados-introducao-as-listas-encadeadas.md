@@ -53,6 +53,7 @@ class LinkedList {
     const node = new Node(value);
     if (!this.head) {
       this.head = node;
+      return;
     }
   }
 }
