@@ -2,7 +2,7 @@
 layout: default
 title: Introdução a Monorepos com Yarn Workspaces
 tags:
-  - architetura
+  - arquitetura
   - monorepo
 date: 2024-12-13T18:35:00.000Z
 ---
