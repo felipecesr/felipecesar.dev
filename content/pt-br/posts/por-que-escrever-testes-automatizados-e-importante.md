@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Por que escrever testes automatizados e importante?
+title: Por quê escrever testes automatizados é importante?
 tags:
   - testes
   - qualidade
