@@ -114,11 +114,7 @@ Métricas de cobertura são ferramentas úteis para identificar **o que não est
 
 Para garantir testes realmente eficazes, lembre-se:
 
-* Use as métricas como 
-
-  **ferramentas de diagnóstico**
-
-  , não como metas rígidas.
+* Use as métricas como **ferramentas de diagnóstico**, não como metas rígidas.
 * Foque em cobrir cenários relevantes para o comportamento do código.
 * Não persiga 100% de cobertura sem avaliar a qualidade real dos testes.
 
