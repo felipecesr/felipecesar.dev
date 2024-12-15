@@ -52,4 +52,14 @@ test('isStringLong', () => {
 
 O número total de linhas na função `isStringLong` é 3. O número de linhas executadas pelo teste é 2, o teste executa todas as linhas menos a declaração (statement) `return true`. Então 2/3 = 0.6666 = **66.66% de cobertura de código**. O valor da métrica é exibido em % Lines.
 
-![Exemplo do output da métrica de cobertura](/img/lines-example.png)
+![Exemplo do output da métrica de cobertura no browser](/img/lines-example.png)
+
+![Exemplo do output da métrica de cobertura no terminal](/img/lines-terminal.png)
+
+Mas o que acontece se refatorarmos o código?
+
+```javascript
+export function isStringLong(input) {
+  return input.length > 5
+}
+```
