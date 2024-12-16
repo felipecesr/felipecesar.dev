@@ -28,13 +28,13 @@ Inicialmente, podemos ter um objeto simples que não está normalizado:
 ```javascript
 {
   id: "1",
-  name: "Evgenil",
+  name: "Jake Peralta",
   job: {
-    id: "UIE",
-    title: "UI Engineer",
-    department: "Engineering"
+    id: "DTC",
+    title: "Detective",
+    department: "99th Precinct"
   },
-  location: { code: "UK", name: "United Kingdom" }
+  location: { code: "NY", name: "New York" }
 }
 ```
 
@@ -52,12 +52,12 @@ Para cumprir essas regras, removemos o aninhamento de objetos e convertemos os d
 ```javascript
 {
   id: "1",
-  name: "Evgenil",
-  job_id: "UIE",
-  job_title: "UI Engineer",
-  job_department: "Engineering",
-  country_code: "UK",
-  country_name: "United Kingdom",
+  name: "Jake Peralta",
+  job_id: "DTC",
+  job_title: "Detective",
+  job_department: "99th Precinct",
+  city_code: "NY",
+  city_name: "New York",
 }
 ```
 
@@ -75,22 +75,22 @@ Neste caso, observamos que campos como `job_title` e `job_department` dependem d
 ```javascript
 const users = {
   "1": {
-    name: "Evgenil",
-    job_id: "UIE",
-    country_id: "UK",
+    name: "Jake Peralta",
+    job_id: "DTC",
+    city_id: "NY",
   }
 }
 
 const jobs = {
-  "UIE": {
-    title: "UI Engineer",
-    department: "Engineering"
+  "DTC": {
+    title: "Detective",
+    department: "99th Precinct"
   }
 }
 
-const user_jobs = { "1": "UIE" }
+const user_jobs = { "1": "DTC" }
 
-const countries = { "UK": "United Kingdom" }
+const cities = { "NY": "New York" }
 ```
 
 Essa separação garante que cada entidade dependa exclusivamente de sua própria chave primária.
@@ -105,9 +105,9 @@ Essa separação garante que cada entidade dependa exclusivamente de sua própri
 Na estrutura atual, o campo `department` em `jobs` pode não estar diretamente relacionado ao `job_id`. Para resolver isso, criamos uma tabela adicional para o departamento:
 
 ```javascript
-const jobs = { "UIE": "UI Engineer" }
+const jobs = { "DTC": "Detective" }
 
-const department = { "UIE": "Engineering" }
+const department = { "DTC": "99th Precinct" }
 ```
 
 A terceira forma normal (3FN) pode ser excessiva em alguns casos. Normalmente, a segunda forma normal (2FN) é suficiente para aplicações frontend, mas a escolha final depende das necessidades específicas do seu projeto.
