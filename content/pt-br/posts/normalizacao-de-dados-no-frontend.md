@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Normalizacao de Dados no Frontend
+title: Normalização de dados no Frontend
 tags:
   - system
   - design
