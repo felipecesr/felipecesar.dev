@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Como evitar re-renders desnecessarios no React usando multiplos contextos
+title: Como evitar re-renders desnecessários no React usando múltiplos contextos
 tags:
   - react
   - performance
