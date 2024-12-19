@@ -42,7 +42,7 @@ const encode = obj => {
 };
 ```
 
-## Codificando `header` e `payload`
+### Codificando `header` e `payload`
 
 Podemos usar essa função para codificar tanto o **header** quanto o **payload**:
 
@@ -59,13 +59,15 @@ const payload = {
 };
 
 encode(header);
-// "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+// Resultado: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 
 encode(payload);
-// "eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ=="
+// Resultado: eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ==
 ```
 
-## Tornando o JWT seguro para URLs
+Note que no final do resultado de `payload` temos `==`, isso é chamado de padding em Base64. As vezes você pode ter um pouco de padding no final. Vamos resolver isso!
+
+### Tornando o JWT seguro para URLs
 
 Tokens Base64 às vezes incluem caracteres como `+`, `/` e `=` que podem causar problemas em URLs. Para resolver isso, criamos a função `makeUrlSafe`:
 
@@ -86,4 +88,53 @@ const makeUrlSafe = encoded => {
 
 Com essa função, garantimos que o token seja seguro para uso em qualquer URL.
 
-## Criando a assinatura do JWT
+### Criando a assinatura do JWT
+
+Agora vem a parte mais importante: a assinatura. Ela combina o **header** e o **payload** com uma chave secreta e os passa por um algoritmo de hash, garantindo que o token seja confiável.
+
+Para isso, utilizaremos a biblioteca [crypto-js](https://www.npmjs.com/package/crypto-js):
+
+### Instalando o `crypto-js`
+
+```
+npm install crypto-js
+```
+
+### Criando a função de assinatura
+
+```javascript
+const hmacSHA256 = require('crypto-js/hmac-sha256');
+const Base64 = require('crypto-js/enc-base64');
+
+const jwtSecret = 'your-256-bit-secret';
+
+const makeSignature = (header, payload, secret) => {
+  const hashed = hmacSHA256(`${encode(header)}.${encode(payload)}`, secret);
+  const stringified = Base64.stringify(hashed);
+  return makeUrlSafe(stringified);
+};
+```
+
+Essa função utiliza o algoritmo **HMACSHA256** para gerar uma assinatura única.
+
+### Construindo o JWT completo
+
+Finalmente, unimos o **header**, o **payload** e a **assinatura** para formar o JWT completo:
+
+```javascript
+const getJwt = (header, payload, signature) => {
+  return `${header}.${payload}.${signature}`;
+};
+
+getJwt(
+  encode(header),
+  encode(payload),
+  makeSignature(header, payload, jwtSecret)
+);
+
+// Resultado: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+```
+
+## Conclusão
+
+Este exercício foi apenas demonstrativo, para explicar a estrutura e criação de um **JSON Web Token**. Espero que este guia tenha ajudado a esclarecer o funcionamento dessa tecnologia!
