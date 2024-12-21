@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Boas Praticas no uso de JSON Web Tokens
+title: Boas Práticas no uso de JSON Web Tokens
 tags:
   - seguranca
 date: 2024-12-21T07:19:00.000Z
