@@ -65,7 +65,7 @@ app.post("/api/signup", async (req, res) => {
 });
 ```
 
-### Pontos de observação
+### Pontos de atenção
 
 * **Nunca armazene senhas em texto puro**: As senhas devem ser criptografadas utilizando bibliotecas como `bcrypt` para gerar hashes seguros.
 * **Mensagem de erro para emails já cadastrados**: Ao verificar se o email já está cadastrado, há duas abordagens possíveis. Algumas pessoas defendem mensagens genéricas, como "dados inválidos", para evitar que invasores descubram emails existentes. Por outro lado, serviços como o Gmail optam por mensagens claras, como "email já cadastrado", priorizando a experiência do usuário. Não há uma regra fixa aqui; escolha a abordagem que melhor atende às necessidades do seu projeto, equilibrando segurança e usabilidade.
@@ -74,3 +74,54 @@ app.post("/api/signup", async (req, res) => {
 Com essas práticas, você pode garantir segurança e uma experiência de usuário sem frustrações.
 
 ## Endpoint de login
+
+Agora, vamos falar sobre o endpoint de login. Veja como ele pode ser implementado:
+
+```javascript
+app.post("/api/authenticate", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    const user = await User.findOne({ email }).lean();
+
+    if (!user) {
+      return res.status(403).json({ message: "Wrong email or password" });
+    }
+
+    const passwordValid = await verifyPassword(password, user.password);
+
+    if (passwordValid) {
+      const { password, bio, ...rest } = user;
+      const userInfo = Object.assign({}, { ...rest });
+
+      const token = createToken(userInfo);
+
+      const decodedToken = jwtDecode(token);
+      const expiresAt = decodedToken.exp;
+
+      return res.json({
+        message: "Authentication successful!",
+        token,
+        userInfo,
+        expiresAt,
+      });
+    } else {
+      return res.status(403).json({
+        message: "Wrong email or password",
+      });
+    }
+  } catch (err) {
+    return res.status(400).json({
+      message: "Something went wrong!",
+    });
+  }
+});
+```
+
+### Ponto de atenção
+
+* **Evite informações detalhadas em erros**: Mensagens genéricas, como "email ou senha incorretos", dificultam o trabalho de invasores, que não saberão se o erro está no email ou na senha.
+
+## Conclusão
+
+O objetivo deste post foi apresentar exemplos simples e práticos para ilustrar o que acontece no backend durante o processo de login e cadastro em APIs que utilizam JWT. Espero que esses conceitos tenham ajudado a esclarecer o funcionamento básico dessas operações.
