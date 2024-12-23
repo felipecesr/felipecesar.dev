@@ -42,7 +42,7 @@ A variável `DATABASE_URL` no arquivo `.env` define a conexão com o banco de da
 DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
 ```
 
-## Criando seu primeiro modelo no Prisma
+## Criando seu primeiro modelo
 
 No arquivo `schema.prisma`, você pode criar modelos que representam tabelas no banco de dados. Cada modelo utiliza a palavra-chave `model` e define as propriedades como colunas.
 
@@ -61,9 +61,9 @@ model User {
 * **id**: Identificador único da tabela. O Prisma precisa que pelo menos um campo utilize o atributo `@id`. Além disso, ele usa o atributo `@default(cuid())` para gerar IDs automaticamente.
 * **createdAt** e **updatedAt**: É uma boa prática definir esses campos para rastrear quando um registro foi criado ou atualizado.
 
-## Adicionando tabelas com Prisma Migrate
+## Adicionando tabelas com `prisma migrate`
 
-O Prisma Migrate facilita a criação e atualização de tabelas no banco de dados. Execute o comando:
+O `prisma migrate` facilita a criação e atualização de tabelas no banco de dados. Execute o comando:
 
 ```
 npx prisma migrate dev --name <nome_da_migracao>
@@ -80,6 +80,14 @@ npx prisma db push
 ```
 
 Esse comando sincroniza o banco de dados com o esquema definido no `schema.prisma`, mas **não gera o diretório de migrações**. É útil para desenvolvimento inicial, mas não recomendado para produção.
+
+## Extensão do VSCode
+
+Quer turbinar ainda mais sua experiência com o Prisma? Instale a **[extensão do VSCode](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma)**. Ela oferece:
+
+* **Autocomplete**: Evita erros ao sugerir nomes de providers ou propriedades automaticamente.
+* **Linting**: Aponta erros de configuração em tempo real.
+* **Formatador e Syntax Highlighting**: Deixe seu código mais legível e organizado automaticamente.
 
 ## Conclusão
 
