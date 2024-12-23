@@ -3,6 +3,7 @@ layout: default
 title: Introdução ao Prisma ORM
 tags:
   - backend
+  - javascript
 date: 2024-12-23T13:44:00.000Z
 ---
 Se você está procurando uma maneira eficiente, moderna e escalável de gerenciar seu banco de dados, o Prisma ORM pode ser a solução perfeita. Neste post, vamos explorar o que é o Prisma, como ele funciona e como você pode começar a utilizá-lo hoje mesmo.
