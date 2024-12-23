@@ -81,6 +81,20 @@ npx prisma db push
 
 Esse comando sincroniza o banco de dados com o esquema definido no `schema.prisma`, mas **não gera o diretório de migrações**. É útil para desenvolvimento inicial, mas não recomendado para produção.
 
+## Extensão do VSCode
+
+Quer turbinar ainda mais sua experiência com o Prisma? Instale a **[extensão do VSCode](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma)**. Ela oferece:
+
+* **Autocomplete**
+
+  : Evita erros ao sugerir nomes de providers ou propriedades automaticamente.
+* **Linting**
+
+  : Aponta erros de configuração em tempo real.
+* **Formatador e Syntax Highlighting**
+
+  : Deixe seu código mais legível e organizado automaticamente.
+
 ## Conclusão
 
 O Prisma ORM é uma ferramenta poderosa que simplifica o gerenciamento de bancos de dados e aumenta a produtividade de desenvolvedores. Com o Prisma Client, Migrate e Studio, você tem à disposição uma solução completa para construir aplicações robustas e escaláveis.
