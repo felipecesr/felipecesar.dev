@@ -11,14 +11,19 @@ Neste post, vamos explorar de forma prática e clara como é feita a autenticaç
 
 ## Endpoint de cadastro
 
-Aqui está um exemplo prático de um endpoint de cadastro em Node.js utilizando Express:
+Aqui está um exemplo prático de um endpoint de cadastro em Node.js utilizando [Next.js Route Handlers](https://nextjs.org/docs/app/building-your-application/routing/route-handlers):
 
 ```javascript
-app.post("/api/signup", async (req, res) => {
+export async function POST(req) {
   try {
-    const { email, firstName, lastName } = req.body;
+    const {
+      email,
+      firstName,
+      lastName,
+      password
+    } = await req.json();
 
-    const hashedPassword = await hashPassword(req.body.password);
+    const hashedPassword = await hashPassword(password);
 
     const userData = {
       email: email.toLowerCase(),
@@ -33,11 +38,26 @@ app.post("/api/signup", async (req, res) => {
     }).lean();
 
     if (existingEmail) {
-      return res.status(400).json({ message: "Email already exists" });
+      return NextResponse
+        .json({ error: "Email already exists" }, { status: 400 })
     }
 
     const newUser = new User(userData);
     const savedUser = await newUser.save();
+    
+    const {
+      firstName,
+      lastName,
+      email,
+      role
+    } = savedUser;
+    
+    const userInfo = {
+      firstName,
+      lastName,
+      email,
+      role
+    };
 
     if (savedUser) {
       const token = createToken(savedUser);
@@ -53,14 +73,12 @@ app.post("/api/signup", async (req, res) => {
         expiresAt,
       });
     } else {
-      return res.status(400).json({
-        message: "There's a problem creating your account",
-      });
+      return NextResponse
+        .json({ error: "There's a problem creating your account" }, { status: 400 });
     }
   } catch (err) {
-    return res.status(400).json({
-      message: "There's a problem creating your account",
-    });
+    return NextResponse
+      .json({ error: "There's a problem creating your account" }, { status: 400 })
   }
 });
 ```
@@ -78,14 +96,15 @@ Com essas práticas, você pode garantir segurança e uma experiência de usuár
 Agora, vamos falar sobre o endpoint de login. Veja como ele pode ser implementado:
 
 ```javascript
-app.post("/api/authenticate", async (req, res) => {
+export async function POST(req) {
   try {
-    const { email, password } = req.body;
+    const { email, password } = await req.json();
 
     const user = await User.findOne({ email }).lean();
 
     if (!user) {
-      return res.status(403).json({ message: "Wrong email or password" });
+      return NextResponse
+        .json({ error: "Wrong email or password" }, { status: 403 });
     }
 
     const passwordValid = await verifyPassword(password, user.password);
@@ -99,21 +118,17 @@ app.post("/api/authenticate", async (req, res) => {
       const decodedToken = jwtDecode(token);
       const expiresAt = decodedToken.exp;
 
-      return res.json({
+      return NextResponse.json({
         message: "Authentication successful!",
         token,
         userInfo,
         expiresAt,
       });
     } else {
-      return res.status(403).json({
-        message: "Wrong email or password",
-      });
+      return NextResponse.json({ error: "Wrong email or password" }, { status: 403 });
     }
   } catch (err) {
-    return res.status(400).json({
-      message: "Something went wrong!",
-    });
+    return NextResponse.json({ error: "Something went wrong!" }, { status: 400 });
   }
 });
 ```
