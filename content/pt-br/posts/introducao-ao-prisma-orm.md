@@ -85,15 +85,9 @@ Esse comando sincroniza o banco de dados com o esquema definido no `schema.prism
 
 Quer turbinar ainda mais sua experiência com o Prisma? Instale a **[extensão do VSCode](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma)**. Ela oferece:
 
-* **Autocomplete**
-
-  : Evita erros ao sugerir nomes de providers ou propriedades automaticamente.
-* **Linting**
-
-  : Aponta erros de configuração em tempo real.
-* **Formatador e Syntax Highlighting**
-
-  : Deixe seu código mais legível e organizado automaticamente.
+* **Autocomplete**: Evita erros ao sugerir nomes de providers ou propriedades automaticamente.
+* **Linting**: Aponta erros de configuração em tempo real.
+* **Formatador e Syntax Highlighting**: Deixe seu código mais legível e organizado automaticamente.
 
 ## Conclusão
 
