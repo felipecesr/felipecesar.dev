@@ -42,7 +42,7 @@ A variável `DATABASE_URL` no arquivo `.env` define a conexão com o banco de da
 DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
 ```
 
-## Criando seu primeiro modelo no Prisma
+## Criando seu primeiro modelo
 
 No arquivo `schema.prisma`, você pode criar modelos que representam tabelas no banco de dados. Cada modelo utiliza a palavra-chave `model` e define as propriedades como colunas.
 
@@ -61,9 +61,9 @@ model User {
 * **id**: Identificador único da tabela. O Prisma precisa que pelo menos um campo utilize o atributo `@id`. Além disso, ele usa o atributo `@default(cuid())` para gerar IDs automaticamente.
 * **createdAt** e **updatedAt**: É uma boa prática definir esses campos para rastrear quando um registro foi criado ou atualizado.
 
-## Adicionando tabelas com Prisma Migrate
+## Adicionando tabelas com `prisma migrate`
 
-O Prisma Migrate facilita a criação e atualização de tabelas no banco de dados. Execute o comando:
+O `prisma migrate` facilita a criação e atualização de tabelas no banco de dados. Execute o comando:
 
 ```
 npx prisma migrate dev --name <nome_da_migracao>
