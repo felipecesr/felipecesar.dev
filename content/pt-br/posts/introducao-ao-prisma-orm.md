@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Introducao ao Prisma ORM
+title: Introdução ao Prisma ORM
 tags:
   - backend
 date: 2024-12-23T13:32:00.000Z
