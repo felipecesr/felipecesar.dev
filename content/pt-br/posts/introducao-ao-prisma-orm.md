@@ -82,6 +82,18 @@ npx prisma db push
 
 Esse comando sincroniza o banco de dados com o esquema definido no `schema.prisma`, mas **não gera o diretório de migrações**. É útil para desenvolvimento inicial, mas não recomendado para produção.
 
+## Prisma Studio
+
+O Prisma Studio é uma interface gráfica intuitiva que permite visualizar, editar e gerenciar os dados do seu banco de dados de forma simples e direta.
+
+Para iniciar o Prisma Studio, basta executar o seguinte comando no terminal:
+
+```
+npx prisma studio
+```
+
+Isso abrirá o Prisma Studio no endereço `http://localhost:5555`, que pode ser acessado diretamente pelo navegador.
+
 ## Extensão do VSCode
 
 Quer turbinar ainda mais sua experiência com o Prisma? Instale a **[extensão do VSCode](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma)**. Ela oferece:
