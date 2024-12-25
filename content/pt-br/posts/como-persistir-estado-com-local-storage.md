@@ -16,7 +16,7 @@ A React Context API é uma ferramenta poderosa para compartilhar estado entre co
 
 Veja como criar um contexto para gerenciar autenticação:
 
-```javascript
+```jsx
 const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
@@ -38,7 +38,7 @@ const AuthProvider = ({ children }) => {
 
 Nas páginas de login e cadastro, utilizamos o contexto para atualizar o estado de autenticação assim que o usuário insere suas credenciais e recebe uma resposta do servidor:
 
-```javascript
+```jsx
 const Page = () => {
   const authContext = useContext(AuthContext);
   // ...
@@ -59,7 +59,7 @@ Um dos maiores desafios no gerenciamento de autenticação é lidar com atualiza
 
 Uma solução simples (mas não ideal para produção) é usar o **localStorage** para persistir dados:
 
-```javascript
+```jsx
 const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
