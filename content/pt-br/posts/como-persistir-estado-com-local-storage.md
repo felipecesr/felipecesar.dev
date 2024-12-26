@@ -3,7 +3,7 @@ layout: default
 title: Como persistir estado com Local Storage
 tags:
   - react
-  - ""
+  - javascript
 date: 2024-12-25T17:06:00.000Z
 ---
 Gerenciar o que cada usuário pode ver, acessar e interagir é essencial para a segurança e experiência do usuário. Mas como garantir que o estado de autenticação continue funcionando, mesmo depois de atualizações de página?
