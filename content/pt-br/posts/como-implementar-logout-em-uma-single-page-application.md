@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Como implementar Logout em uma Single Page Application
+title: Como implementar Logout em uma Single Page Application (SPA)
 tags:
   - react
   - javascript
