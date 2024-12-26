@@ -89,6 +89,26 @@ const AuthProvider = ({ children }) => {
 
 Com esse método, os dados de autenticação são salvos no navegador e carregados automaticamente quando a página é recarregada. Mas atenção: armazenar tokens no localStorage tem vulnerabilidades de segurança, como ataques XSS.
 
+## Verificando se o usuário está autenticado
+
+Para garantir que apenas usuários autenticados tenham acesso a determinados recursos, podemos verificar se o token do usuário ainda é válido.
+
+Aqui está um exemplo de função que utiliza o `expiresAt` para determinar se o usuário está autenticado:
+
+```javascript
+const isAuthenticated = () => {
+  if (!auth.token || auth.expiresAt) {
+    return false;
+  }
+  return new Date().getTime() / 1000 < auth.expiresAt
+};
+```
+
+* Primeiro verificamos se o `token` e o `expiresAt` existem. Caso contrário, retornamos false.
+* Em seguida, comparamos o timestamp atual (em segundos) com o `expiresAt`. Se o token ainda for válido, retornamos `true`.
+
+Essa verificação ajuda a controlar o acesso de forma eficiente, evitando que usuários com tokens expirados utilizem a aplicação.
+
 ## Conclusão
 
 Embora o localStorage seja prático para fins didáticos, ele não é a solução mais segura para persistir autenticação. O uso de **cookies Http-Only** é uma abordagem mais robusta, pois protege os dados de ataques XSS e melhora a segurança geral da aplicação.
