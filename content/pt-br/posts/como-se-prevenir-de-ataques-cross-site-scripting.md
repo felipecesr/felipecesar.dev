@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Como se prevenir de ataques Cross-Site Scripting
+title: Como se prevenir de ataques Cross-Site Scripting (XSS)
 tags:
   - seguranca
   - javascript
