@@ -1,6 +1,6 @@
 ---
 layout: default
-title: O que e Cross-Origin Resource Sharing
+title: O que é Cross-Origin Resource Sharing (CORS)?
 tags:
   - web
   - seguranca
