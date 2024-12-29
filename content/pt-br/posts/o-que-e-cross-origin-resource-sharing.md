@@ -4,7 +4,7 @@ title: O que é Cross-Origin Resource Sharing (CORS)?
 tags:
   - web
   - seguranca
-date: 2024-12-29T15:19:00.000Z
+date: 2024-12-29T15:22:00.000Z
 ---
 CORS (Cross-Origin Resource Sharing) é um recurso de segurança dos navegadores que controla quais domínios podem acessar recursos de um servidor diferente daquele que serviu a página. É como uma lista de permissões para evitar acessos não autorizados.
 
