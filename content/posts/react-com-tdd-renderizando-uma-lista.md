@@ -8,6 +8,7 @@ tags:
   - testing
 date: 2020-02-16T20:31:17.067Z
 ---
+
 Aprenda como criar um componente de lista em React com desenvolvimento guiado por testes.
 
 # **Introdução**
@@ -33,7 +34,7 @@ npm install --save-dev @testing-library/react
 Após a instalação, vamos criar um arquivo chamado `UserList.test.js`. Vamos importar a função `render` diretamente do `@testing-library`.
 
 ```jsx
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 ```
 
 # **Renderizando a lista**
@@ -45,7 +46,7 @@ describe("UserList", () => {
   it("renders multiple users in ul element", () => {
     const users = [
       { id: 1, name: "Matthew Murdock" },
-      { id: 2, name: "Frank Castle" }
+      { id: 2, name: "Frank Castle" },
     ];
     const { container } = render(<UserList users={users} />);
     expect(container.querySelector("ul")).not.toBeNull();
@@ -72,7 +73,7 @@ export const UserList = () => null;
 E importá-lo dentro do teste.
 
 ```jsx
-import { UserList } from '../src/UserList'
+import { UserList } from "../src/UserList";
 ```
 
 Ao retornar `null` dessa forma, deixamos de receber um erro do React e passamos a receber uma mensagem de erro mais amigável.
@@ -81,7 +82,7 @@ Ao retornar `null` dessa forma, deixamos de receber um erro do React e passamo
 expect(received).not.toBeNull()
 Received: null
    9 | const { container } = render(<UserList users={users} />);
-  10 | 
+  10 |
 > 11 | expect(container.querySelector("ul")).not.toBeNull();
      |                                           ^
 ```
@@ -98,7 +99,7 @@ Ao executar o teste novamente, recebemos outro erro.
 Expected length: 2
 Received length: 0
 Received object: []
-  10 | 
+  10 |
   11 | expect(container.querySelector("ul")).not.toBeNull();
 > 12 | expect(container.querySelector("ul").children)
              .toHaveLength(2);
@@ -112,7 +113,9 @@ Vamos usar a função `map` para renderizar todos os itens da lista.
 ```jsx
 const List = ({ users }) => (
   <ul>
-    {users.map(() => <div />)}
+    {users.map(() => (
+      <div />
+    ))}
   </ul>
 );
 ```
@@ -246,13 +249,13 @@ describe("UserList", () => {
     { id: 1, name: "Matthew Murdock" },
     { id: 2, name: "Frank Castle" }
   ];
-  
+
   it("renders multiple users in list", () => {
     const { getByRole } = render(<UserListusers={users} />);
     expect(getByRole("list")).not.toBeNull();
     expect(getByRole("list").children).toHaveLength(2);
   });
-  
+
   it("renders each user in a list item", () => {
     const { getAllByRole } = render(<UserListusers={users} />);
     const listItems = getAllByRole("listitem");
@@ -266,5 +269,3 @@ describe("UserList", () => {
 # **Conclusão**
 
 Neste artigo, criamos um componente de lista com TDD e ainda podemos aprender um pouco sobre `@testing-library`, nos próximos vamos explorar um pouco mais essa lib. Se tiverem dúvidas ou sugestões não deixem de comentar. Abraço!
-
-<!-- notionvc: 328dc4cd-15af-4677-82c9-808d96804b39 -->
