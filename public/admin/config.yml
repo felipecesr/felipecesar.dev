@@ -1,46 +1,31 @@
 backend:
-  name: github
+  name: test-repo
   branch: master
   repo: felipecesr/felipecesar.dev
-publish_mode: editorial_workflow
-media_folder: static/img
+
+media_folder: public/img
 public_folder: /img
+publish_mode: editorial_workflow
+site_url: https://felipecesar.dev
 slug:
   encoding: "ascii"
   clean_accents: true
+
 collections:
-  - label: "Blog in Portuguese"
-    name: "portuguese_posts"
-    label_singular: "Blog Post"
-    folder: "content/pt-br/posts"
+  - label: "Posts"
+    name: "posts"
+    label_singular: "Post"
+    folder: "content/posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "default",
-        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Aliases", name: "aliases", widget: "list", summary: '{{fields.string}}', field: {label: Alias, name: alias, widget: string} }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - label: "Blog in English"
-    name: "english_posts"
-    label_singular: "Blog Post"
-    folder: "content/en/posts"
-    create: true
-    slug: "{{slug}}"
-    fields:
       - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "default",
+          label: "Category",
+          name: "categories",
+          widget: "list",
+          required: false,
         }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
