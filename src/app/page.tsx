@@ -1,4 +1,4 @@
-import Biography from "@/markdown/biography.mdx";
+import Biography from "@/biography.mdx";
 
 const Home = () => (
   <section className="space-y-8">
