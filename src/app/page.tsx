@@ -1,38 +1,33 @@
-import Header from "@/components/header";
+import Biography from "@/markdown/biography.mdx";
 
-const Home = () => {
-  return (
-    <div>
-      <Header />
-      <section>
-        <p>Jan 2025 Workshop</p>
-        <h2>Testes de Unidade em aplicações React</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, voluptas dolorem voluptatibus natus deleniti assumenda.</p>
-        <a href="#">Inscreva-se</a>
-      </section>
-      <h2>Blog</h2>
-      <ul>
-        <li>Post 1</li>
-        <li>Post 2</li>
-        <li>Post 3</li>
-      </ul>
-      <h2>Cursos</h2>
-      <ul>
-        <li>
-          <p>Curso 1</p>
-          <a href="#">Acessar</a>
-        </li>
-        <li>
-          <p>Curso 2</p>
-          <a href="#">Acessar</a>
-        </li>
-        <li>
-          <p>Curso 3</p>
-          <a href="#">Comprar na Udemy</a>
-        </li>
-      </ul>
-    </div>
-  );
-};
+const Home = () => (
+  <section className="space-y-8">
+    <picture>
+      <source
+        sizes="(min-width: 640px) 768px, 736px"
+        type="image/avif"
+        srcSet="/img/felipe_736.avif 736w, /img/felipe_768.avif 768w"
+      />
+      <source
+        sizes="(min-width: 640px) 768px, 736px"
+        type="image/webp"
+        srcSet="/img/felipe_736.webp 736w, /img/felipe_768.webp 768w"
+      />
+      <source
+        sizes="(min-width: 640px) 768px, 736px"
+        type="image/jpeg"
+        srcSet="/img/felipe_736.jpeg 736w, /img/felipe_768.jpeg 768w"
+      />
+      <img
+        className="aspect-[3/4] max-w-full rounded-md shadow-lg sm:float-right sm:ml-8 sm:w-72 md:w-96"
+        alt="Felipe Cesar"
+        width="768"
+        height="1024"
+        src="/img/felipe_768.jpeg"
+      />
+    </picture>
+    <Biography />
+  </section>
+);
 
 export default Home;
