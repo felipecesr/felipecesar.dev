@@ -1,4 +1,4 @@
-import { getBlogPosts } from "@/app/posts/[slug]/utils";
+import { getBlogPosts } from "@/lib/content";
 import BlogPosts from "@/components/posts";
 
 export async function generateStaticParams() {
@@ -14,7 +14,6 @@ const Serie = async ({ params }) => {
   const post = getBlogPosts("content/series").find(
     (post) => post.slug === slug
   );
-  console.log(post);
 
   if (!post) {
     return <div>Post not found</div>;
@@ -25,7 +24,7 @@ const Serie = async ({ params }) => {
       <h1>{post.metadata.title}</h1>
       <p>{post.metadata.description}</p>
       <hr />
-      <BlogPosts serie={post.metadata.slug} />
+      <BlogPosts serie={slug} />
     </div>
   );
 };

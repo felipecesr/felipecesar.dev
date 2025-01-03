@@ -7,6 +7,9 @@ type Metadata = {
   summary: string;
   image?: string;
   serie?: string;
+  date?: string;
+  description?: string;
+  slug?: string;
 };
 
 function parseFrontmatter(fileContent: string) {
@@ -28,7 +31,7 @@ function parseFrontmatter(fileContent: string) {
 }
 
 function getMDXFiles(dir) {
-  return fs.readdirSync(dir).filter((file) => path.extname(file) === ".md");
+  return fs.readdirSync(dir).filter((file) => /\.(md|mdx)$/.test(file));
 }
 
 function readMDXFile(filePath) {
@@ -42,10 +45,17 @@ function getMDXData(dir) {
     let { metadata, content } = readMDXFile(path.join(dir, file));
     let slug = path.basename(file, path.extname(file));
 
+    let c = content;
+    const regex = /`{3}mermaid\n([\S\s]*?)`{3}/g;
+    const mermaid = content.matchAll(regex);
+    [...mermaid].forEach((m) => {
+      c = c.replace(m[0], `<Svg data={\`${m[1]}\`} />`);
+    });
+
     return {
       metadata,
       slug,
-      content,
+      content: c,
     };
   });
 }

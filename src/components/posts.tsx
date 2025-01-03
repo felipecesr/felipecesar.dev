@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getBlogPosts } from "@/app/posts/[slug]/utils";
+import { getBlogPosts } from "@/lib/content";
 import formatDate from "@/lib/format-date";
 
 const BlogPosts = ({ serie = null }) => {

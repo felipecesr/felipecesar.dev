@@ -1,4 +1,4 @@
-import { getBlogPosts } from "@/app/posts/[slug]/utils";
+import { getBlogPosts } from "@/lib/content";
 
 const Series = () => {
   const allSeries = getBlogPosts("content/series");

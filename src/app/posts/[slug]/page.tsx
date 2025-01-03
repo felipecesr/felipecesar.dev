@@ -1,4 +1,4 @@
-import { getBlogPosts } from "./utils";
+import { getBlogPosts } from "@/lib/content";
 import CustomMDX from "@/components/mdx";
 import Date from "@/components/date";
 
