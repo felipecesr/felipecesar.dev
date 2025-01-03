@@ -3,48 +3,143 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --sh-class: #8be9fd;
+  --sh-identifier: #50fa7b;
+  --sh-sign: #6272a4;
+  --sh-property: #ff79c6;
+  --sh-entity: #bd93f9;
+  --sh-jsxliterals: #ffb86c;
+  --sh-string: #f1fa8c;
+  --sh-keyword: #ff79c6;
+  --sh-comment: #6272a4;
+
+  --wave-bg: rgba(0, 0, 0, 0.2);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply text-black-pearl-900 dark:bg-black-pearl-900 dark:text-white;
+    font-family: var(--font-body), system-ui, sans-serif;
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  pre {
+    @apply overflow-x-auto rounded-md border-2 border-black-pearl-950 bg-black-pearl-950 p-4 dark:border-black-pearl-800;
+  }
+
+  table {
+    @apply block w-full max-w-full border-separate border-spacing-0 overflow-x-scroll rounded-md border-2 border-black-pearl-950 bg-black-pearl-950 shadow-md dark:border-black-pearl-800 dark:bg-black-pearl-800;
+  }
+
+  thead {
+    @apply border-2 border-black-pearl-950 bg-black-pearl-950 text-white dark:border-black-pearl-700 dark:bg-black-pearl-700;
+    &:first-child {
+      @apply rounded-t-md;
+    }
+    &:first-child th:first-child {
+      @apply rounded-tl-md;
+    }
+    &:first-child th:last-child {
+      @apply rounded-tr-md;
+    }
+  }
+
+  tbody {
+    @apply bg-white dark:bg-black-pearl-900;
+    & th {
+      @apply bg-slate-100 dark:bg-black-pearl-800;
+    }
+    &:last-child {
+      @apply rounded-b-md;
+    }
+    &:last-child > tr:last-child > td:first-child,
+    &:last-child > tr:last-child > th:first-child {
+      @apply rounded-bl-md;
+    }
+    &:last-child > tr:last-child > td:last-child {
+      @apply rounded-br-md;
+    }
+  }
+
+  th,
+  td {
+    @apply whitespace-nowrap p-2 text-left;
+  }
 }
 
 @layer components {
-  .btn-menu,
-  .btn-menu::before,
-  .btn-menu::after {
-    width: 20px;
-    height: 2px;
-    background-color: #fff;
+  .button {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-primary-600 p-2 outline-8 outline-offset-4 outline-primary-500 ring-primary-400 ring-offset-0 transition-colors hover:bg-primary-100 hover:ring-2 active:bg-primary-200 dark:hover:bg-slate-800 dark:active:bg-primary-900;
+    &.small {
+      @apply py-1 text-xs;
+    }
+    &.ghost {
+      @apply border-none bg-transparent text-primary-500 hover:bg-slate-100 active:bg-slate-200 dark:hover:bg-slate-700 dark:active:bg-slate-800;
+    }
   }
 
-  .btn-menu::before,
-  .btn-menu::after {
-    content: '';
-    display: block;
-    position: absolute;
+  .button-primary {
+    @apply button rounded-md border border-primary-500 bg-primary-600 p-2 text-white hover:bg-primary-700 active:bg-primary-800;
   }
 
-  .btn-menu {
-    @apply relative inline-block;
+  .input {
+    @apply appearance-none rounded-md border border-slate-500 p-2 accent-primary-600 outline-offset-4 outline-primary-500 ring-primary-400 hover:border-primary-800 focus:outline-4 focus:ring-4 dark:border-black-pearl-600 dark:bg-black-pearl-800 dark:outline-primary-800 dark:ring-primary-800;
   }
 
-  .btn-menu::before {
-    top: -6px;
+  .link,
+  .prose a {
+    @apply hover:bg-primary-200 hover:decoration-primary-400 dark:hover:bg-slate-800 dark:hover:decoration-primary-600;
   }
 
-  .btn-menu::after {
-    top: 6px;
+  .surface {
+    @apply rounded-md p-4 shadow-md;
+  }
+
+  .surface-secondary {
+    @apply surface bg-slate-50 text-slate-900 dark:bg-black-pearl-800 dark:text-white;
+  }
+
+  .prose {
+    th {
+      @apply text-white;
+    }
+    th,
+    td {
+      @apply p-2;
+    }
+    tbody tr:nth-child(even) {
+      @apply bg-slate-100 dark:border-black-pearl-700 dark:bg-black-pearl-800;
+    }
+    pre.shiki {
+      @apply shadow-md;
+    }
+  }
+}
+
+.wave {
+  display: block;
+  width: 100%;
+  height: clamp(2rem, 5vw, 10rem);
+  margin: 0;
+  z-index: 0;
+  bottom: 0;
+}
+
+#page-divide {
+  animation: moveforward 10s linear infinite;
+}
+
+@media (prefers-reduced-motion) {
+  #page-divide {
+    animation: none;
+  }
+}
+
+@keyframes moveforward {
+  0% {
+    transform: translate(-90px);
+  }
+
+  to {
+    transform: translate(85px);
   }
 }

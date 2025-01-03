@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Anton, Work_Sans } from "next/font/google";
 import Link from "next/link";
 import "./global.css";
 import Navigation from "@/components/navigation";
 import SocialLink from "@/components/social-link";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
+import Wave from "@/components/wave";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const anton = Anton({
+  variable: "--font-header",
   subsets: ["latin"],
+  weight: "400",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const workSans = Work_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
 });
 
@@ -28,12 +30,10 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="pt-BR">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${anton.variable} ${workSans.variable} antialiased`}>
         <main className="container my-6 grid grid-cols-1 items-center gap-6 sm:my-10 sm:grid-cols-2 lg:grid-cols-3">
           <header>
-            <h1 className="whitespace-nowrap lg:order-1">
+            <h1 className={`whitespace-nowrap lg:order-1 ${anton.className}`}>
               <Link
                 href="/"
                 className="font-header text-6xl text-black decoration-primary-700 hover:underline dark:text-white"
@@ -65,6 +65,7 @@ const RootLayout = ({
 
           <div className="my-6 sm:col-span-full lg:order-3">{children}</div>
         </main>
+        <Wave />
       </body>
     </html>
   );

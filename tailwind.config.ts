@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
+
 import typography from "@tailwindcss/typography";
+import containerQueries from "@tailwindcss/container-queries";
 
 export default {
   content: [
@@ -11,30 +13,30 @@ export default {
     extend: {
       colors: {
         primary: {
-          "50": "#faf7fd",
-          "100": "#f2ecfb",
-          "200": "#e7ddf7",
-          "300": "#d5c2f0",
-          "400": "#bc9be5",
-          "500": "#9967d5",
-          "600": "#8a55c8",
-          "700": "#7642ae",
-          "800": "#643a8f",
-          "900": "#523073",
-          "950": "#361952",
+          "50": "#fff9e6",
+          "100": "#fff3cc",
+          "200": "#ffe699",
+          "300": "#ffdb66",
+          "400": "#ffd133",
+          "500": "#ffc700",
+          "600": "#e6b300",
+          "700": "#ffd900",
+          "800": "#b38a00",
+          "900": "#806600",
+          "950": "#4d3d00",
         },
         "black-pearl": {
-          "50": "#b3deff",
-          "100": "#9ed7ff",
-          "200": "#75cdff",
-          "300": "#33bbff",
-          "400": "#009de6",
-          "500": "#007bc2",
-          "600": "#005c9e",
-          "700": "#004275",
-          "800": "#003052",
-          "900": "#02233c",
-          "950": "#011628",
+          "50": "#f2f2f2",
+          "100": "#e6e6e6",
+          "200": "#cccccc",
+          "300": "#b3b3b3",
+          "400": "#999999",
+          "500": "#808080",
+          "600": "#666666",
+          "700": "#4d4d4d",
+          "800": "#333333",
+          "900": "#1c1c1c",
+          "950": "#0d0d0d",
         },
       },
       container: {
@@ -49,7 +51,10 @@ export default {
           lg: "1024px",
         },
       },
+      fontFamily: {
+        body: ["Arial", "sans-serif"],
+      },
     },
   },
-  plugins: [typography],
+  plugins: [typography, containerQueries],
 } satisfies Config;

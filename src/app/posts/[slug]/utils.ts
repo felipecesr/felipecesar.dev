@@ -6,6 +6,7 @@ type Metadata = {
   publishedAt: string;
   summary: string;
   image?: string;
+  serie?: string;
 };
 
 function parseFrontmatter(fileContent: string) {
@@ -49,6 +50,6 @@ function getMDXData(dir) {
   });
 }
 
-export function getBlogPosts() {
-  return getMDXData(path.join(process.cwd(), "content/posts"));
+export function getBlogPosts(dir = "content/posts") {
+  return getMDXData(path.join(process.cwd(), dir));
 }

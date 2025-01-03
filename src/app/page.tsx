@@ -26,7 +26,9 @@ const Home = () => (
         src="/img/felipe_768.jpeg"
       />
     </picture>
-    <Biography />
+    <div className="prose dark:prose-invert">
+      <Biography />
+    </div>
   </section>
 );
 
