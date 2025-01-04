@@ -1,7 +1,7 @@
-import type { Metadata, ResolvingMetadata } from 'next'
 import { getBlogPosts } from "@/lib/content";
 import CustomMDX from "@/components/mdx";
 import Date from "@/components/date";
+import { baseUrl } from '@/app/sitemap'
 
 export async function generateStaticParams() {
   const posts = getBlogPosts();
@@ -9,6 +9,46 @@ export async function generateStaticParams() {
   return posts.map((post) => ({
     slug: post.slug,
   }));
+}
+
+export function generateMetadata({ params }) {
+  let post = getBlogPosts().find((post) => post.slug === params.slug)
+  if (!post) {
+    return
+  }
+
+  let {
+    title,
+    publishedAt: publishedTime,
+    summary: description,
+    image,
+  } = post.metadata
+  const ogImage = image
+    ? image
+    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      publishedTime,
+      url: `${baseUrl}/posts/${post.slug}`,
+      images: [
+        {
+          url: ogImage,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogImage],
+    },
+  }
 }
 
 const Post = async ({ params }) => {

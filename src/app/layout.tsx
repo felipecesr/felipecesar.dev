@@ -6,6 +6,7 @@ import Navigation from "@/components/navigation";
 import SocialLink from "@/components/social-link";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
 import Wave from "@/components/wave";
+import { baseUrl } from './sitemap'
 
 const anton = Anton({
   variable: "--font-header",
@@ -19,9 +20,32 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Felipe Cesar",
-  description: "Um blog com artigos sobre boas práticas em engenharia de software focado em JavaScript, TypeScript e desenvolvimento web em geral.",
-};
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: 'Felipe Cesar',
+    template: '%s | Felipe Cesar',
+  },
+  description: 'Um blog com artigos sobre boas práticas em engenharia de software focado em JavaScript, TypeScript e desenvolvimento web em geral.',
+  openGraph: {
+    title: 'Felipe Cesar',
+    description: 'Um blog com artigos sobre boas práticas em engenharia de software focado em JavaScript, TypeScript e desenvolvimento web em geral.',
+    url: baseUrl,
+    siteName: 'Felipe Cesar',
+    locale: 'pt_BR',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
 
 const RootLayout = ({
   children,
