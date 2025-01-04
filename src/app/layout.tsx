@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Anton, Work_Sans } from "next/font/google";
+import { GoogleTagManager } from '@next/third-parties/google'
 import Link from "next/link";
 import "./global.css";
 import Navigation from "@/components/navigation";
@@ -54,6 +55,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="pt-BR">
+      <GoogleTagManager gtmId="GTM-5TG84ZB" />
       <body className={`${anton.variable} ${workSans.variable} antialiased`}>
         <main className="container my-6 grid grid-cols-1 items-center gap-6 sm:my-10 sm:grid-cols-2 lg:grid-cols-3">
           <header>
