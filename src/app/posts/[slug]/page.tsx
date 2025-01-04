@@ -79,7 +79,7 @@ const Post = async ({ params }) => {
         <p>
           Viu algo que parece um pouco estranho? Sinta-se à vontade para{" "}
           <a
-            href={`https://github.com/felipecesr/felipecesr.dev/tree/main/content/posts/${slug}.md`}
+            href={`https://github.com/felipecesr/felipecesar.dev/tree/main/content/posts/${slug}.md`}
             className="font-semibold underline decoration-primary-500 decoration-2 underline-offset-4"
           >
             abrir um pull request aqui
