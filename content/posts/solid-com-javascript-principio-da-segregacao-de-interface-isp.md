@@ -7,6 +7,7 @@ tags:
   - solid
   - es6
 date: 2019-04-23T20:22:15.293Z
+serie: solid
 ---
 Nesse artigo vamos ver a teoria por trás do **Princípio da Segregação de Interface** (Interface Segregation Principle), ou simplesmente **ISP**, e como representar esse conceito em aplicações JavaScript.
 

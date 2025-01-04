@@ -2,6 +2,7 @@
 layout: default
 title: "SOLID com JavaScript: Princípio Aberto/Fechado (OCP)"
 date: 2018-07-31T20:38:18.756Z
+serie: solid
 ---
 Dando continuidade a série inciada no [ultimo post](/posts/princípio-da-responsabilidade-única-srp/) sobre os princípios **SOLID**, hoje o post será sobre o **Princípio Aberto/Fechado** (Open Closed Principle em inglês), ou apenas **OCP**.
 

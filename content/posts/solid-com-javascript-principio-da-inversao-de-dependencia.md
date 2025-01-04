@@ -6,6 +6,7 @@ tags:
   - solid
   - cleancode
 date: 2024-05-22T19:20:01.214Z
+serie: solid
 ---
 Neste artigo, vou falar sobre o quinto e último princípio do SOLID: o Princípio da Inversão de dependência (Dependency Inversion Principle), ou simplesmente DIP.
 

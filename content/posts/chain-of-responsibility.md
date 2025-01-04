@@ -28,7 +28,28 @@ Você cria uma **cadeia de objetos** para examinar requisições. Cada objeto ex
 
 ## **Diagrama de classes**
 
-![Diagrama de classes](/img/captura-de-tela-2024-06-25-às-14.48.29.png)
+```mermaid
+classDiagram
+    Handler --> Handler
+    Handler <|-- SpamHandler
+    Handler <|-- FanHandler
+    Handler <|-- ComplaintHandler
+    Handler <|-- NewLocHandler
+    Handler: sucessor
+    Handler: handleRequest()
+    class SpamHandler{
+        handleRequest()
+    }
+    class FanHandler{
+        handleRequest()
+    }
+    class ComplaintHandler{
+        handleRequest()
+    }
+    class NewLocHandler{
+        handleRequest()
+    }
+```
 
 ## Código
 
