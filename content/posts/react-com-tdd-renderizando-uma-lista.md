@@ -266,5 +266,3 @@ describe("UserList", () => {
 # **Conclusão**
 
 Neste artigo, criamos um componente de lista com TDD e ainda podemos aprender um pouco sobre `@testing-library`, nos próximos vamos explorar um pouco mais essa lib. Se tiverem dúvidas ou sugestões não deixem de comentar. Abraço!
-
-<!-- notionvc: 328dc4cd-15af-4677-82c9-808d96804b39 -->
