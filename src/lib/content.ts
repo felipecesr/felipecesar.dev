@@ -57,7 +57,7 @@ function getMDXData(dir) {
       slug,
       content: c,
     };
-  });
+  }).sort((obj1, obj2) => new Date(obj2.metadata.date).getTime() - new Date(obj1.metadata.date).getTime());
 }
 
 export function getBlogPosts(dir = "content/posts") {
