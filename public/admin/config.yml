@@ -1,0 +1,29 @@
+backend:
+  name: github
+  branch: master
+  repo: felipecesr/felipecesar.dev
+
+media_folder: public/img
+public_folder: /img
+publish_mode: editorial_workflow
+site_url: https://felipecesar.dev
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+  - label: "Posts"
+    name: "posts"
+    label_singular: "Post"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Serie", name: "serie", widget: "select", options: ["solid", "player-hls"] }
+      - { label: "Body", name: "body", widget: "markdown" }
+    view_groups:
+      - label: Series
+        field: serie
