@@ -9,7 +9,7 @@ Nesse artigo vamos criar a função `multiply`, seguindo o TDD, que foi explicad
 
 As principais características de funções puras são, elas não causam efeitos colaterais e retornam o mesmo valor sempre que são chamadas com os mesmos argumentos, isso as torna muito fáceis de testar.
 
-Então chega de conversa e vamos partir para a prática. Baixe o [repositório](https://github.com/felipecesr/react-com-tdd-na-pratica/tree/master) e faça o `checkout` na branch `exercise-03`. Em seguida, crie a pasta `utils` dentro de `src` e dentro dela crie o arquivo `math.test.js`, com as seguintes linhas:
+Então chega de conversa e vamos partir para a prática. Baixe o [repositório](https://github.com/felipecesr/react-com-tdd-na-pratica/tree/main) e faça o `checkout` na branch `exercise-03`. Em seguida, crie a pasta `utils` dentro de `src` e dentro dela crie o arquivo `math.test.js`, com as seguintes linhas:
 
 ```javascript
 test.todo('multiply: returns the multiplication of two numbers')

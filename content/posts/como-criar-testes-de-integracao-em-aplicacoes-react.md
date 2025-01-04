@@ -15,7 +15,7 @@ A aplicação é um conversor de moedas, o usuário deve preencher uma quantia e
 
 ![Wireframe de uma aplicação para converter de moedas](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/o759twvmy48d3q7rj1uk.png)
 
-Para continuar de onde paramos você pode baixar o [repositório](https://github.com/felipecesr/react-com-tdd-na-pratica/tree/master) e fazer um `checkout` na branch `exercise-04`.
+Para continuar de onde paramos você pode baixar o [repositório](https://github.com/felipecesr/react-com-tdd-na-pratica/tree/main) e fazer um `checkout` na branch `exercise-04`.
 
 Crie o arquivo `App.test.js` dentro de `src` e adicione o seguinte:
 

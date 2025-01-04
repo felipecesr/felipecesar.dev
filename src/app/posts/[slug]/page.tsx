@@ -1,3 +1,4 @@
+import type { Metadata, ResolvingMetadata } from 'next'
 import { getBlogPosts } from "@/lib/content";
 import CustomMDX from "@/components/mdx";
 import Date from "@/components/date";
@@ -38,7 +39,7 @@ const Post = async ({ params }) => {
         <p>
           Viu algo que parece um pouco estranho? Sinta-se à vontade para{" "}
           <a
-            href={`https://github.com/felipecesr/felipecesr.dev/tree/master/content/posts/${slug}.md`}
+            href={`https://github.com/felipecesr/felipecesr.dev/tree/main/content/posts/${slug}.md`}
             className="font-semibold underline decoration-primary-500 decoration-2 underline-offset-4"
           >
             abrir um pull request aqui

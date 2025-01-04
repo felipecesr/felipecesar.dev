@@ -12,4 +12,4 @@
 
 ## License
 
-[MIT License](https://github.com/felipecesr/felipecesar.dev/blob/master/LICENSE) © Felipe Cesar
+[MIT License](https://github.com/felipecesr/felipecesar.dev/blob/main/LICENSE) © Felipe Cesar

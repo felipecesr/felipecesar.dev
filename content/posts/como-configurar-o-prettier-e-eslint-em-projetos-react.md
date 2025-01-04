@@ -7,7 +7,7 @@ aliases:
 ---
 Continuando a série sobre testes, vamos adicionar duas ferramentas ao projeto que ajudam a melhorar a qualidade do código.
 
-Você pode baixar o [repositório](https://github.com/felipecesr/react-com-tdd-na-pratica/tree/master) e fazer o checkout na branch `exercise-05` para continuar de onde paramos.
+Você pode baixar o [repositório](https://github.com/felipecesr/react-com-tdd-na-pratica/tree/main) e fazer o checkout na branch `exercise-05` para continuar de onde paramos.
 
 ## Prettier
 A primeira ferramenta é o [Prettier](https://prettier.io/), com ele não precisamos nos preocupar com indentação de código, se as aspas devem ser simples ou duplas, etc. Ele formata o código automaticamente mantendo sempre o mesmo padrão.

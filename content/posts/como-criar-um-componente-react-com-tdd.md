@@ -30,7 +30,7 @@ Tendo isso em mente podemos ver como esse ciclo funciona na prática.
 
 ## Escrevendo um teste que falha
 
-Para acompanhar o desenvolvimento você pode baixar o [repositório](https://github.com/felipecesr/react-com-tdd-na-pratica/tree/master) e fazer o checkout na branch `exercise-01-start`.
+Para acompanhar o desenvolvimento você pode baixar o [repositório](https://github.com/felipecesr/react-com-tdd-na-pratica/tree/main) e fazer o checkout na branch `exercise-01-start`.
 
 Após baixar o código, crie a pasta `src/components` e adicione o arquivo `Highlight.test.js` com o seguinte conteúdo:
 
