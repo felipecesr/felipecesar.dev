@@ -116,11 +116,11 @@
 }
 
 .wave {
-  display: block;
+  position: fixed;
   width: 100%;
   height: clamp(2rem, 5vw, 10rem);
   margin: 0;
-  z-index: 0;
+  z-index: -1;
   bottom: 0;
 }
 
