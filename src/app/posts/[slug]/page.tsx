@@ -1,7 +1,8 @@
 import { getBlogPosts } from "@/lib/content";
 import CustomMDX from "@/components/mdx";
 import Date from "@/components/date";
-import { baseUrl } from '@/app/sitemap'
+import Disqus from "@/components/disqus";
+import { baseUrl } from "@/app/sitemap";
 
 export async function generateStaticParams() {
   const posts = getBlogPosts();
@@ -11,21 +12,23 @@ export async function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug)
+export async function generateMetadata({ params }) {
+  const slug = (await params).slug
+  
+  const post = getBlogPosts().find((post) => post.slug === slug);
   if (!post) {
-    return
+    return;
   }
 
-  let {
+  const {
     title,
     publishedAt: publishedTime,
     summary: description,
     image,
-  } = post.metadata
+  } = post.metadata;
   const ogImage = image
     ? image
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
+    : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
 
   return {
     title,
@@ -33,7 +36,7 @@ export function generateMetadata({ params }) {
     openGraph: {
       title,
       description,
-      type: 'article',
+      type: "article",
       publishedTime,
       url: `${baseUrl}/posts/${post.slug}`,
       images: [
@@ -43,12 +46,12 @@ export function generateMetadata({ params }) {
       ],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title,
       description,
       images: [ogImage],
     },
-  }
+  };
 }
 
 const Post = async ({ params }) => {
@@ -87,6 +90,7 @@ const Post = async ({ params }) => {
           .
         </p>
       </footer>
+      <Disqus slug={slug} title={post.metadata.title} />
     </>
   );
 };
