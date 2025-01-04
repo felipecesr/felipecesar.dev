@@ -1,17 +1,22 @@
-import { getBlogPosts } from '@/lib/content'
+import { getBlogPosts } from "@/lib/content";
 
-export const baseUrl = 'https://felipecesar.dev'
+export const baseUrl = "https://felipecesar.dev";
 
 export default async function sitemap() {
   const blogs = getBlogPosts().map((post) => ({
     url: `${baseUrl}/posts/${post.slug}`,
     lastModified: post.metadata.publishedAt,
-  }))
+  }));
 
-  const routes = ['', '/posts'].map((route) => ({
+  const series = getBlogPosts("content/series").map((serie) => ({
+    url: `${baseUrl}/series/${serie.slug}`,
+    lastModified: serie.metadata.publishedAt,
+  }));
+
+  const routes = ["", "/posts", "/series"].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date().toISOString().split('T')[0],
-  }))
+    lastModified: new Date().toISOString().split("T")[0],
+  }));
 
-  return [...routes, ...blogs]
+  return [...routes, ...blogs, ...series];
 }
