@@ -20,7 +20,7 @@ const Series = () => {
             >
               {serie.metadata.title}
             </h3>
-            <p className="line-clamp-4">Entenda os 5 princípios do SOLID</p>
+            <p className="line-clamp-4">{serie.metadata.description}</p>
           </a>
         </li>
       ))}
