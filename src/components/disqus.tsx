@@ -1,6 +1,5 @@
 "use client";
 
-import { baseUrl } from "@/app/sitemap";
 import { DiscussionEmbed } from "disqus-react";
 
 type Props = {
