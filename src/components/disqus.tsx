@@ -1,5 +1,6 @@
 "use client";
 
+import { baseUrl } from "@/app/sitemap";
 import { DiscussionEmbed } from "disqus-react";
 
 type Props = {
@@ -11,7 +12,7 @@ const Disqus = ({ slug, title }: Props) => (
   <DiscussionEmbed
     shortname="felipecesar"
     config={{
-      url: slug,
+      url: `https://felipecesar.dev/posts/${slug}`,
       identifier: slug,
       title,
       language: "pt_BR",
