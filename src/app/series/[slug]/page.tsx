@@ -20,12 +20,11 @@ const Serie = async ({ params }) => {
   }
 
   return (
-    <div>
-      <h1>{post.metadata.title}</h1>
+    <article className="prose dark:prose-invert">
+      <h2 className="">{post.metadata.title}</h2>
       <p>{post.metadata.description}</p>
-      <hr />
       <BlogPosts serie={slug} />
-    </div>
+    </article>
   );
 };
 
