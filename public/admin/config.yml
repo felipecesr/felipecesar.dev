@@ -22,7 +22,13 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Serie", name: "serie", widget: "string" }
+      - {
+          label: "Serie",
+          name: "serie",
+          widget: "select",
+          options: ["solid", "player-hls"],
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
     view_groups:
       - label: Series
