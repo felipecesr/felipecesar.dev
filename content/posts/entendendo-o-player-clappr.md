@@ -122,14 +122,8 @@ O Clappr organiza seus componentes em uma hierarquia. O "Core" é o contexto pri
 Os plugins permitem estender as funcionalidades do Clappr. Eles podem ser de dois tipos principais:
 
 
-* `CorePlugin`
-
-
-  : para modificar o contexto geral do player.
-* `ContainerPlugin`
-
-
-  : para alterar a área de exibição do vídeo.
+* `CorePlugin`: para modificar o contexto geral do player.
+* `ContainerPlugin`: para alterar a área de exibição do vídeo.
 
 
 Você pode criar versões visuais desses plugins (`UICorePlugin` e `UIContainerPlugin`) para adicionar elementos de interface.
@@ -142,8 +136,7 @@ Exemplo de um `CorePlugin` simples:
 import { CorePlugin } from '@clappr/player';
 
 
-export default class Plugin extends CorePlugin {
-}
+export default class Plugin extends CorePlugin {}
 ```
 
 
