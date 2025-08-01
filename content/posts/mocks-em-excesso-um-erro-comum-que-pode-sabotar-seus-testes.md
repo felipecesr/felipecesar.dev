@@ -58,7 +58,6 @@ jest.mock('library1', () => ({
   ...jest.requireActual('library1'),
   useSomething: jest.fn(),
 }))
-
 ```
 
 Depois de muito tempo perdido com um problema que poderia ter sido evitado com boas práticas de testes, o erro foi resolvido.
