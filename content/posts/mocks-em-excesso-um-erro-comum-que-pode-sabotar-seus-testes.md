@@ -6,7 +6,7 @@ tags:
   - react
 date: 2025-08-01T11:25:00.000-03:00
 ---
-Ontem, passei horas tentando entender um problema que, na verdade, **nem deveria existir** — e o pior: ele só acontecia nos testes.
+Passei horas tentando entender um problema que, na verdade, **nem deveria existir** — e o pior: ele só acontecia nos testes.
 
 Eu estava escrevendo um teste para um componente React que importava um componente de uma lib, que por sua vez importava outro de outra lib. A estrutura era mais ou menos assim:
 
